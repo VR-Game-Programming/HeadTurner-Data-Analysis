@@ -126,6 +126,8 @@ with open(ProcessedDir + "T1_Result.csv", "w", newline="") as csvfile:
 # Draw Figure
 # =================================================================
 N = len(Directions)
+angles = [n / float(N) * 2 * pi for n in range(N)]
+angles += angles[:1]
 theta = dict()
 offset = {"Standing": pi / 32, "Lying": pi * 7 / 32}
 for p in Postures:
@@ -143,9 +145,62 @@ for p in Postures:
         theta[p], values, linewidth=0, yerr=std_values, elinewidth=1, ecolor="k"
     )
 
+plt.xticks(angles[:-1], Directions, color="black", size=10)
+ax.tick_params(axis="x", which="major", pad=20)
 plt.yticks([0, 30, 60, 90, 120, 150, 180], color="grey", size=10)
 plt.ylim(-30, 180)
 
 plt.legend(loc="best", bbox_to_anchor=(0, 0))
 plt.savefig("Result Figure/" + "T1_MaxViewingRange.png", transparent=False)
-plt.show()
+plt.close()
+
+
+# Draw Figure (v2)
+# =================================================================
+# Set plot
+plt.figure(figsize=(10, 10))
+ax = plt.subplot(111, polar=True)
+
+N = len(Directions)
+angles = [n / float(N) * 2 * pi for n in range(N)]
+angles += angles[:1]
+
+# Draw direction axes
+ax.set_xlabel("Direction", labelpad=15, color="black", size=16)
+ax.xaxis.set_label_position("bottom")
+plt.xticks(angles[:-1], Directions, color="black", size=10)
+ax.tick_params(axis="x", which="major", pad=20)
+
+# Draw range labels
+ax.set_ylabel("Max Viewing Range", labelpad=40, color="grey", size=16)
+ax.yaxis.set_label_position("left")
+ax.set_rlabel_position(20)
+# ax.get_yaxis().set_visible(False)
+plt.yticks([30, 60, 90, 120, 150, 180], color="grey", size=10)
+plt.ylim(0, 180)
+
+# Plot the data
+i = 0
+colors = ["tab:blue", "tab:red"]
+for pos in Postures:
+    values = list(range_data[pos].values())
+    values += values[:1]
+    std_values = list(std_data[pos].values())
+    std_values += std_values[:1]
+    ax.errorbar(
+        angles,
+        values,
+        color=colors[i],
+        linewidth=2,
+        linestyle="solid",
+        label=pos,
+        # yerr=std_values,
+        # ecolor=colors[i],
+        # capsize=4,
+    )
+    ax.fill(angles, values, "k", alpha=0.05)
+    i += 1
+
+plt.legend(loc="best", bbox_to_anchor=(0, 0))
+plt.savefig("Result Figure/" + "T1_MaxViewingRange_v2.png", transparent=False)
+plt.close()
