@@ -1,0 +1,25 @@
+Base: Standing, Up
+
+                Mixed Linear Model Regression Results
+=====================================================================
+Model:                 MixedLM     Dependent Variable:     range     
+No. Observations:      768         Method:                 REML      
+No. Groups:            16          Scale:                  649.8529  
+Min. group size:       48          Log-Likelihood:         -3587.2169
+Max. group size:       48          Converged:              Yes       
+Mean group size:       48.0                                          
+---------------------------------------------------------------------
+                        Coef.  Std.Err.    z    P>|z|  [0.025  0.975]
+---------------------------------------------------------------------
+Intercept               91.507    7.917  11.558 0.000  75.990 107.025
+posture[T.Lying]       -58.633    1.840 -31.870 0.000 -62.239 -55.028
+direction[T.Down]        9.399    3.679   2.555 0.011   2.188  16.611
+direction[T.DownLeft]   28.227    3.679   7.671 0.000  21.015  35.438
+direction[T.DownRight]  26.446    3.679   7.187 0.000  19.234  33.658
+direction[T.Left]       33.917    3.679   9.218 0.000  26.706  41.129
+direction[T.Right]      35.986    3.679   9.780 0.000  28.775  43.198
+direction[T.UpLeft]     21.608    3.679   5.873 0.000  14.397  28.820
+direction[T.UpRight]    19.974    3.679   5.428 0.000  12.762  27.186
+Group Var              881.072   12.942                              
+=====================================================================
+

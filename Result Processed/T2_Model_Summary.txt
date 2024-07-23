@@ -1,0 +1,25 @@
+Base: Standing, 90
+
+           Mixed Linear Model Regression Results
+===========================================================
+Model:              MixedLM  Dependent Variable:  fatigue  
+No. Observations:   208      Method:              REML     
+No. Groups:         13       Scale:               1.1879   
+Min. group size:    16       Log-Likelihood:      -327.5058
+Max. group size:    16       Converged:           Yes      
+Mean group size:    16.0                                   
+-----------------------------------------------------------
+                 Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------
+Intercept         1.817    0.309  5.881 0.000  1.212  2.423
+posture[T.Lying]  1.750    0.151 11.578 0.000  1.454  2.046
+direction[T.0]   -0.346    0.302 -1.145 0.252 -0.939  0.246
+direction[T.135]  0.538    0.302  1.781 0.075 -0.054  1.131
+direction[T.180]  0.000    0.302  0.000 1.000 -0.592  0.592
+direction[T.225]  0.808    0.302  2.672 0.008  0.215  1.400
+direction[T.270]  0.500    0.302  1.654 0.098 -0.092  1.092
+direction[T.315]  1.038    0.302  3.435 0.001  0.446  1.631
+direction[T.45]   0.769    0.302  2.545 0.011  0.177  1.362
+Group Var         0.573    0.250                           
+===========================================================
+
