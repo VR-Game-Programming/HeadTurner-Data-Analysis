@@ -182,6 +182,8 @@ plt.ylim(0, 180)
 # Plot the data
 i = 0
 colors = ["tab:blue", "tab:red"]
+ecolors = ["black", "grey"]
+ecapsize = [6, 4]
 for pos in Postures:
     values = list(range_data[pos].values())
     values += values[:1]
@@ -194,9 +196,9 @@ for pos in Postures:
         linewidth=2,
         linestyle="solid",
         label=pos,
-        # yerr=std_values,
-        # ecolor=colors[i],
-        # capsize=4,
+        yerr=std_values,
+        ecolor=ecolors[i],
+        capsize=ecapsize[i],
     )
     ax.fill(angles, values, "k", alpha=0.05)
     i += 1
