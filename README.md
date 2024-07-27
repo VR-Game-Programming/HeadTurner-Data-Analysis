@@ -11,3 +11,6 @@ Python Scripts for Data Analysis
 
 > Data Flow:
 > Result Raw -> Result Raw (ReCaculate) -> Result Processed, Result Figure
+
+# Analysis Method
+待補
