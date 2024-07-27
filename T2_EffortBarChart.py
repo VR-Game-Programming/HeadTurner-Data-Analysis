@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import statistics as stat
 import csv
+from math import pi
 from Constant import *
 
 # Get Dataframe From Google Sheet
@@ -57,7 +58,7 @@ with open("Result Processed/" + "T2_Result.csv", "w", newline="") as csvfile:
         for idx, d in enumerate(Directions):
             writer.writerow([p, d, data[p][idx], std_data[p][idx]])
 
-# Draw Plot
+# Draw Figure
 # 設置長條的X軸位置
 x = np.arange(len(Directions))
 width = 0.35  # 長條的寬度
@@ -85,11 +86,63 @@ bars2 = ax.bar(
 
 # 添加一些文本標籤
 ax.set_xlabel("Directions")
-ax.set_ylabel("Fatigue Scores")
-ax.set_title("Fatigue scores with different postures and directions")
+ax.set_ylabel("Effort Scores")
+ax.set_title("Effort scores with different postures and directions")
 ax.set_xticks(x)
 ax.set_xticklabels(Directions)
 ax.legend()
 
-plt.savefig("Result Figure/" + "T2_FatigueScores.png", transparent=False)
-plt.show()
+plt.savefig("Result Figure/" + "T2_EffortScores.png", transparent=False)
+plt.close()
+
+# Draw Figure (v2)
+# =================================================================
+# Set plot
+plt.figure(figsize=(10, 10))
+ax = plt.subplot(111, polar=True)
+
+N = len(Directions)
+angles = [n / float(N) * 2 * pi for n in range(N)]
+angles += angles[:1]
+
+# Draw direction axes
+ax.set_xlabel("Direction", labelpad=15, color="black", size=16)
+ax.xaxis.set_label_position("bottom")
+plt.xticks(angles[:-1], Directions, color="black", size=10)
+ax.tick_params(axis="x", which="major", pad=20)
+
+# Draw range labels
+ax.set_ylabel("Effort Score", labelpad=40, color="grey", size=16)
+ax.yaxis.set_label_position("left")
+ax.set_rlabel_position(20)
+# ax.get_yaxis().set_visible(False)
+plt.yticks([1, 2, 3, 4, 5, 6, 7], color="grey", size=10)
+plt.ylim(1, 7)
+
+# Plot the data
+i = 0
+colors = ["tab:blue", "tab:red"]
+ecolors = ["black", "grey"]
+ecapsize = [6, 4]
+for pos in Postures:
+    values = data[pos]
+    values += values[:1]
+    std_values = std_data[pos]
+    std_values += std_values[:1]
+    ax.errorbar(
+        angles,
+        values,
+        color=colors[i],
+        linewidth=2,
+        linestyle="solid",
+        label=pos,
+        yerr=std_values,
+        ecolor=ecolors[i],
+        capsize=ecapsize[i],
+    )
+    ax.fill(angles, values, "k", alpha=0.05)
+    i += 1
+
+plt.legend(loc="best", bbox_to_anchor=(0, 0))
+plt.savefig("Result Figure/" + "T2_EffortScores_v2.png", transparent=False)
+plt.close()
