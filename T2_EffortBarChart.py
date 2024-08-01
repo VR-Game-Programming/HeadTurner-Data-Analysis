@@ -85,6 +85,8 @@ bars2 = ax.bar(
     capsize=3,
 )
 
+# plt.ylim(1, 7)
+
 # Add Text
 ax.set_xlabel("Directions")
 ax.set_ylabel("Effort Scores")

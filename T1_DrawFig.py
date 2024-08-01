@@ -69,7 +69,7 @@ ax = plt.subplot(projection="polar")
 N = int(360 / 30)
 angles = [n / float(N) * 2 * pi for n in range(N)]
 begin = pi / 2
-bottom = 0
+bottom = 4
 
 for p in Postures:
     value = range_data[p]["Left"] / 180 * pi
@@ -79,8 +79,8 @@ for p in Postures:
         10,
         width=value,
         bottom=bottom,
-        color=Colors[p][0],
-        alpha=0.5,
+        color=Colors[p][1],
+        alpha=1,
         label=p,
     )
     value = range_data[p]["Right"] / 180 * pi
@@ -90,8 +90,8 @@ for p in Postures:
         10,
         width=value,
         bottom=bottom,
-        color=Colors[p][0],
-        alpha=0.5,
+        color=Colors[p][1],
+        alpha=1,
     )
 
 # Draw x axis
@@ -130,7 +130,7 @@ ax = plt.subplot(projection="polar")
 N = int(360 / 30)
 angles = [n / float(N) * 2 * pi for n in range(N)]
 begin = 0
-bottom = 0
+bottom = 4
 
 for p in Postures:
     value = range_data[p]["Up"] / 180 * pi
@@ -140,8 +140,8 @@ for p in Postures:
         10,
         width=value,
         bottom=bottom,
-        color=Colors[p][0],
-        alpha=0.5,
+        color=Colors[p][1],
+        alpha=1,
         label=p,
     )
     value = range_data[p]["Down"] / 180 * pi
@@ -151,8 +151,8 @@ for p in Postures:
         10,
         width=value,
         bottom=bottom,
-        color=Colors[p][0],
-        alpha=0.5,
+        color=Colors[p][1],
+        alpha=1,
     )
 
 # Draw x axis
