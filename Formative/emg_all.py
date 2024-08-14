@@ -1,7 +1,7 @@
 import json
 import numpy as np
 import matplotlib.pyplot as plt
-from emg_single import get_result
+from Formative.emg_single import get_result
 from Constant import Directions, Postures
 import csv
 
