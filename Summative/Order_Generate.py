@@ -52,5 +52,5 @@ def generate_formative_order(filename, subConditionName, subConditionList):
     print(f"Generated {filename} successfully!")
 
 
-generate_formative_order("Summative_Order_S1.csv", "Direction", Directions)
-generate_formative_order("Summative_Order_S2.csv", "Application", Applications)
+generate_formative_order("Summative_S1_Order.csv", "Direction", Directions)
+generate_formative_order("Summative_S2_Order.csv", "Application", Applications)
