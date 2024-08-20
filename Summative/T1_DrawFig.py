@@ -9,25 +9,20 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from Constant import *
 
-ProcessedDir = "Result Processed/"
 
-
-def CalculateAngle(direction, angle):
-    if direction == "Right" or direction == "UpRight" or direction == "DownRight":
-        return abs(angle) if angle > 0 else 360 + angle
-
-    elif direction == "Left" or direction == "UpLeft" or direction == "DownLeft":
-        return abs(angle) if angle < 0 else 360 - angle
-
-    else:
-        return abs(angle) if abs(angle) < 180 else 360 - abs(angle)
+def CalculateAvgAngle(directions):
+    normal = []
+    for value in directions:
+        if abs(value) > 10:
+            normal.append(value)
+    return stat.fmean(normal)
 
 
 # Data Prepare
 # =================================================================
 # Initialize the result dict
 range_data = dict()
-for p in Postures:
+for p in Conditions:
     range_data[p] = dict()
     for d in Directions:
         range_data[p][d] = [None] * len(Participants)
