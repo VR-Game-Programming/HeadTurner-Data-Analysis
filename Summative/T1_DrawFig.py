@@ -55,129 +55,53 @@ with open(ProcessedDir + "T1_Result.csv", "w", newline="") as csvfile:
             writer.writerow([p, d, range_data[p][d], std_data[p][d]])
 
 
-# Draw Figure (v3)
-# =================================================================
-# Left-Right
-plt.figure(figsize=(10, 10))
-ax = plt.subplot(projection="polar")
+def DrawRangeRadarChart(
+    FigureTitle, FigurePath, CompareGroups, LeftMaxAngle, RightMaxAngle, Type
+):
+    plt.figure(figsize=(10, 10))
+    ax = plt.subplot(projection="polar")
 
-N = int(360 / 30)
-angles = [n / float(N) * 2 * pi for n in range(N)]
-begin = pi / 2
-bottom = 4
+    N = int(360 / 30)
+    angles = [n / float(N) * 2 * pi for n in range(N)]
+    begin = pi / 2
+    bottom = 4
 
-for p in Postures:
-    value = range_data[p]["Left"] / 180 * pi
-    offset = begin + value / 2
-    ax.bar(
-        offset,
-        10,
-        width=value,
-        bottom=bottom,
-        color=Colors[p][1],
-        alpha=1,
-        label=p,
-    )
-    value = range_data[p]["Right"] / 180 * pi
-    offset = begin - value / 2
-    ax.bar(
-        offset,
-        10,
-        width=value,
-        bottom=bottom,
-        color=Colors[p][1],
-        alpha=1,
-    )
+    for group, i in enumerate(CompareGroups):
+        value = LeftMaxAngle[group]
+        offset = begin + value / 2
+        ax.bar(
+            offset,
+            10,
+            width=value,
+            bottom=bottom,
+            color=Colors[i][1],
+            alpha=1,
+            label=group,
+        )
 
-# Draw x axis
-angles_label = [
-    "Right 90",
-    "Right 60",
-    "Right 30",
-    "Front",
-    "Left 30",
-    "Left 60",
-    "Left 90",
-    "Left 120",
-    "Left 150",
-    "Back",
-    "Right 150",
-    "Right 120",
-]
-plt.xticks(angles, angles_label, color="black", size=10)
-ax.tick_params(axis="x", which="major", pad=20)
+        value = RightMaxAngle[group]
+        offset = begin - value / 2
+        ax.bar(
+            offset,
+            10,
+            width=value,
+            bottom=bottom,
+            color=Colors[i][1],
+            alpha=1,
+        )
 
-# Draw y axis
-plt.yticks([0, 10], color="grey", size=0)
-plt.ylim(0, 10)
+    # Draw x axis
+    plt.xticks(angles, RangeRadarChartAngleLabels[Type], color="black", size=10)
+    ax.tick_params(axis="x", which="major", pad=20)
 
-plt.legend(loc="best", bbox_to_anchor=(0, 0))
-plt.title(
-    "Yaw Maximum Viewing Range at different posture", pad=20, color="black", size=16
-)
-plt.savefig("Result Figure/" + "T1_MaxViewingRange_LR_v3.png", transparent=False)
-plt.close()
+    # Draw y axis
+    plt.yticks([0, 10], color="grey", size=0)
+    plt.ylim(0, 10)
 
-# Up Down
-plt.figure(figsize=(10, 10))
-ax = plt.subplot(projection="polar")
-
-N = int(360 / 30)
-angles = [n / float(N) * 2 * pi for n in range(N)]
-begin = 0
-bottom = 4
-
-for p in Postures:
-    value = range_data[p]["Up"] / 180 * pi
-    offset = begin + value / 2
-    ax.bar(
-        offset,
-        10,
-        width=value,
-        bottom=bottom,
-        color=Colors[p][1],
-        alpha=1,
-        label=p,
-    )
-    value = range_data[p]["Down"] / 180 * pi
-    offset = begin - value / 2
-    ax.bar(
-        offset,
-        10,
-        width=value,
-        bottom=bottom,
-        color=Colors[p][1],
-        alpha=1,
-    )
-
-# Draw x axis
-angles_label = [
-    "Front",
-    "Up 30",
-    "Up 60",
-    "Up 90",
-    "Up 120",
-    "Up 150",
-    "Back",
-    "Down 150",
-    "Down 120",
-    "Down 90",
-    "Down 60",
-    "Down 30",
-]
-plt.xticks(angles, angles_label, color="black", size=10)
-ax.tick_params(axis="x", which="major", pad=20)
-
-# Draw y axis
-plt.yticks([0, 10], color="grey", size=0)
-plt.ylim(0, 10)
-
-plt.legend(loc="best", bbox_to_anchor=(0, 0))
-plt.title(
-    "Pitch Maximum Viewing Range at different posture", pad=20, color="black", size=16
-)
-plt.savefig("Result Figure/" + "T1_MaxViewingRange_UD_v3.png", transparent=False)
-plt.close()
+    plt.legend(loc="best", bbox_to_anchor=(0, 0))
+    plt.title(FigureTitle, pad=20, color="black", size=16)
+    plt.savefig(FigurePath, transparent=False)
+    plt.close()
 
 
 # Draw Figure (v2)
