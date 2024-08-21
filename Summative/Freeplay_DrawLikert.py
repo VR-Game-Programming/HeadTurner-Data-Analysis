@@ -37,8 +37,19 @@ def GetDataFromSheet(metrics):
     return DataDict
 
 
+def GetOverallPreference():
+    OverallPreferenceData = {
+        "NormalBed": [0],
+        "ActuatedBed": [0],
+    }
+    for i, row in df.iterrows():
+        OverallPreferenceData[row["OverallPreference"]][0] += 1
+
+    return OverallPreferenceData
+
+
 def DrawHorizontalStackBarChart(FigureTitle, Data):
-    fig, axes = plt.subplots(figsize=(10, 4), ncols=2, sharey=True)
+    fig, axes = plt.subplots(figsize=(12, 4), ncols=2, sharey=True)
     fig.tight_layout()
 
     for i, condition in enumerate(Conditions):
@@ -49,7 +60,7 @@ def DrawHorizontalStackBarChart(FigureTitle, Data):
         axes[i].set_xlim(0, 10)
         axes[i].set_xticks([0, 2, 4, 6, 8, 10])
 
-        for j, point in enumerate(Points):
+        for j in range(0, len(Points)):
             widths = data[:, j]
             starts = data_cum[:, j] - widths
             rects = axes[i].barh(
@@ -57,7 +68,7 @@ def DrawHorizontalStackBarChart(FigureTitle, Data):
                 widths,
                 left=starts,
                 align="center",
-                height=0.5,
+                height=0.4,
                 color=Colors[i][j],
             )
             # axes[i].bar_label(rects, label_type="center")
@@ -68,6 +79,39 @@ def DrawHorizontalStackBarChart(FigureTitle, Data):
     axes[0].yaxis.tick_left()
     axes[0].tick_params(axis="y")
 
+    plt.ylim(-1, 2)
+    plt.subplots_adjust(wspace=0, top=0.85, bottom=0.1, left=0.18, right=0.95)
+    plt.suptitle(FigureTitle, fontsize=16, fontweight="bold")
+
+    figurepath = f"{RootDir}/Result Figure/Summative Freeplay {FigureTitle} [BarH].png"
+    plt.savefig(figurepath, transparent=False)
+    plt.close()
+
+    print(f"Figure saved to {figurepath}\n")
+
+
+def DrawPreferenceDataChart(Data, FigureTitle="Overall Preference"):
+    fig, axes = plt.subplots(figsize=(12, 4), ncols=2, sharey=True)
+    fig.tight_layout()
+
+    for i, condition in enumerate(Conditions):
+
+        axes[i].set_title(condition, color=Colors[i][3])
+        axes[i].set_xlim(0, 10)
+        axes[i].set_xticks([0, 2, 4, 6, 8, 10])
+
+        rects = axes[i].barh(
+            "Overall Preference",
+            Data[condition],
+            align="center",
+            color=Colors[i][1],
+        )
+
+    axes[0].invert_xaxis()
+    axes[0].yaxis.tick_left()
+    axes[0].tick_params(axis="y")
+
+    plt.ylim(-2, 2)
     plt.subplots_adjust(wspace=0, top=0.85, bottom=0.1, left=0.18, right=0.95)
     plt.suptitle(FigureTitle, fontsize=16, fontweight="bold")
 
@@ -83,3 +127,6 @@ DrawHorizontalStackBarChart("Comfort", ComfortData)
 
 PreferenceData = GetDataFromSheet("Preference")
 DrawHorizontalStackBarChart("Preference", PreferenceData)
+
+OverallPreferenceData = GetOverallPreference()
+DrawPreferenceDataChart(OverallPreferenceData)
