@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import statistics as stat
 import csv
-from math import pi
 from Constant import *
 
 # Get dataframe from Google Sheet

@@ -1,14 +1,14 @@
 RootDir = "./Summative"
 
 Participants = list(range(1, 10 + 1))
-Conditions = ["ActuatedBed", "NormalBed"]
+Conditions = ["NormalBed", "ActuatedBed"]
 Directions = ["Right", "Up", "Left", "Down"]
 Applications = ["Ecosphere", "Archery"]
 Points = list(range(1, 5 + 1))
 EcosphereClips = ["EcosphereBorneo", "EcosphereRajaAmpat"]
 Colors = [
-    ["#badbdb", "#98d1d1", "#76c8c8", "#54bebe", "#3ea3a3"],
-    ["#e4bcad", "#df979e", "#d7658b", "#c80064", "#8f0047"],
+    ["#e5f6ff", "#82cfff", "#33b1ff", "#0072c3", "#003a6d"],
+    ["#ffd7d9", "#ff8389", "#fa4d56", "#da1e28", "#750e13"],
 ]
 
 RangeRadarChartAngleLabels = {
