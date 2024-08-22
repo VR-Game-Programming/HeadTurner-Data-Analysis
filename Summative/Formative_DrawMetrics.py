@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import statistics as stat
 import csv
+from scipy.stats import ttest_rel, wilcoxon
 from math import pi
 from Constant import *
 
@@ -31,6 +32,21 @@ def ReturnProcessData(task, metrics):
                 f"{task}-{metrics}-{condition}-{direction}"
             ].tolist()
 
+    filepath = f"{RootDir}/Processed Data/Summative_{task}_{metrics}_pval.csv"
+    with open(filepath, "w", newline="") as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(["Direction", "paired-t", "wilcoxon"])
+        for direction in Directions:
+            _, p = ttest_rel(
+                DataDict["ActuatedBed"][direction],
+                DataDict["NormalBed"][direction],
+            )
+            _, wp = wilcoxon(
+                DataDict["ActuatedBed"][direction],
+                DataDict["NormalBed"][direction],
+            )
+            writer.writerow([direction, p, wp])
+
     StdDict = dict()
     for condition in Conditions:
         StdDict[condition] = dict()
@@ -55,7 +71,6 @@ def ReturnProcessData(task, metrics):
 
     return DataDict, StdDict
 
-
 def DrawRadarChart(
     FigureTitle,
     Data,
@@ -64,8 +79,6 @@ def DrawRadarChart(
     std=True,
     annotate=False,
 ):
-    print(f"[DrawRadarChart] Processing with data:\nData: {Data}\nStdData: {StdData}")
-
     plt.figure(figsize=(10, 10))
     ax = plt.subplot(111, polar=True)
 
@@ -133,7 +146,7 @@ def DrawRadarChart(
 
     plt.savefig(figurepath, transparent=False)
     plt.close()
-    print(f"Figure saved to {figurepath}\n")
+    print(f"Figure saved to {ColorText(figurepath, "green")}\n")
 
 
 T1EffortDict, T1EffortStdDict = ReturnProcessData("T1", "Effort")

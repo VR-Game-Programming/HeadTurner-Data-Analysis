@@ -41,3 +41,13 @@ RangeRadarChartAngleLabels = {
         "Down 30",
     ],
 }
+
+def ColorText(text, color):
+    if color == "green":
+        return f"\033[92m{text}\033[0m"
+    elif color == "yellow":
+        return f"\033[93m{text}\033[0m"
+    elif color == "red":
+        return f"\033[91m{text}\033[0m"
+    else:
+        return text
