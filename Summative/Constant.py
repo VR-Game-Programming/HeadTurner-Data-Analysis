@@ -1,12 +1,13 @@
 RootDir = "./Summative"
 
 Participants = list(range(1, 16 + 1))
-Conditions = ["ActuatedBed", "NormalBed"]
+Conditions = ["NormalBed", "ActuatedBed"]
 Directions = ["Right", "Up", "Left", "Down"]
 Applications = ["Ecosphere", "Archery"]
 Points = list(range(1, 5 + 1))
 EcosphereClips = ["EcosphereBorneo", "EcosphereRajaAmpat"]
-Colors = [
+Colors = [["#54bebe", "#98d1d1"], ["#c80064", "#d7658b"]]
+LikertColors = [
     ["#e5f6ff", "#82cfff", "#33b1ff", "#0072c3", "#003a6d"],
     ["#ffd7d9", "#ff8389", "#fa4d56", "#da1e28", "#750e13"],
 ]

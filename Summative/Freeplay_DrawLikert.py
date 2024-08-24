@@ -40,9 +40,9 @@ for i, condition in enumerate(Conditions):
     data = np.array(list(ComfortData[condition].values()))
     data_cum = data.cumsum(axis=1)
 
-    axes[i].set_title(condition, color=Colors[i][2])
-    axes[i].set_xlim(0, 10)
-    axes[i].set_xticks([0, 2, 4, 6, 8, 10])
+    axes[i].set_title(condition, color=LikertColors[i][2])
+    axes[i].set_xlim(0, 14)
+    axes[i].set_xticks([0, 2, 4, 6, 8, 10, 12, 14])
 
     for j in range(0, len(Points)):
         widths = data[:, j]
@@ -53,7 +53,7 @@ for i, condition in enumerate(Conditions):
             left=starts,
             align="center",
             height=0.4,
-            color=Colors[i][j],
+            color=LikertColors[i][j],
         )
         # axes[i].bar_label(rects, label_type="center")
 
@@ -63,7 +63,7 @@ axes[0].set_yticklabels(Applications)
 axes[0].yaxis.tick_left()
 axes[0].tick_params(axis="y")
 
-plt.ylim(-1, 2)
+plt.ylim(-1, 3)
 plt.subplots_adjust(wspace=0, top=0.85, bottom=0.1, left=0.18, right=0.95)
 plt.suptitle("Comfort", fontsize=16, fontweight="bold")
 
@@ -99,9 +99,9 @@ for i, condition in enumerate(Conditions):
     data = np.array(list(PreferenceData[condition].values()))
     data_cum = data.cumsum(axis=1)
 
-    axes[i].set_title(condition, color=Colors[i][2])
-    axes[i].set_xlim(0, 10)
-    axes[i].set_xticks([0, 2, 4, 6, 8, 10])
+    axes[i].set_title(condition, color=LikertColors[i][2])
+    axes[i].set_xlim(0, 14)
+    axes[i].set_xticks([0, 2, 4, 6, 8, 10, 12, 14])
 
     for j in range(0, len(Points)):
         widths = data[:, j]
@@ -112,7 +112,7 @@ for i, condition in enumerate(Conditions):
             left=starts,
             align="center",
             height=0.4,
-            color=Colors[i][j],
+            color=LikertColors[i][j],
         )
         # axes[i].bar_label(rects, label_type="center")
 

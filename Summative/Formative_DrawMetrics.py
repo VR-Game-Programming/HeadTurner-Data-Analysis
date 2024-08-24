@@ -108,25 +108,25 @@ def DrawRadarChart(
             ax.errorbar(
                 angles,
                 values,
-                color=Colors[i][2],
+                color=Colors[i][1],
                 linewidth=2,
                 linestyle="solid",
                 label=group,
                 yerr=std_values,
-                ecolor=Colors[i][2],
+                ecolor=Colors[i][1],
                 capsize=5,
             )
         else:
             ax.plot(
                 angles,
                 values,
-                color=Colors[i][2],
+                color=Colors[i][1],
                 linewidth=2,
                 linestyle="solid",
                 label=group,
             )
 
-        ax.fill(angles, values, color=Colors[i][2], alpha=0.1)
+        ax.fill(angles, values, color=Colors[i][1], alpha=0.1)
         if annotate:
             for a, v in zip(angles, values):
                 ax.annotate(
