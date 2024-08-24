@@ -76,7 +76,7 @@ def DrawRadarChart(
     Data,
     StdData,
     yLimit,
-    std=True,
+    std=False,
     annotate=False,
 ):
     plt.figure(figsize=(10, 10))
