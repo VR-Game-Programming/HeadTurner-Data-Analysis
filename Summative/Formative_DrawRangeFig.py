@@ -123,7 +123,7 @@ def DrawRangeRadarChart(FigureTitle, FigurePath, LeftData, RightData, Type):
             height=(10 - bottom - 0.1),
             width=(leftValue + rightValue),
             bottom=bottom,
-            edgecolor=Colors[i][1],
+            edgecolor=Colors[i],
             linewidth=4,
             linestyle="solid",
             fill=False,

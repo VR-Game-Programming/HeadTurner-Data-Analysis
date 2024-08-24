@@ -78,7 +78,7 @@ def DrawBarChart(FigureTitle, Data, ErrorData, yLimit):
             x + offset[i],
             data,
             width,
-            color=Colors[i][1],
+            color=Colors[i],
             label=group,
             yerr=std_data,
             capsize=3,
