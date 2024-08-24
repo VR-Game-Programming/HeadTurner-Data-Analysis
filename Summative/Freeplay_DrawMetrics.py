@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import statistics as stat
 import csv
-from math import pi
+from scipy.stats import ttest_rel, wilcoxon
 from Constant import *
 
 # Get dataframe from Google Sheet
@@ -28,6 +28,15 @@ def GetDataFromSheet(metrics):
         DataDict[condition] = dict()
         for app in Applications:
             DataDict[condition][app] = df[f"{app}-{metrics}-{condition}"].tolist()
+
+    filepath = f"{RootDir}/Processed Data/Summative_Freeplay_{metrics}_pval.csv"
+    with open(filepath, "w", newline="") as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(["App", "paired-t", "wilcoxon"])
+        for app in Applications:
+            _, p = ttest_rel(DataDict["ActuatedBed"][app], DataDict["NormalBed"][app])
+            _, wp = wilcoxon(DataDict["ActuatedBed"][app], DataDict["NormalBed"][app])
+            writer.writerow([app, p, wp])
 
     StdDict = dict()
     for condition in Conditions:
@@ -55,8 +64,6 @@ def GetDataFromSheet(metrics):
 
 
 def DrawBarChart(FigureTitle, Data, ErrorData, yLimit):
-    print(f"[DrawBarChart] Processing with data:\nData: {Data}\nErrorData: {ErrorData}")
-
     plt.figure(figsize=(10, 10))
     ax = plt.subplot()
 
@@ -89,7 +96,7 @@ def DrawBarChart(FigureTitle, Data, ErrorData, yLimit):
     plt.savefig(figurepath, transparent=False)
     plt.close()
 
-    print(f"Figure saved to {figurepath}\n")
+    print(f"Figure saved to {ColorText(figurepath, "green")}\n")
 
 
 EffortData, EffortError = GetDataFromSheet("Effort")

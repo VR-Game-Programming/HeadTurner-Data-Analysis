@@ -7,8 +7,8 @@ Applications = ["Ecosphere", "Archery"]
 Points = list(range(1, 5 + 1))
 EcosphereClips = ["EcosphereBorneo", "EcosphereRajaAmpat"]
 Colors = [
-    ["#badbdb", "#98d1d1", "#76c8c8", "#54bebe", "#3ea3a3"],
-    ["#e4bcad", "#df979e", "#d7658b", "#c80064", "#8f0047"],
+    ["#e5f6ff", "#82cfff", "#33b1ff", "#0072c3", "#003a6d"],
+    ["#ffd7d9", "#ff8389", "#fa4d56", "#da1e28", "#750e13"],
 ]
 
 RangeRadarChartAngleLabels = {
@@ -41,3 +41,14 @@ RangeRadarChartAngleLabels = {
         "Down 30",
     ],
 }
+
+
+def ColorText(text, color):
+    if color == "green":
+        return f"\033[92m{text}\033[0m"
+    elif color == "yellow":
+        return f"\033[93m{text}\033[0m"
+    elif color == "red":
+        return f"\033[91m{text}\033[0m"
+    else:
+        return text

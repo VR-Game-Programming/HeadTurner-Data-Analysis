@@ -22,4 +22,4 @@ DirectionDict = {
     "315": "DownRight",
 }
 Angles = ["HeadYaw", "HeadPitch", "TrunkYaw", "TrunkPitch"]
-Colors = {"Standing": ["#54bebe", "#98d1d1"], "Lying": ["#c80064", "#d7658b"]}
+Colors = {"Standing": ["#82cfff", "#33b1ff"], "Lying": ["#ff8389", "#fa4d56"]}
