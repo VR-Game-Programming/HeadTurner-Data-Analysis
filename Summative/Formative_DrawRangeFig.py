@@ -112,7 +112,6 @@ def DrawRangeRadarChart(FigureTitle, FigurePath, LeftData, RightData, Type):
     begin = pi / 2 if Type == "LR" else 0
     bottom = 4
     hatches = ["\\", None]
-    linewidths = [5, 5]
 
     for i, group in enumerate(Conditions):
         leftValue = LeftData[group] / 180 * pi
@@ -120,15 +119,16 @@ def DrawRangeRadarChart(FigureTitle, FigurePath, LeftData, RightData, Type):
         offset = (leftValue + rightValue) / 2 - rightValue
         ax.bar(
             x=(begin + offset),
-            height=(10 - bottom - 0.1),
+            height=(10 - bottom),
             width=(leftValue + rightValue),
             bottom=bottom,
+            color=Colors_Alpha[i],
             edgecolor=Colors[i],
-            linewidth=4,
+            linewidth=3,
             linestyle="solid",
-            fill=False,
+            # fill=False,
             label=group,
-            hatch=hatches[i],
+            # hatch=hatches[i],
         )
 
     # Draw x axis

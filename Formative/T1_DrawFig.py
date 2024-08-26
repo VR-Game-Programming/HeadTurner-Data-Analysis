@@ -9,31 +9,17 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from Constant import *
 
-ProcessedDir = "Result Processed/"
-
-
-def CalculateAngle(direction, angle):
-    if direction == "Right" or direction == "UpRight" or direction == "DownRight":
-        return abs(angle) if angle > 0 else 360 + angle
-
-    elif direction == "Left" or direction == "UpLeft" or direction == "DownLeft":
-        return abs(angle) if angle < 0 else 360 - angle
-
-    else:
-        return abs(angle) if abs(angle) < 180 else 360 - abs(angle)
-
-
 # Data Prepare
 # =================================================================
 # Initialize the result dict
 range_data = dict()
-for p in Postures:
-    range_data[p] = dict()
-    for d in Directions:
-        range_data[p][d] = [None] * len(Participants)
+for dir in Directions:
+    range_data[dir] = dict()
+    for pos in Postures:
+        range_data[dir][pos] = [None] * len(Participants)
 
 # Read raw result
-filepath = "Result Processed/T1_RawData_Mean.csv"
+filepath = f"{RootDir}/Result Processed/T1_RawData_Mean.csv"
 with open(filepath, newline="") as csvfile:
     r = csv.DictReader(csvfile)
     for row in r:
@@ -42,147 +28,207 @@ with open(filepath, newline="") as csvfile:
         dir = row["Direction"]
         angle = float(row["Range"])
 
-        range_data[pos][dir][i - 1] = angle
+        range_data[dir][pos][i - 1] = angle
 
 # Calculate mean & std
 std_data = dict()
-for pos in Postures:
-    std_data[pos] = dict()
-    for d in Directions:
-        std_data[pos][d] = stat.stdev(range_data[pos][d])
-        range_data[pos][d] = stat.fmean(range_data[pos][d])
+for dir in Directions:
+    std_data[dir] = dict()
+    for pos in Postures:
+        std_data[dir][pos] = stat.stdev(range_data[dir][pos])
+        range_data[dir][pos] = stat.fmean(range_data[dir][pos])
 
-with open(ProcessedDir + "T1_Result.csv", "w", newline="") as csvfile:
-    writer = csv.writer(csvfile)
-    writer.writerow(["Posture", "Direction", "Mean", "Std"])
-    for p in Postures:
-        for d in Directions:
-            writer.writerow([p, d, range_data[p][d], std_data[p][d]])
+# with open(f"{RootDir}/Result Processed/T1_Result.csv", "w", newline="") as csvfile:
+#     writer = csv.writer(csvfile)
+#     writer.writerow(["Posture", "Direction", "Mean", "Std"])
+#     for dir in Directions:
+#         for pos in Postures:
+#             writer.writerow([pos, dir, range_data[dir][pos], std_data[dir][pos]])
 
 
-# Draw Figure (v3)
-# =================================================================
-# Left-Right
-plt.figure(figsize=(10, 10))
-ax = plt.subplot(projection="polar")
+def DrawRangeRadarChart(FigureTitle, FigurePath, LeftData, RightData, Type):
+    plt.figure(figsize=(10, 10))
+    ax = plt.subplot(projection="polar")
 
-N = int(360 / 30)
-angles = [n / float(N) * 2 * pi for n in range(N)]
-begin = pi / 2
-bottom = 4
+    N = int(360 / 30)
+    angles = [n / float(N) * 2 * pi for n in range(N)]
+    begin = pi / 2 if Type == "LR" else 0
+    bottom = 4
+    hatches = ["\\", None]
 
-for p in Postures:
-    value = range_data[p]["Left"] / 180 * pi
-    offset = begin + value / 2
-    ax.bar(
-        offset,
-        10,
-        width=value,
-        bottom=bottom,
-        color=Colors[p][1],
-        alpha=1,
-        label=p,
-    )
-    value = range_data[p]["Right"] / 180 * pi
-    offset = begin - value / 2
-    ax.bar(
-        offset,
-        10,
-        width=value,
-        bottom=bottom,
-        color=Colors[p][1],
-        alpha=1,
-    )
+    for i, group in enumerate(Postures):
+        leftValue = LeftData[group] / 180 * pi
+        rightValue = RightData[group] / 180 * pi
+        offset = (leftValue + rightValue) / 2 - rightValue
+        ax.bar(
+            x=(begin + offset),
+            height=(10 - bottom),
+            width=(leftValue + rightValue),
+            bottom=bottom,
+            color=Colors_Alpha[i],
+            edgecolor=Colors[i],
+            linewidth=3,
+            linestyle="solid",
+            # fill=False,
+            label=group,
+            # hatch=hatches[i],
+        )
 
-# Draw x axis
-angles_label = [
-    "Right 90",
-    "Right 60",
-    "Right 30",
-    "Front",
-    "Left 30",
-    "Left 60",
-    "Left 90",
-    "Left 120",
-    "Left 150",
-    "Back",
-    "Right 150",
-    "Right 120",
-]
-plt.xticks(angles, angles_label, color="black", size=10)
-ax.tick_params(axis="x", which="major", pad=20)
+    # Draw x axis
+    plt.xticks(angles, RangeRadarChartAngleLabels[Type], color="black", size=10)
+    ax.tick_params(axis="x", which="major", pad=20)
 
-# Draw y axis
-plt.yticks([0, 10], color="grey", size=0)
-plt.ylim(0, 10)
+    # Draw y axis
+    plt.yticks([0, 10], color="grey", size=0)
+    plt.ylim(0, 10)
 
-plt.legend(loc="best", bbox_to_anchor=(0, 0))
-plt.title(
-    "Yaw Maximum Viewing Range at different posture", pad=20, color="black", size=16
+    plt.legend(loc="best", bbox_to_anchor=(0, 0))
+    plt.title(FigureTitle, pad=20, color="black", size=16)
+    plt.savefig(FigurePath, transparent=False)
+    plt.close()
+
+    print(f"Figure saved to {ColorText(FigurePath, "green")}\n")
+
+
+DrawRangeRadarChart(
+    FigureTitle="Head Maximum Viewing Range (Yaw)",
+    FigurePath=f"{RootDir}/Result Figure/Formative T1 HeadMaximumRange Yaw.png",
+    LeftData=range_data["Left"],
+    RightData=range_data["Right"],
+    Type="LR",
 )
-plt.savefig("Result Figure/" + "T1_MaxViewingRange_LR_v3.png", transparent=False)
-plt.close()
 
-# Up Down
-plt.figure(figsize=(10, 10))
-ax = plt.subplot(projection="polar")
-
-N = int(360 / 30)
-angles = [n / float(N) * 2 * pi for n in range(N)]
-begin = 0
-bottom = 4
-
-for p in Postures:
-    value = range_data[p]["Up"] / 180 * pi
-    offset = begin + value / 2
-    ax.bar(
-        offset,
-        10,
-        width=value,
-        bottom=bottom,
-        color=Colors[p][1],
-        alpha=1,
-        label=p,
-    )
-    value = range_data[p]["Down"] / 180 * pi
-    offset = begin - value / 2
-    ax.bar(
-        offset,
-        10,
-        width=value,
-        bottom=bottom,
-        color=Colors[p][1],
-        alpha=1,
-    )
-
-# Draw x axis
-angles_label = [
-    "Front",
-    "Up 30",
-    "Up 60",
-    "Up 90",
-    "Up 120",
-    "Up 150",
-    "Back",
-    "Down 150",
-    "Down 120",
-    "Down 90",
-    "Down 60",
-    "Down 30",
-]
-plt.xticks(angles, angles_label, color="black", size=10)
-ax.tick_params(axis="x", which="major", pad=20)
-
-# Draw y axis
-plt.yticks([0, 10], color="grey", size=0)
-plt.ylim(0, 10)
-
-plt.legend(loc="best", bbox_to_anchor=(0, 0))
-plt.title(
-    "Pitch Maximum Viewing Range at different posture", pad=20, color="black", size=16
+DrawRangeRadarChart(
+    FigureTitle="Head Maximum Viewing Range (Pitch)",
+    FigurePath=f"{RootDir}/Result Figure/Formative T1 HeadMaximumRange Pitch.png",
+    LeftData=range_data["Up"],
+    RightData=range_data["Down"],
+    Type="UD",
 )
-plt.savefig("Result Figure/" + "T1_MaxViewingRange_UD_v3.png", transparent=False)
-plt.close()
+
+# # Draw Figure (v3)
+# # =================================================================
+# # Left-Right
+# plt.figure(figsize=(10, 10))
+# ax = plt.subplot(projection="polar")
+
+# N = int(360 / 30)
+# angles = [n / float(N) * 2 * pi for n in range(N)]
+# begin = pi / 2
+# bottom = 4
+
+# for p in Postures:
+#     value = range_data[p]["Left"] / 180 * pi
+#     offset = begin + value / 2
+#     ax.bar(
+#         offset,
+#         10,
+#         width=value,
+#         bottom=bottom,
+#         color=Colors[p][1],
+#         alpha=1,
+#         label=p,
+#     )
+#     value = range_data[p]["Right"] / 180 * pi
+#     offset = begin - value / 2
+#     ax.bar(
+#         offset,
+#         10,
+#         width=value,
+#         bottom=bottom,
+#         color=Colors[p][1],
+#         alpha=1,
+#     )
+
+# # Draw x axis
+# angles_label = [
+#     "Right 90",
+#     "Right 60",
+#     "Right 30",
+#     "Front",
+#     "Left 30",
+#     "Left 60",
+#     "Left 90",
+#     "Left 120",
+#     "Left 150",
+#     "Back",
+#     "Right 150",
+#     "Right 120",
+# ]
+# plt.xticks(angles, angles_label, color="black", size=10)
+# ax.tick_params(axis="x", which="major", pad=20)
+
+# # Draw y axis
+# plt.yticks([0, 10], color="grey", size=0)
+# plt.ylim(0, 10)
+
+# plt.legend(loc="best", bbox_to_anchor=(0, 0))
+# plt.title(
+#     "Yaw Maximum Viewing Range at different posture", pad=20, color="black", size=16
+# )
+# plt.savefig("Result Figure/" + "T1_MaxViewingRange_LR_v3.png", transparent=False)
+# plt.close()
+
+# # Up Down
+# plt.figure(figsize=(10, 10))
+# ax = plt.subplot(projection="polar")
+
+# N = int(360 / 30)
+# angles = [n / float(N) * 2 * pi for n in range(N)]
+# begin = 0
+# bottom = 4
+
+# for p in Postures:
+#     value = range_data[p]["Up"] / 180 * pi
+#     offset = begin + value / 2
+#     ax.bar(
+#         offset,
+#         10,
+#         width=value,
+#         bottom=bottom,
+#         color=Colors[p][1],
+#         alpha=1,
+#         label=p,
+#     )
+#     value = range_data[p]["Down"] / 180 * pi
+#     offset = begin - value / 2
+#     ax.bar(
+#         offset,
+#         10,
+#         width=value,
+#         bottom=bottom,
+#         color=Colors[p][1],
+#         alpha=1,
+#     )
+
+# # Draw x axis
+# angles_label = [
+#     "Front",
+#     "Up 30",
+#     "Up 60",
+#     "Up 90",
+#     "Up 120",
+#     "Up 150",
+#     "Back",
+#     "Down 150",
+#     "Down 120",
+#     "Down 90",
+#     "Down 60",
+#     "Down 30",
+# ]
+# plt.xticks(angles, angles_label, color="black", size=10)
+# ax.tick_params(axis="x", which="major", pad=20)
+
+# # Draw y axis
+# plt.yticks([0, 10], color="grey", size=0)
+# plt.ylim(0, 10)
+
+# plt.legend(loc="best", bbox_to_anchor=(0, 0))
+# plt.title(
+#     "Pitch Maximum Viewing Range at different posture", pad=20, color="black", size=16
+# )
+# plt.savefig("Result Figure/" + "T1_MaxViewingRange_UD_v3.png", transparent=False)
+# plt.close()
 
 
 # Draw Figure (v2)
