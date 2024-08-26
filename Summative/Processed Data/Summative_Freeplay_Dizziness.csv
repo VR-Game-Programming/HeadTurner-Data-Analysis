@@ -1,0 +1,5 @@
+App,Condition,Mean,Std
+Ecosphere,NormalBed,1.25,2.0816659994661326
+Archery,NormalBed,1.8125,2.8802488318430637
+Ecosphere,ActuatedBed,0.6875,1.40089257261219
+Archery,ActuatedBed,1.96875,3.1541969395288767

@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from emg_single import get_result
 from Constant import Colors, Directions, Postures
+from Formative.emg_single import get_result
+from Constant import Directions, Postures
 import csv
 
 TOTAL_PARTICIPANTS = 16
