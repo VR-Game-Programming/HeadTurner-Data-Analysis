@@ -76,7 +76,7 @@ def DrawRadarChart(
     Data,
     StdData,
     yLimit,
-    std=True,
+    std=False,
     annotate=False,
 ):
     plt.figure(figsize=(10, 10))
@@ -94,7 +94,7 @@ def DrawRadarChart(
     # Draw range labels
     ax.yaxis.set_label_position("left")
     ax.set_rlabel_position(20)
-    labels = np.arange(0, yLimit, yLimit / 4)
+    labels = np.arange(0, yLimit, yLimit / 5)
     plt.yticks(labels, color="grey", size=0)
     plt.ylim(0, yLimit)
 
@@ -108,25 +108,25 @@ def DrawRadarChart(
             ax.errorbar(
                 angles,
                 values,
-                color=Colors[i],
+                color=Colors[i][3],
                 linewidth=2,
                 linestyle="solid",
                 label=group,
                 yerr=std_values,
-                ecolor=Colors[i],
+                ecolor=Colors[i][3],
                 capsize=5,
             )
         else:
             ax.plot(
                 angles,
                 values,
-                color=Colors[i],
+                color=Colors[i][3],
                 linewidth=2,
                 linestyle="solid",
                 label=group,
             )
 
-        ax.fill(angles, values, color=Colors[i], alpha=0.1)
+        ax.fill(angles, values, color=Colors[i][3], alpha=0.1)
         if annotate:
             for a, v in zip(angles, values):
                 ax.annotate(
@@ -154,7 +154,7 @@ DrawRadarChart(
     FigureTitle="T1 Effort",
     Data=T1EffortDict,
     StdData=T1EffortStdDict,
-    yLimit=8,
+    yLimit=10,
 )
 
 T2EffortDict, T2EffortStdDict = ReturnProcessData("T2", "Effort")
@@ -162,7 +162,7 @@ DrawRadarChart(
     FigureTitle="T2 Effort",
     Data=T2EffortDict,
     StdData=T2EffortStdDict,
-    yLimit=8,
+    yLimit=10,
 )
 
 T2DizzniessDict, T2DizzniessStdDict = ReturnProcessData("T2", "Dizziness")
@@ -170,5 +170,5 @@ DrawRadarChart(
     FigureTitle="T2 Dizzniess",
     Data=T2DizzniessDict,
     StdData=T2DizzniessStdDict,
-    yLimit=4,
+    yLimit=5,
 )

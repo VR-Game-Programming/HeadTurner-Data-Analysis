@@ -25,8 +25,10 @@ DirectionDict = {
 }
 Angles = ["HeadYaw", "HeadPitch", "TrunkYaw", "TrunkPitch"]
 
-Colors = ["#52B4B4", "#d7658b"]
-Colors_Alpha = ["#52B4B416", "#d7658b16"]
+Colors = [
+    ["#BECACA", "#AFC7C7", "#90C1C1", "#71BBBB", "#52B4B4"],
+    ["#C7BFC4", "#D0B3BD", "#D299AC", "#D7658B", "#D7658B"],
+]
 
 RangeRadarChartAngleLabels = {
     "LR": [
