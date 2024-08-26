@@ -76,7 +76,7 @@ def DrawRadarChart(
     Data,
     StdData,
     yLimit,
-    std=False,
+    std=True,
     annotate=False,
 ):
     plt.figure(figsize=(10, 10))
@@ -95,7 +95,7 @@ def DrawRadarChart(
     ax.yaxis.set_label_position("left")
     ax.set_rlabel_position(20)
     labels = np.arange(0, yLimit, yLimit / 4)
-    plt.yticks(labels, color="grey", size=10)
+    plt.yticks(labels, color="grey", size=0)
     plt.ylim(0, yLimit)
 
     # Plot the data
