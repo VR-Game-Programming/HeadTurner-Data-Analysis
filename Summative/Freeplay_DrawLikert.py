@@ -55,7 +55,12 @@ for i, condition in enumerate(Conditions):
             height=0.4,
             color=Colors[i][j],
         )
-        # axes[i].bar_label(rects, label_type="center")
+        for rect in rects:
+            x, y = rect.get_xy()
+            w, h = rect.get_width(), rect.get_height()
+            if (w == 0 or x == 0):
+                continue
+            axes[i].plot([x, x], [y + 0.01, y + h - 0.01], color='black', lw=1)
 
 axes[0].invert_xaxis()
 axes[0].set_yticks(range(len(Applications)))
@@ -114,7 +119,12 @@ for i, condition in enumerate(Conditions):
             height=0.4,
             color=Colors[i][j],
         )
-        # axes[i].bar_label(rects, label_type="center")
+        for rect in rects:
+            x, y = rect.get_xy()
+            w, h = rect.get_width(), rect.get_height()
+            if (w == 0 or x == 0):
+                continue
+            axes[i].plot([x, x], [y + 0.01, y + h - 0.01], color='black', lw=1)
 
 axes[0].invert_xaxis()
 axes[0].set_yticks(range(len(Applications) + 1))
