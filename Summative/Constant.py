@@ -6,10 +6,9 @@ Directions = ["Right", "Up", "Left", "Down"]
 Applications = ["Ecosphere", "Archery"]
 Points = list(range(1, 5 + 1))
 EcosphereClips = ["EcosphereBorneo", "EcosphereRajaAmpat"]
-Colors = ["#52B4B4", "#d7658b"]
-LikertColors = [
-    ["#e5f6ff", "#82cfff", "#33b1ff", "#0072c3", "#003a6d"],
-    ["#ffd7d9", "#ff8389", "#fa4d56", "#da1e28", "#750e13"],
+Colors = [
+    ["#BECACA", "#AFC7C7", "#90C1C1", "#71BBBB", "#52B4B4"],
+    ["#C7BFC4", "#D0B3BD", "#D299AC", "#D57F9C", "#D7658B"],
 ]
 
 RangeRadarChartAngleLabels = {

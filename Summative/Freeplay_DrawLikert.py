@@ -40,7 +40,7 @@ for i, condition in enumerate(Conditions):
     data = np.array(list(ComfortData[condition].values()))
     data_cum = data.cumsum(axis=1)
 
-    axes[i].set_title(condition, color=LikertColors[i][2])
+    axes[i].set_title(condition, color=Colors[i][2])
     axes[i].set_xlim(0, 14)
     axes[i].set_xticks([0, 2, 4, 6, 8, 10, 12, 14])
 
@@ -53,9 +53,14 @@ for i, condition in enumerate(Conditions):
             left=starts,
             align="center",
             height=0.4,
-            color=LikertColors[i][j],
+            color=Colors[i][j],
         )
-        # axes[i].bar_label(rects, label_type="center")
+        for rect in rects:
+            x, y = rect.get_xy()
+            w, h = rect.get_width(), rect.get_height()
+            if (w == 0 or x == 0):
+                continue
+            axes[i].plot([x, x], [y + 0.01, y + h - 0.01], color='black', lw=1)
 
 axes[0].invert_xaxis()
 axes[0].set_yticks(range(len(Applications)))
@@ -71,7 +76,7 @@ figurepath = f"{RootDir}/Result Figure/Summative Freeplay Comfort [BarH].png"
 plt.savefig(figurepath, transparent=False)
 plt.close()
 
-print(f"Figure saved to {figurepath}\n")
+print(f"Figure saved to {ColorText(figurepath, "green")}\n")
 
 # Get Preference Data
 PreferenceData = dict()
@@ -87,7 +92,7 @@ for app in Applications:
             int(row[f"{app}-{"Preference"}-2"]) - 1
         ] += 1
 for i, row in df.iterrows():
-    PreferenceData[row["OverallPreference"]]["Overall"][2] += 1
+    PreferenceData[row["OverallPreference"]]["Overall"][4] += 1
 
 print(PreferenceData)
 
@@ -99,7 +104,7 @@ for i, condition in enumerate(Conditions):
     data = np.array(list(PreferenceData[condition].values()))
     data_cum = data.cumsum(axis=1)
 
-    axes[i].set_title(condition, color=LikertColors[i][2])
+    axes[i].set_title(condition, color=Colors[i][2])
     axes[i].set_xlim(0, 14)
     axes[i].set_xticks([0, 2, 4, 6, 8, 10, 12, 14])
 
@@ -112,9 +117,14 @@ for i, condition in enumerate(Conditions):
             left=starts,
             align="center",
             height=0.4,
-            color=LikertColors[i][j],
+            color=Colors[i][j],
         )
-        # axes[i].bar_label(rects, label_type="center")
+        for rect in rects:
+            x, y = rect.get_xy()
+            w, h = rect.get_width(), rect.get_height()
+            if (w == 0 or x == 0):
+                continue
+            axes[i].plot([x, x], [y + 0.01, y + h - 0.01], color='black', lw=1)
 
 axes[0].invert_xaxis()
 axes[0].set_yticks(range(len(Applications) + 1))
@@ -130,4 +140,4 @@ figurepath = f"{RootDir}/Result Figure/Summative Freeplay Preference [BarH].png"
 plt.savefig(figurepath, transparent=False)
 plt.close()
 
-print(f"Figure saved to {figurepath}\n")
+print(f"Figure saved to {ColorText(figurepath, "green")}\n")

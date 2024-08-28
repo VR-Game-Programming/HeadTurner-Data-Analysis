@@ -46,17 +46,17 @@ for p in Postures:
     data[p] = list()
     std_data[p] = list()
     for d in Directions_num:
-        col_name = p + " - " + d
+        col_name = "Task2 - " + p + " - " + d
         scores = df[col_name].to_list()
         data[p].append(stat.fmean(scores))
         std_data[p].append(stat.stdev(scores))
 
-with open("Result Processed/" + "T2_Result.csv", "w", newline="") as csvfile:
-    writer = csv.writer(csvfile)
-    writer.writerow(["Posture", "Direction", "Mean", "Std"])
-    for p in Postures:
-        for idx, d in enumerate(Directions):
-            writer.writerow([p, d, data[p][idx], std_data[p][idx]])
+# with open("Result Processed/" + "T2_Result.csv", "w", newline="") as csvfile:
+#     writer = csv.writer(csvfile)
+#     writer.writerow(["Posture", "Direction", "Mean", "Std"])
+#     for p in Postures:
+#         for idx, d in enumerate(Directions):
+#             writer.writerow([p, d, data[p][idx], std_data[p][idx]])
 
 # Draw Figure
 # =================================================================
@@ -70,7 +70,7 @@ bars1 = ax.bar(
     x - width / 2,
     data["Standing"],
     width,
-    color=Colors["Standing"][1],
+    color=Colors[0][4],
     label="Standing",
     yerr=std_data["Standing"],
     capsize=3,
@@ -79,7 +79,7 @@ bars2 = ax.bar(
     x + width / 2,
     data["Lying"],
     width,
-    color=Colors["Lying"][1],
+    color=Colors[1][4],
     label="Lying",
     yerr=std_data["Lying"],
     capsize=3,
@@ -95,7 +95,7 @@ ax.set_xticks(x)
 ax.set_xticklabels(Directions)
 ax.legend()
 
-plt.savefig("Result Figure/" + "T2_EffortScores.png", transparent=False)
+plt.savefig(f"{RootDir}/Result Figure/T2_EffortScores.png", transparent=False)
 plt.close()
 
 
