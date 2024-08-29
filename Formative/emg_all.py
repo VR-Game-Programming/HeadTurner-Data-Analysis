@@ -1,6 +1,8 @@
 import json
 import numpy as np
 import matplotlib.pyplot as plt
+from emg_single import get_result
+from Constant import Colors, Directions, Postures
 from Formative.emg_single import get_result
 from Constant import Directions, Postures
 import csv
@@ -16,7 +18,7 @@ mcl_result = {}
 
 for participant_number in range(1, TOTAL_PARTICIPANTS+1):
     for posture in ['Lying', 'Standing']:
-        mcl = get_result(participant_number, posture, create_fig=True)
+        mcl = get_result(participant_number, posture, create_fig=False)
         results[posture] = [sum(x) for x in zip(results[posture], mcl)]
         if participant_number not in mcl_result:
             mcl_result[participant_number] = {}
@@ -67,24 +69,24 @@ x = np.arange(len(Directions))
 width = 0.35  # 長條的寬度
 
 # 繪製長條圖
-fig, ax = plt.subplots()
+fig, ax = plt.subplots(figsize=(15, 10))
 bars1 = ax.bar(
     x - width / 2,
     average[Postures[0]],
     width,
-    alpha=0.5,
     label=Postures[0],
     yerr=standard_deviation[Postures[0]],
     capsize=3,
+    color=Colors["Standing"][1],
 )
 bars2 = ax.bar(
     x + width / 2,
     average[Postures[1]],
     width,
-    alpha=0.5,
     label=Postures[1],
     yerr=standard_deviation[Postures[1]],
     capsize=3,
+    color=Colors["Lying"][1],
 )
 
 # 添加一些文本標籤

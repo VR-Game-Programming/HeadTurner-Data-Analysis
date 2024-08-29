@@ -51,8 +51,10 @@ def ReturnProcessData(task, metrics):
     for condition in Conditions:
         StdDict[condition] = dict()
         for direction in Directions:
-            StdDict[condition][direction] = stat.stdev(DataDict[condition][direction])
-            DataDict[condition][direction] = stat.fmean(DataDict[condition][direction])
+            StdDict[condition][direction] = stat.stdev(
+                DataDict[condition][direction])
+            DataDict[condition][direction] = stat.fmean(
+                DataDict[condition][direction])
 
     filepath = f"{RootDir}/Processed Data/Summative_{task}_{metrics}.csv"
     with open(filepath, "w", newline="") as csvfile:
@@ -70,6 +72,7 @@ def ReturnProcessData(task, metrics):
                 )
 
     return DataDict, StdDict
+
 
 def DrawRadarChart(
     FigureTitle,
