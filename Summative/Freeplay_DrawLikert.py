@@ -36,11 +36,11 @@ print(ComfortData)
 fig, axes = plt.subplots(figsize=(12, 4), ncols=2, sharey=True)
 fig.tight_layout()
 
-for i, condition in enumerate(Conditions):
+for i, condition in enumerate(reversed(Conditions)):
     data = np.array(list(ComfortData[condition].values()))
     data_cum = data.cumsum(axis=1)
 
-    axes[i].set_title(condition, color=Colors[i][2])
+    axes[i].set_title(condition, color=Colors[(i+1)%2][4])
     axes[i].set_xlim(0, 14)
     axes[i].set_xticks([0, 2, 4, 6, 8, 10, 12, 14])
 
@@ -53,7 +53,7 @@ for i, condition in enumerate(Conditions):
             left=starts,
             align="center",
             height=0.4,
-            color=Colors[i][j],
+            color=Colors[(i+1)%2][j],
         )
         for rect in rects:
             x, y = rect.get_xy()
@@ -100,11 +100,11 @@ print(PreferenceData)
 fig, axes = plt.subplots(figsize=(12, 4), ncols=2, sharey=True)
 fig.tight_layout()
 
-for i, condition in enumerate(Conditions):
+for i, condition in enumerate(reversed(Conditions)):
     data = np.array(list(PreferenceData[condition].values()))
     data_cum = data.cumsum(axis=1)
 
-    axes[i].set_title(condition, color=Colors[i][2])
+    axes[i].set_title(condition, color=Colors[(i+1)%2][4])
     axes[i].set_xlim(0, 14)
     axes[i].set_xticks([0, 2, 4, 6, 8, 10, 12, 14])
 
@@ -117,7 +117,7 @@ for i, condition in enumerate(Conditions):
             left=starts,
             align="center",
             height=0.4,
-            color=Colors[i][j],
+            color=Colors[(i+1)%2][j],
         )
         for rect in rects:
             x, y = rect.get_xy()

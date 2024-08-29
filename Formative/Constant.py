@@ -1,7 +1,7 @@
 RootDir = "./Formative"
 
 Participants = list(range(1, 16 + 1))
-Postures = ["Lying", "Standing"]
+Postures = ["Standing", "Lying"]
 Directions_num = ["0", "45", "90", "135", "180", "225", "270", "315"]
 Directions = [
     "Right",

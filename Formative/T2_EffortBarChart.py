@@ -67,21 +67,21 @@ fig, ax = plt.subplots(figsize=(15, 10))
 # Draw
 fig, ax = plt.subplots(figsize=(15, 10))
 ax.bar(
-    x - width / 2,
-    data["Lying"],
-    width,
-    color=Colors[0][4],
-    label="Lying",
-    yerr=std_data["Lying"],
-    capsize=3,
-)
-ax.bar(
     x + width / 2,
     data["Standing"],
     width,
-    color=Colors[1][4],
+    color=Colors[0][4],
     label="Standing",
     yerr=std_data["Standing"],
+    capsize=3,
+)
+ax.bar(
+    x - width / 2,
+    data["Lying"],
+    width,
+    color=Colors[1][4],
+    label="Lying",
+    yerr=std_data["Lying"],
     capsize=3,
 )
 

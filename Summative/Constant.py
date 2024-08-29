@@ -1,7 +1,7 @@
 RootDir = "./Summative"
 
 Participants = list(range(1, 16 + 1))
-Conditions = ["NormalBed", "ActuatedBed"]
+Conditions = ["ActuatedBed", "NormalBed"]
 Directions = ["Right", "Up", "Left", "Down"]
 Applications = ["Ecosphere", "Archery"]
 Points = list(range(1, 5 + 1))
