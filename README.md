@@ -19,6 +19,8 @@
 
 [不同姿勢和方向上 maximum trunk range 的(受試者)平均和標準差](/Formative/Result%20Processed/O3_MaxTrunkRotation.csv)
 
+[不同方向上，姿勢之間的 maximum head range 的 Wilcoxon signed-rank test 結果](Formative/Result%20Processed/O3_pValue_Result.txt)
+
 # Summative
 ## Formative-Metric Task 1
 [不同方向和情境上的 maximum head rotation range 的(受試者)平均和標準差](/Summative/Processed%20Data/Summative_T1_HeadMaximumRange.csv)
