@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import statistics as stat
 import csv
+from scipy.stats import wilcoxon
 from math import pi
 from Constant import *
 
@@ -41,14 +42,17 @@ df = df.drop(index=0)
 
 # Initialize Data
 data = dict()
+avg_data = dict()
 std_data = dict()
 for p in Postures:
-    data[p] = list()
+    data[p] = dict()
+    avg_data[p] = list()
     std_data[p] = list()
     for d in Directions_num:
         col_name = "Task2 - " + p + " - " + d
         scores = df[col_name].to_list()
-        data[p].append(stat.fmean(scores))
+        data[p][d] = scores
+        avg_data[p].append(stat.fmean(scores))
         std_data[p].append(stat.stdev(scores))
 
 # with open("Result Processed/" + "T2_Result.csv", "w", newline="") as csvfile:
@@ -57,6 +61,23 @@ for p in Postures:
 #     for p in Postures:
 #         for idx, d in enumerate(Directions):
 #             writer.writerow([p, d, data[p][idx], std_data[p][idx]])
+
+# Data Analysis
+with open(f"{RootDir}/Result Processed/T2_pValue_Result.txt", "w") as text_file:
+    for d in Directions_num:
+        print(f"For Direction {d}", file=text_file)
+        print(
+            "=================================================================",
+            file=text_file,
+        )
+        print("Standing:", file=text_file)
+        print(data["Standing"][d], file=text_file)
+        print("Lying:", file=text_file)
+        print(data["Lying"][d], file=text_file)
+        print(
+            wilcoxon(data["Standing"][d], data["Lying"][d]), file=text_file
+        )
+        print("\n", file=text_file)
 
 
 # Draw Figure
@@ -69,7 +90,7 @@ def DrawEffortBarChart():
     fig, ax = plt.subplots(figsize=(15, 10))
     ax.bar(
         x - width / 2,
-        data["Standing"],
+        avg_data["Standing"],
         width,
         color=Colors[0][4],
         label="Standing",
@@ -78,7 +99,7 @@ def DrawEffortBarChart():
     )
     ax.bar(
         x + width / 2,
-        data["Lying"],
+        avg_data["Lying"],
         width,
         color=Colors[1][4],
         label="Lying",
@@ -129,7 +150,7 @@ def DrawEffortRadarChart(
 
     # Plot the data
     for i, group in enumerate(Postures):
-        values = data[group]
+        values = avg_data[group]
         values += values[:1]
         if std:
             std_values = list(std_data[group])
@@ -177,5 +198,5 @@ def DrawEffortRadarChart(
     plt.close()
     print(f"Figure saved to {ColorText(figurepath, "green")}\n")
 
-DrawEffortBarChart()
-DrawEffortRadarChart()
+# DrawEffortBarChart()
+# DrawEffortRadarChart()
