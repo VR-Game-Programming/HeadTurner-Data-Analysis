@@ -17,7 +17,7 @@
 [以 Standing 向上 為基準，以 GLMM 分析 effort 的結果](/Formative/Result%20Processed/T2_Model_Summary.txt)  
 小結: **lying 比 standing 少了 1.750 單位的 effort (p < 0.001)**
 
-[不同姿勢和方向上 maximum trunk range 的(受試者)平均和標準差](/Formative/Result Processed/O3_MaxTrunkRotation.csv)
+[不同姿勢和方向上 maximum trunk range 的(受試者)平均和標準差](/Formative/Result%20Processed/O3_MaxTrunkRotation.csv)
 
 # Summative
 ## Formative-Metric Task 1
