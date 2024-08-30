@@ -1,8 +1,8 @@
 Application: Ecosphere
-Comfort: t = 1.4999999999999998, p = 0.20799999999999982
-Preference: t = 1.4855627054164147, p = 0.21157899460007396
+Comfort: t = 27.0, p = 0.033538818359375
+Preference: t = 28.5, p = 0.0443115234375
 
 Application: Archery
-Comfort: t = 0.7844645405527361, p = 0.47662066727284136
-Preference: t = 0.0, p = 1.0
+Comfort: t = 61.5, p = 0.781951904296875
+Preference: t = 66.0, p = 0.93988037109375
 

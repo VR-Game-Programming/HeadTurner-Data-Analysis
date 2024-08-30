@@ -2,7 +2,7 @@ import pygsheets
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.stats import ttest_rel
+from scipy.stats import wilcoxon
 from Constant import *
 
 # Get dataframe from Google Sheet
@@ -20,18 +20,26 @@ df = wks.get_as_df()
 df = df.loc[df["受試者編號"] > 0]
 
 # Get Comfort Data
+RawComfortData = dict()
 ComfortData = dict()
 for condition in Conditions:
     ComfortData[condition] = dict()
     for app in Applications:
+        RawComfortData[app] = list()
         ComfortData[condition][app] = [0] * len(Points)
 for app in Applications:
     for i, row in df.iterrows():
+        align = row[f"{app}-{"Comfort"}-1"]
+        if align == "NormalBed":
+            value = -int(row[f"{app}-{"Comfort"}-2"])
+        elif align == "ActuatedBed":
+            value = int(row[f"{app}-{"Comfort"}-2"])
+        RawComfortData[app].append(
+            value
+        )
         ComfortData[row[f"{app}-{"Comfort"}-1"]][app][
             int(row[f"{app}-{"Comfort"}-2"]) - 1
         ] += 1
-
-print(ComfortData)
 
 # Draw Comfort Figure
 def DrawComfortFig():
@@ -81,22 +89,29 @@ def DrawComfortFig():
     print(f"Figure saved to {ColorText(figurepath, "green")}\n")
 
 # Get Preference Data
+RawPreferenceData = dict()
 PreferenceData = dict()
 for condition in Conditions:
     PreferenceData[condition] = dict()
     PreferenceData[condition]["Overall"] = [0] * len(Points)
     for app in Applications:
+        RawPreferenceData[app] = list()
         PreferenceData[condition][app] = [0] * len(Points)
 
 for app in Applications:
     for i, row in df.iterrows():
+        align = row[f"{app}-{"Preference"}-1"]
+        if align == "NormalBed":
+            value = -int(row[f"{app}-{"Preference"}-2"])
+        elif align == "ActuatedBed":
+            value = int(row[f"{app}-{"Preference"}-2"])
+        RawPreferenceData[app].append(value)
         PreferenceData[row[f"{app}-{"Preference"}-1"]][app][
             int(row[f"{app}-{"Preference"}-2"]) - 1
         ] += 1
 for i, row in df.iterrows():
     PreferenceData[row["OverallPreference"]]["Overall"][4] += 1
 
-print(PreferenceData)
 
 # Draw Preference Figure
 def DrawPreferenceFig():
@@ -150,9 +165,9 @@ def TTestAnalysis():
     with open(f"{RootDir}/Processed Data/Summative_Freeplay_Likert_pval.txt", "w") as file:
         for app in Applications:
             file.write(f"Application: {app}\n")
-            t, p = ttest_rel(ComfortData["ActuatedBed"][app], ComfortData["NormalBed"][app])
+            t, p = wilcoxon(RawComfortData[app])
             file.write(f"Comfort: t = {t}, p = {p}\n")
-            t, p = ttest_rel(PreferenceData["ActuatedBed"][app], PreferenceData["NormalBed"][app])
+            t, p = wilcoxon(RawPreferenceData[app])
             file.write(f"Preference: t = {t}, p = {p}\n")
             file.write("\n")
 
