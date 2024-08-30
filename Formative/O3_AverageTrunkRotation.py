@@ -1,10 +1,9 @@
 import pandas as pd
 import statistics as stat
 import csv
-from scipy.stats import ttest_rel, wilcoxon
+from scipy.stats import wilcoxon
 import matplotlib.pyplot as plt
 from Constant import *
-
 
 max_trunk_dict = dict()
 for pos in Postures:
@@ -26,9 +25,7 @@ def FindMaximumValue(data_list):
 # Calculate mean of maximum trunk rotation in 3 tasks
 for i in Participants:
     for pos in Postures:
-        filepath = (
-            "Result Raw (ReCalculate)/O3_Final/" + f"Formative_O3_P{i}_{pos}_Final.csv"
-        )
+        filepath = f"{RootDir}/Result Raw (ReCalculate)/O3_Final/Formative_O3_P{i}_{pos}_Final.csv"
         df = pd.read_csv(filepath)
 
         for dir in Directions:
@@ -60,7 +57,9 @@ for pos in Postures:
             max_trunk_dict[pos][dir][ang] = stat.fmean(max_trunk_dict[pos][dir][ang])
 
 # Write to CSV
-with open("Result Processed/O3_MaxTrunkRotation.csv", "w", newline="") as csvfile:
+with open(
+    f"{RootDir}/Result Processed/O3_MaxTrunkRotation.csv", "w", newline=""
+) as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(["Type", "Direction", "Posture", "TrunkRotation"])
     for ang in ["TrunkYaw", "TrunkPitch"]:
