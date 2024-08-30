@@ -2,12 +2,12 @@
 
 # Formative
 ## Task 1
-[不同姿勢和方向上 maximum viewing range 的(受試者)平均和標準差](/Formative/Result%20Processed/T1_Result.csv)
+[不同姿勢和方向上 maximum head range 的(受試者)平均和標準差](/Formative/Result%20Processed/T1_Result.csv)
 
-[不同方向上，姿勢之間的 maximum viewing range 的 Wilcoxon signed-rank test 結果](/Formative/Result%20Processed/T1_pValue_Result.txt)  
+[不同方向上，姿勢之間的 maximum head range 的 Wilcoxon signed-rank test 結果](/Formative/Result%20Processed/T1_pValue_Result.txt)  
 小結: **每個方向都是 p < 0.001**
 
-[以 Standing 向上 為基準，以 GLMM 分析 maximum viewing range 的結果](/Formative/Result%20Processed/T1_Model_Summary.txt)  
+[以 Standing 向上 為基準，以 GLMM 分析 maximum head range 的結果](/Formative/Result%20Processed/T1_Model_Summary.txt)  
 小結: **lying 比 standing 少了 58.777 單位的 range (p < 0.001)**
 
 
@@ -16,6 +16,8 @@
 
 [以 Standing 向上 為基準，以 GLMM 分析 effort 的結果](/Formative/Result%20Processed/T2_Model_Summary.txt)  
 小結: **lying 比 standing 少了 1.750 單位的 effort (p < 0.001)**
+
+[不同姿勢和方向上 maximum trunk range 的(受試者)平均和標準差](/Formative/Result Processed/O3_MaxTrunkRotation.csv)
 
 # Summative
 ## Formative-Metric Task 1
