@@ -23,8 +23,11 @@ def ReadRawRsult():
         for direction in Directions:
             DataDict[part][direction] = dict()
             for condition in Conditions:
-                DataDict[part][direction][condition] = list()
+                DataDict[part][direction][condition] = dict()
+                for participant in Participants:
+                    DataDict[part][direction][condition][participant] = -1
 
+    outlierList = list()
     for participant in Participants:
         if participant == 10:
             continue
@@ -40,16 +43,50 @@ def ReadRawRsult():
                     headRangeList.append(abs(float(row["MaxViewingRange"])))
                     bodyRangeList.append(abs(float(row["MaxBodyRange"])))
                     if tcount == 3:
-                        DataDict["Head"][direction][condition].append(
-                            CalculateAvgAngle(headRangeList, 10)
-                        )
-                        DataDict["Body"][direction][condition].append(
-                            CalculateAvgAngle(bodyRangeList, 0)
-                        )
+                        haed_avg = CalculateAvgAngle(headRangeList, 10)
+                        if (haed_avg == 0):
+                            outlierList.append(f"Head_{participant}_{direction}")
+                        DataDict["Head"][direction][condition][participant] = haed_avg
+
+                        body_avg = CalculateAvgAngle(bodyRangeList, 0)
+                        if (body_avg == 0):
+                            outlierList.append(f"Body_{participant}_{direction}")
+                        DataDict["Body"][direction][condition][participant] = body_avg
+
                         headRangeList = list()
                         bodyRangeList = list()
 
+    return DataDict, outlierList
+
+def RemoveOutlier(DataDict, outlierList):
+    # Remove outlier
+    for outlier in outlierList:
+        part, participant, direction = outlier.split("_")
+        print(part, participant, direction)
+        for condition in Conditions:
+            DataDict[part][direction][condition][int(participant)] = -1
+
+    for part in ["Head", "Body"]:
+        for direction in Directions:
+            for condition in Conditions:
+                tmp_list = list()
+                for value in list(DataDict[part][direction][condition].values()):
+                    if value != -1:
+                        tmp_list.append(value)
+                DataDict[part][direction][condition] = tmp_list
+
     return DataDict
+
+def PrintDataDict2CSV(DataDict):
+    for part in ["Head", "Body"]:
+        filepath = f"{RootDir}/Processed Data/Summative_T1_{part}MaximumRange_Raw.csv"
+        with open(filepath, "w", newline="") as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(["Direction", "Condition", "Range"])
+            for direction in Directions:
+                for condition in Conditions:
+                    for value in DataDict[part][direction][condition]:
+                        writer.writerow([direction, condition, value])
 
 def CalculatePval(DataDict):
     for part in ["Head", "Body"]:
@@ -177,7 +214,9 @@ def DrawAllFigure(DataDict):
     )
 
 # Main
-DataDict = ReadRawRsult()
+DataDict, outlierList = ReadRawRsult()
+DataDict = RemoveOutlier(DataDict, outlierList)
+PrintDataDict2CSV(DataDict)
 CalculatePval(DataDict)
 AvgDict, StdDict = CalculateAVGSTD(DataDict)
 DrawAllFigure(AvgDict)
