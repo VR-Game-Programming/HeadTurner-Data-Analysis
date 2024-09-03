@@ -82,11 +82,10 @@ def PrintDataDict2CSV(DataDict):
         filepath = f"{RootDir}/Processed Data/Summative_T1_{part}MaximumRange_Raw.csv"
         with open(filepath, "w", newline="") as csvfile:
             writer = csv.writer(csvfile)
-            writer.writerow(["Direction", "Condition", "Range"])
+            writer.writerow(["Direction", "Participant", "NormalBedRange", "ActuatedBedRange"])
             for direction in Directions:
-                for condition in Conditions:
-                    for value in DataDict[part][direction][condition]:
-                        writer.writerow([direction, condition, value])
+                for participant in Participants:
+                    writer.writerow([direction, participant, DataDict[part][direction]["NormalBed"][participant], DataDict[part][direction]["ActuatedBed"][participant]])
 
 def CalculatePval(DataDict):
     for part in ["Head", "Body"]:
@@ -215,8 +214,8 @@ def DrawAllFigure(DataDict):
 
 # Main
 DataDict, outlierList = ReadRawRsult()
-DataDict = RemoveOutlier(DataDict, outlierList)
 PrintDataDict2CSV(DataDict)
-CalculatePval(DataDict)
-AvgDict, StdDict = CalculateAVGSTD(DataDict)
-DrawAllFigure(AvgDict)
+# DataDict = RemoveOutlier(DataDict, outlierList)
+# CalculatePval(DataDict)
+# AvgDict, StdDict = CalculateAVGSTD(DataDict)
+# DrawAllFigure(AvgDict)
