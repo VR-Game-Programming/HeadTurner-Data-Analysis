@@ -48,11 +48,11 @@ def Get_Degree(dir):
 
 with open(f"{RootDir}/Result Processed/O3_AverageTime.csv", "w", newline="") as csvfile:
     writer = csv.writer(csvfile)
-    writer.writerow(["Posture", "Direction", "TaskTime", "TaskTime/degree"])
+    writer.writerow(["Posture", "Direction", "TaskTime", "Degree/Second"])
 
     for pos in Postures:
         for dir in Directions:
             task_time_dict[pos][dir] = Remove_Outlier(task_time_dict[pos][dir])
             task_time = stat.fmean(task_time_dict[pos][dir])
-            task_time_degree = task_time / Get_Degree(dir)
-            writer.writerow([pos, dir, task_time, task_time_degree])
+            degree_sec = Get_Degree(dir) / task_time
+            writer.writerow([pos, dir, task_time, degree_sec])
