@@ -1,0 +1,1121 @@
+2024-11-22 20:17:01.488431
+TASK1 RANGE START   MaxViewingRange
+     INFO                check [67.15463, 63.33971, 65.54333] @ P1 ActuatedBed Right
+     INFO                check [38.12593, 0.4370072, 35.33601] @ P1 ActuatedBed Up
+     EXCEED THRESHOLD    0.4370072 
+     INFO                check [65.67265, 65.33836, 70.04796] @ P1 ActuatedBed Left
+     INFO                check [58.61547, 56.64251, 54.43939] @ P1 ActuatedBed Down
+     INFO                check [77.86182, 73.74077, 70.86896] @ P1 NormalBed Right
+     INFO                check [59.28375, 40.87795, 44.2332] @ P1 NormalBed Up
+     OUTLIER             59.28375  
+     INFO                check [60.64087, 64.40167, 61.92882] @ P1 NormalBed Left
+     INFO                check [55.02459, 54.67641, 49.38008] @ P1 NormalBed Down
+     OUTLIER             49.38008  
+     INFO                check [69.50677, 80.52837, 73.50095] @ P2 ActuatedBed Left
+     OUTLIER             80.52837  
+     INFO                check [42.74792, 38.50052, 38.65511] @ P2 ActuatedBed Down
+     INFO                check [61.93163, 61.32144, 66.58101] @ P2 ActuatedBed Right
+     INFO                check [30.46254, 31.61752, 30.18572] @ P2 ActuatedBed Up
+     INFO                check [63.58891, 74.69035, 64.24626] @ P2 NormalBed Left
+     OUTLIER             74.69035  
+     INFO                check [31.38276, 28.31743, 23.16925] @ P2 NormalBed Down
+     OUTLIER             23.16925  
+     INFO                check [67.50972, 69.96882, 72.00175] @ P2 NormalBed Right
+     INFO                check [52.76004, 49.2309, 50.29265] @ P2 NormalBed Up
+     INFO                check [86.02251, 92.3515, 88.97606] @ P3 ActuatedBed Left
+     INFO                check [73.70825, 58.86172, 51.55622] @ P3 ActuatedBed Down
+     OUTLIER             73.70825  
+     OUTLIER             51.55622  
+     INFO                check [100.1281, 93.53325, 100.5139] @ P3 ActuatedBed Right
+     OUTLIER             93.53325  
+     INFO                check [57.83629, 49.84002, 52.3951] @ P3 ActuatedBed Up
+     OUTLIER             57.83629  
+     INFO                check [53.26811, 48.94985, 50.24303] @ P3 NormalBed Left
+     INFO                check [35.8447, 35.27755, 39.95703] @ P3 NormalBed Down
+     INFO                check [62.12046, 58.68949, 62.00852] @ P3 NormalBed Right
+     INFO                check [32.94743, 32.53005, 32.54552] @ P3 NormalBed Up
+     INFO                check [26.60706, 27.25171, 26.86964] @ P4 ActuatedBed Down
+     INFO                check [67.86015, 73.73125, 73.6021] @ P4 ActuatedBed Right
+     OUTLIER             67.86015  
+     INFO                check [41.90932, 44.00079, 35.99597] @ P4 ActuatedBed Up
+     OUTLIER             35.99597  
+     INFO                check [70.7422, 77.80106, 64.48997] @ P4 ActuatedBed Left
+     OUTLIER             77.80106  
+     INFO                check [0.1027921, 10.46952, 0.02797646] @ P4 NormalBed Down
+     EXCEED THRESHOLD    0.1027921 
+     EXCEED THRESHOLD    0.02797646
+     INFO                check [2.194013, 0.6333472, 1.096108] @ P4 NormalBed Right
+     EXCEED THRESHOLD    2.194013  
+     EXCEED THRESHOLD    0.6333472 
+     EXCEED THRESHOLD    1.096108  
+     INFO                check [30.70033, 26.92213, 28.95728] @ P4 NormalBed Up
+     INFO                check [45.82481, 42.88304, 43.17631] @ P4 NormalBed Left
+     INFO                check [95.28233, 97.99944, 97.43707] @ P5 ActuatedBed Left
+     INFO                check [66.98963, 63.02348, 65.84016] @ P5 ActuatedBed Down
+     INFO                check [103.6648, 104.0909, 104.7479] @ P5 ActuatedBed Right
+     INFO                check [56.52991, 56.30579, 57.53695] @ P5 ActuatedBed Up
+     INFO                check [86.10739, 81.71141, 0.3077414] @ P5 NormalBed Left
+     EXCEED THRESHOLD    0.3077414 
+     INFO                check [73.69415, 77.19357, 80.30869] @ P5 NormalBed Down
+     INFO                check [103.326, 111.8032, 113.5364] @ P5 NormalBed Right
+     OUTLIER             103.326   
+     INFO                check [56.7636, 54.79511, 54.73999] @ P5 NormalBed Up
+     INFO                check [72.21165, 75.03124, 81.71967] @ P6 ActuatedBed Right
+     OUTLIER             81.71967  
+     INFO                check [37.93076, 37.8707, 38.93587] @ P6 ActuatedBed Up
+     INFO                check [76.85213, 77.26392, 79.52841] @ P6 ActuatedBed Left
+     INFO                check [34.84738, 38.91475, 43.32566] @ P6 ActuatedBed Down
+     INFO                check [52.06699, 66.44498, 66.94048] @ P6 NormalBed Right
+     OUTLIER             52.06699  
+     INFO                check [31.82265, 34.31732, 37.5291] @ P6 NormalBed Up
+     INFO                check [59.81091, 65.54558, 65.999] @ P6 NormalBed Left
+     OUTLIER             59.81091  
+     INFO                check [39.83375, 42.88535, 43.82126] @ P6 NormalBed Down
+     INFO                check [55.01288, 55.09479, 54.64557] @ P7 ActuatedBed Up
+     INFO                check [109.3884, 127.3355, 136.3205] @ P7 ActuatedBed Left
+     OUTLIER             109.3884  
+     OUTLIER             136.3205  
+     INFO                check [88.07529, 0.9211111, 78.61578] @ P7 ActuatedBed Down
+     EXCEED THRESHOLD    0.9211111 
+     INFO                check [2.250815, 79.22501, 104.3644] @ P7 ActuatedBed Right
+     EXCEED THRESHOLD    2.250815  
+     OUTLIER             79.22501  
+     INFO                check [45.70806, 41.35776, 40.11411] @ P7 NormalBed Up
+     INFO                check [79.58192, 98.26536, 101.2393] @ P7 NormalBed Left
+     OUTLIER             79.58192  
+     INFO                check [93.54655, 96.73154, 94.1368] @ P7 NormalBed Down
+     INFO                check [89.04822, 79.78656, 73.72816] @ P7 NormalBed Right
+     OUTLIER             89.04822  
+     OUTLIER             73.72816  
+     INFO                check [31.52925, 30.94884, 32.22225] @ P8 ActuatedBed Up
+     INFO                check [69.15466, 71.07555, 73.31598] @ P8 ActuatedBed Left
+     INFO                check [40.04726, 41.82684, 40.299] @ P8 ActuatedBed Down
+     INFO                check [73.95261, 83.97276, 82.68122] @ P8 ActuatedBed Right
+     OUTLIER             73.95261  
+     INFO                check [33.04906, 28.86272, 24.12515] @ P8 NormalBed Up
+     INFO                check [54.27989, 59.02184, 57.77613] @ P8 NormalBed Left
+     INFO                check [35.62993, 42.70719, 46.05214] @ P8 NormalBed Down
+     OUTLIER             35.62993  
+     INFO                check [63.53133, 60.46896, 64.36417] @ P8 NormalBed Right
+     INFO                check [70.75744, 66.19108, 72.82951] @ P9 ActuatedBed Right
+     INFO                check [77.23244, 74.58321, 77.2193] @ P9 ActuatedBed Up
+     INFO                check [92.80944, 98.70844, 98.78168] @ P9 ActuatedBed Left
+     OUTLIER             92.80944  
+     INFO                check [51.04903, 39.98651, 41.83184] @ P9 ActuatedBed Down
+     OUTLIER             51.04903  
+     INFO                check [68.69061, 72.88403, 75.49406] @ P9 NormalBed Right
+     INFO                check [72.46621, 71.47477, 63.98969] @ P9 NormalBed Up
+     OUTLIER             63.98969  
+     INFO                check [77.00688, 80.2496, 79.37399] @ P9 NormalBed Left
+     INFO                check [26.0885, 26.04434, 27.33733] @ P9 NormalBed Down
+     INFO                check [17.44433, 15.99428, 15.82558] @ P10 ActuatedBed Up
+     INFO                check [30.56559, 31.62636, 29.93485] @ P10 ActuatedBed Left
+     INFO                check [13.66436, 11.28797, 11.42732] @ P10 ActuatedBed Down
+     INFO                check [1.737425, 29.27747, 31.95487] @ P10 ActuatedBed Right
+     EXCEED THRESHOLD    1.737425  
+     INFO                check [14.82215, 14.70946, 13.90071] @ P10 NormalBed Up
+     INFO                check [19.18365, 15.44696, 16.72837] @ P10 NormalBed Left
+     INFO                check [9.828494, 9.221642, 8.824833] @ P10 NormalBed Down
+     INFO                check [19.69861, 19.39977, 18.16608] @ P10 NormalBed Right
+     INFO                check [37.2677, 34.6346, 38.96029] @ P11 ActuatedBed Down
+     INFO                check [74.04941, 66.94327, 72.82722] @ P11 ActuatedBed Right
+     OUTLIER             66.94327  
+     INFO                check [17.9793, 26.48051, 26.57225] @ P11 ActuatedBed Up
+     OUTLIER             17.9793   
+     INFO                check [55.3713, 54.5404, 56.94178] @ P11 ActuatedBed Left
+     INFO                check [28.95368, 23.03779, 25.92726] @ P11 NormalBed Down
+     INFO                check [82.88313, 87.55749, 66.45778] @ P11 NormalBed Right
+     OUTLIER             66.45778  
+     INFO                check [43.86096, 38.06157, 37.48082] @ P11 NormalBed Up
+     OUTLIER             43.86096  
+     INFO                check [52.61197, 50.79478, 47.91768] @ P11 NormalBed Left
+     INFO                check [93.80816, 97.34253, 93.34414] @ P12 ActuatedBed Left
+     INFO                check [66.12886, 1.29875, 55.78009] @ P12 ActuatedBed Down
+     EXCEED THRESHOLD    1.29875   
+     OUTLIER             66.12886  
+     INFO                check [112.8995, 121.9889, 121.2496] @ P12 ActuatedBed Right
+     OUTLIER             112.8995  
+     INFO                check [35.52865, 30.49272, 0.7793398] @ P12 ActuatedBed Up
+     EXCEED THRESHOLD    0.7793398 
+     INFO                check [72.71082, 67.62531, 71.40416] @ P12 NormalBed Left
+     INFO                check [70.0448, 62.27541, 66.62747] @ P12 NormalBed Down
+     INFO                check [73.1366, 59.10252, 62.68239] @ P12 NormalBed Right
+     OUTLIER             73.1366   
+     INFO                check [59.86645, 44.1062, 40.82655] @ P12 NormalBed Up
+     OUTLIER             59.86645  
+     INFO                check [66.43977, 81.94058, 81.83568] @ P13 ActuatedBed Right
+     OUTLIER             66.43977  
+     INFO                check [39.85472, 37.93547, 36.98303] @ P13 ActuatedBed Up
+     INFO                check [61.08241, 75.49527, 80.15625] @ P13 ActuatedBed Left
+     OUTLIER             61.08241  
+     INFO                check [48.11405, 48.85948, 52.26643] @ P13 ActuatedBed Down
+     INFO                check [65.88382, 66.15642, 67.46909] @ P13 NormalBed Right
+     INFO                check [51.69279, 45.6116, 44.92579] @ P13 NormalBed Up
+     OUTLIER             51.69279  
+     INFO                check [51.54609, 50.43827, 50.86866] @ P13 NormalBed Left
+     INFO                check [27.0586, 30.6943, 35.96609] @ P13 NormalBed Down
+     OUTLIER             35.96609  
+     INFO                check [18.06992, 14.17565, 13.08772] @ P14 ActuatedBed Up
+     INFO                check [19.05476, 26.2869, 27.17138] @ P14 ActuatedBed Left
+     OUTLIER             19.05476  
+     INFO                check [11.4009, 11.96591, 14.61169] @ P14 ActuatedBed Down
+     INFO                check [18.48072, 18.07376, 19.11178] @ P14 ActuatedBed Right
+     INFO                check [5.81524, 8.950454, 10.61871] @ P14 NormalBed Up
+     INFO                check [11.05017, 8.979053, 11.11888] @ P14 NormalBed Left
+     INFO                check [8.904173, 6.988366, 8.135883] @ P14 NormalBed Down
+     INFO                check [9.77829, 10.46324, 10.32038] @ P14 NormalBed Right
+     INFO                check [42.94886, 37.87492, 40.56444] @ P15 ActuatedBed Down
+     INFO                check [60.25676, 58.64235, 56.25451] @ P15 ActuatedBed Right
+     INFO                check [25.18394, 17.41275, 23.20088] @ P15 ActuatedBed Up
+     OUTLIER             17.41275  
+     INFO                check [35.73783, 33.31527, 39.33097] @ P15 ActuatedBed Left
+     INFO                check [39.07808, 38.35204, 38.45543] @ P15 NormalBed Down
+     INFO                check [49.17188, 40.48456, 40.06077] @ P15 NormalBed Right
+     OUTLIER             49.17188  
+     INFO                check [28.86051, 26.55425, 23.43397] @ P15 NormalBed Up
+     INFO                check [38.73623, 35.10021, 35.44387] @ P15 NormalBed Left
+     INFO                check [58.75591, 57.05379, 56.65062] @ P16 ActuatedBed Down
+     INFO                check [69.47164, 97.69028, 95.27144] @ P16 ActuatedBed Right
+     OUTLIER             69.47164  
+     INFO                check [32.88271, 38.59816, 0.3886621] @ P16 ActuatedBed Up
+     EXCEED THRESHOLD    0.3886621 
+     INFO                check [75.43953, 82.54213, 105.3347] @ P16 ActuatedBed Left
+     OUTLIER             75.43953  
+     OUTLIER             105.3347  
+     INFO                check [62.08812, 55.70408, 61.56377] @ P16 NormalBed Down
+     OUTLIER             55.70408  
+     INFO                check [66.05262, 78.92258, 76.13383] @ P16 NormalBed Right
+     OUTLIER             66.05262  
+     INFO                check [36.90396, 35.59752, 34.43979] @ P16 NormalBed Up
+     INFO                check [43.43018, 54.4437, 58.8614] @ P16 NormalBed Left
+     OUTLIER             43.43018  
+     READ RAW DATA       read MaxViewingRange data
+     REMOVE BAD DATA     P4 ActuatedBed Right
+     REMOVE BAD DATA     P4 NormalBed Right
+     CALCULATE PVAL      save to ./Summative v2/output/formative/summative task1 MaxViewingRange pval.csv
+     CALCULATE STAT      save to ./Summative v2/output/formative/summative task1 MaxViewingRange stat.csv
+     DRAW RADAR          ActuatedBed 1.3326569869156706 1.2781156340805047
+     DRAW RADAR          NormalBed 1.1157414189423296 0.9805632212783134
+     DRAW RADAR          save to ./Summative v2/output/formative/summative MaxViewingRange YAW.png
+     DRAW RADAR          ActuatedBed 0.6639725075587292 0.7819228819713903
+     DRAW RADAR          NormalBed 0.6525984873480806 0.7156260761866055
+     DRAW RADAR          save to ./Summative v2/output/formative/summative MaxViewingRange PITCH.png
+2024-11-22 20:22:15.874305
+TASK1 RANGE START   MaxViewingRange
+     INFO                check [67.15463, 63.33971, 65.54333] @ P1 ActuatedBed Right
+     INFO                check [38.12593, 0.4370072, 35.33601] @ P1 ActuatedBed Up
+     EXCEED THRESHOLD    0.4370072 
+     INFO                check [65.67265, 65.33836, 70.04796] @ P1 ActuatedBed Left
+     INFO                check [58.61547, 56.64251, 54.43939] @ P1 ActuatedBed Down
+     INFO                check [77.86182, 73.74077, 70.86896] @ P1 NormalBed Right
+     INFO                check [59.28375, 40.87795, 44.2332] @ P1 NormalBed Up
+     OUTLIER             59.28375  
+     INFO                check [60.64087, 64.40167, 61.92882] @ P1 NormalBed Left
+     INFO                check [55.02459, 54.67641, 49.38008] @ P1 NormalBed Down
+     OUTLIER             49.38008  
+     INFO                check [69.50677, 80.52837, 73.50095] @ P2 ActuatedBed Left
+     OUTLIER             80.52837  
+     INFO                check [42.74792, 38.50052, 38.65511] @ P2 ActuatedBed Down
+     INFO                check [61.93163, 61.32144, 66.58101] @ P2 ActuatedBed Right
+     INFO                check [30.46254, 31.61752, 30.18572] @ P2 ActuatedBed Up
+     INFO                check [63.58891, 74.69035, 64.24626] @ P2 NormalBed Left
+     OUTLIER             74.69035  
+     INFO                check [31.38276, 28.31743, 23.16925] @ P2 NormalBed Down
+     OUTLIER             23.16925  
+     INFO                check [67.50972, 69.96882, 72.00175] @ P2 NormalBed Right
+     INFO                check [52.76004, 49.2309, 50.29265] @ P2 NormalBed Up
+     INFO                check [86.02251, 92.3515, 88.97606] @ P3 ActuatedBed Left
+     INFO                check [73.70825, 58.86172, 51.55622] @ P3 ActuatedBed Down
+     OUTLIER             73.70825  
+     OUTLIER             51.55622  
+     INFO                check [100.1281, 93.53325, 100.5139] @ P3 ActuatedBed Right
+     OUTLIER             93.53325  
+     INFO                check [57.83629, 49.84002, 52.3951] @ P3 ActuatedBed Up
+     OUTLIER             57.83629  
+     INFO                check [53.26811, 48.94985, 50.24303] @ P3 NormalBed Left
+     INFO                check [35.8447, 35.27755, 39.95703] @ P3 NormalBed Down
+     INFO                check [62.12046, 58.68949, 62.00852] @ P3 NormalBed Right
+     INFO                check [32.94743, 32.53005, 32.54552] @ P3 NormalBed Up
+     INFO                check [26.60706, 27.25171, 26.86964] @ P4 ActuatedBed Down
+     INFO                check [67.86015, 73.73125, 73.6021] @ P4 ActuatedBed Right
+     OUTLIER             67.86015  
+     INFO                check [41.90932, 44.00079, 35.99597] @ P4 ActuatedBed Up
+     OUTLIER             35.99597  
+     INFO                check [70.7422, 77.80106, 64.48997] @ P4 ActuatedBed Left
+     OUTLIER             77.80106  
+     INFO                check [0.1027921, 10.46952, 0.02797646] @ P4 NormalBed Down
+     EXCEED THRESHOLD    0.1027921 
+     EXCEED THRESHOLD    0.02797646
+     INFO                check [2.194013, 0.6333472, 1.096108] @ P4 NormalBed Right
+     EXCEED THRESHOLD    2.194013  
+     EXCEED THRESHOLD    0.6333472 
+     EXCEED THRESHOLD    1.096108  
+     INFO                check [30.70033, 26.92213, 28.95728] @ P4 NormalBed Up
+     INFO                check [45.82481, 42.88304, 43.17631] @ P4 NormalBed Left
+     INFO                check [95.28233, 97.99944, 97.43707] @ P5 ActuatedBed Left
+     INFO                check [66.98963, 63.02348, 65.84016] @ P5 ActuatedBed Down
+     INFO                check [103.6648, 104.0909, 104.7479] @ P5 ActuatedBed Right
+     INFO                check [56.52991, 56.30579, 57.53695] @ P5 ActuatedBed Up
+     INFO                check [86.10739, 81.71141, 0.3077414] @ P5 NormalBed Left
+     EXCEED THRESHOLD    0.3077414 
+     INFO                check [73.69415, 77.19357, 80.30869] @ P5 NormalBed Down
+     INFO                check [103.326, 111.8032, 113.5364] @ P5 NormalBed Right
+     OUTLIER             103.326   
+     INFO                check [56.7636, 54.79511, 54.73999] @ P5 NormalBed Up
+     INFO                check [72.21165, 75.03124, 81.71967] @ P6 ActuatedBed Right
+     OUTLIER             81.71967  
+     INFO                check [37.93076, 37.8707, 38.93587] @ P6 ActuatedBed Up
+     INFO                check [76.85213, 77.26392, 79.52841] @ P6 ActuatedBed Left
+     INFO                check [34.84738, 38.91475, 43.32566] @ P6 ActuatedBed Down
+     INFO                check [52.06699, 66.44498, 66.94048] @ P6 NormalBed Right
+     OUTLIER             52.06699  
+     INFO                check [31.82265, 34.31732, 37.5291] @ P6 NormalBed Up
+     INFO                check [59.81091, 65.54558, 65.999] @ P6 NormalBed Left
+     OUTLIER             59.81091  
+     INFO                check [39.83375, 42.88535, 43.82126] @ P6 NormalBed Down
+     INFO                check [55.01288, 55.09479, 54.64557] @ P7 ActuatedBed Up
+     INFO                check [109.3884, 127.3355, 136.3205] @ P7 ActuatedBed Left
+     OUTLIER             109.3884  
+     OUTLIER             136.3205  
+     INFO                check [88.07529, 0.9211111, 78.61578] @ P7 ActuatedBed Down
+     EXCEED THRESHOLD    0.9211111 
+     INFO                check [2.250815, 79.22501, 104.3644] @ P7 ActuatedBed Right
+     EXCEED THRESHOLD    2.250815  
+     OUTLIER             79.22501  
+     INFO                check [45.70806, 41.35776, 40.11411] @ P7 NormalBed Up
+     INFO                check [79.58192, 98.26536, 101.2393] @ P7 NormalBed Left
+     OUTLIER             79.58192  
+     INFO                check [93.54655, 96.73154, 94.1368] @ P7 NormalBed Down
+     INFO                check [89.04822, 79.78656, 73.72816] @ P7 NormalBed Right
+     OUTLIER             89.04822  
+     OUTLIER             73.72816  
+     INFO                check [31.52925, 30.94884, 32.22225] @ P8 ActuatedBed Up
+     INFO                check [69.15466, 71.07555, 73.31598] @ P8 ActuatedBed Left
+     INFO                check [40.04726, 41.82684, 40.299] @ P8 ActuatedBed Down
+     INFO                check [73.95261, 83.97276, 82.68122] @ P8 ActuatedBed Right
+     OUTLIER             73.95261  
+     INFO                check [33.04906, 28.86272, 24.12515] @ P8 NormalBed Up
+     INFO                check [54.27989, 59.02184, 57.77613] @ P8 NormalBed Left
+     INFO                check [35.62993, 42.70719, 46.05214] @ P8 NormalBed Down
+     OUTLIER             35.62993  
+     INFO                check [63.53133, 60.46896, 64.36417] @ P8 NormalBed Right
+     INFO                check [70.75744, 66.19108, 72.82951] @ P9 ActuatedBed Right
+     INFO                check [77.23244, 74.58321, 77.2193] @ P9 ActuatedBed Up
+     INFO                check [92.80944, 98.70844, 98.78168] @ P9 ActuatedBed Left
+     OUTLIER             92.80944  
+     INFO                check [51.04903, 39.98651, 41.83184] @ P9 ActuatedBed Down
+     OUTLIER             51.04903  
+     INFO                check [68.69061, 72.88403, 75.49406] @ P9 NormalBed Right
+     INFO                check [72.46621, 71.47477, 63.98969] @ P9 NormalBed Up
+     OUTLIER             63.98969  
+     INFO                check [77.00688, 80.2496, 79.37399] @ P9 NormalBed Left
+     INFO                check [26.0885, 26.04434, 27.33733] @ P9 NormalBed Down
+     INFO                check [17.44433, 15.99428, 15.82558] @ P10 ActuatedBed Up
+     INFO                check [30.56559, 31.62636, 29.93485] @ P10 ActuatedBed Left
+     INFO                check [13.66436, 11.28797, 11.42732] @ P10 ActuatedBed Down
+     INFO                check [1.737425, 29.27747, 31.95487] @ P10 ActuatedBed Right
+     EXCEED THRESHOLD    1.737425  
+     INFO                check [14.82215, 14.70946, 13.90071] @ P10 NormalBed Up
+     INFO                check [19.18365, 15.44696, 16.72837] @ P10 NormalBed Left
+     INFO                check [9.828494, 9.221642, 8.824833] @ P10 NormalBed Down
+     INFO                check [19.69861, 19.39977, 18.16608] @ P10 NormalBed Right
+     INFO                check [37.2677, 34.6346, 38.96029] @ P11 ActuatedBed Down
+     INFO                check [74.04941, 66.94327, 72.82722] @ P11 ActuatedBed Right
+     OUTLIER             66.94327  
+     INFO                check [17.9793, 26.48051, 26.57225] @ P11 ActuatedBed Up
+     OUTLIER             17.9793   
+     INFO                check [55.3713, 54.5404, 56.94178] @ P11 ActuatedBed Left
+     INFO                check [28.95368, 23.03779, 25.92726] @ P11 NormalBed Down
+     INFO                check [82.88313, 87.55749, 66.45778] @ P11 NormalBed Right
+     OUTLIER             66.45778  
+     INFO                check [43.86096, 38.06157, 37.48082] @ P11 NormalBed Up
+     OUTLIER             43.86096  
+     INFO                check [52.61197, 50.79478, 47.91768] @ P11 NormalBed Left
+     INFO                check [93.80816, 97.34253, 93.34414] @ P12 ActuatedBed Left
+     INFO                check [66.12886, 1.29875, 55.78009] @ P12 ActuatedBed Down
+     EXCEED THRESHOLD    1.29875   
+     OUTLIER             66.12886  
+     INFO                check [112.8995, 121.9889, 121.2496] @ P12 ActuatedBed Right
+     OUTLIER             112.8995  
+     INFO                check [35.52865, 30.49272, 0.7793398] @ P12 ActuatedBed Up
+     EXCEED THRESHOLD    0.7793398 
+     INFO                check [72.71082, 67.62531, 71.40416] @ P12 NormalBed Left
+     INFO                check [70.0448, 62.27541, 66.62747] @ P12 NormalBed Down
+     INFO                check [73.1366, 59.10252, 62.68239] @ P12 NormalBed Right
+     OUTLIER             73.1366   
+     INFO                check [59.86645, 44.1062, 40.82655] @ P12 NormalBed Up
+     OUTLIER             59.86645  
+     INFO                check [66.43977, 81.94058, 81.83568] @ P13 ActuatedBed Right
+     OUTLIER             66.43977  
+     INFO                check [39.85472, 37.93547, 36.98303] @ P13 ActuatedBed Up
+     INFO                check [61.08241, 75.49527, 80.15625] @ P13 ActuatedBed Left
+     OUTLIER             61.08241  
+     INFO                check [48.11405, 48.85948, 52.26643] @ P13 ActuatedBed Down
+     INFO                check [65.88382, 66.15642, 67.46909] @ P13 NormalBed Right
+     INFO                check [51.69279, 45.6116, 44.92579] @ P13 NormalBed Up
+     OUTLIER             51.69279  
+     INFO                check [51.54609, 50.43827, 50.86866] @ P13 NormalBed Left
+     INFO                check [27.0586, 30.6943, 35.96609] @ P13 NormalBed Down
+     OUTLIER             35.96609  
+     INFO                check [18.06992, 14.17565, 13.08772] @ P14 ActuatedBed Up
+     INFO                check [19.05476, 26.2869, 27.17138] @ P14 ActuatedBed Left
+     OUTLIER             19.05476  
+     INFO                check [11.4009, 11.96591, 14.61169] @ P14 ActuatedBed Down
+     INFO                check [18.48072, 18.07376, 19.11178] @ P14 ActuatedBed Right
+     INFO                check [5.81524, 8.950454, 10.61871] @ P14 NormalBed Up
+     INFO                check [11.05017, 8.979053, 11.11888] @ P14 NormalBed Left
+     INFO                check [8.904173, 6.988366, 8.135883] @ P14 NormalBed Down
+     INFO                check [9.77829, 10.46324, 10.32038] @ P14 NormalBed Right
+     INFO                check [42.94886, 37.87492, 40.56444] @ P15 ActuatedBed Down
+     INFO                check [60.25676, 58.64235, 56.25451] @ P15 ActuatedBed Right
+     INFO                check [25.18394, 17.41275, 23.20088] @ P15 ActuatedBed Up
+     OUTLIER             17.41275  
+     INFO                check [35.73783, 33.31527, 39.33097] @ P15 ActuatedBed Left
+     INFO                check [39.07808, 38.35204, 38.45543] @ P15 NormalBed Down
+     INFO                check [49.17188, 40.48456, 40.06077] @ P15 NormalBed Right
+     OUTLIER             49.17188  
+     INFO                check [28.86051, 26.55425, 23.43397] @ P15 NormalBed Up
+     INFO                check [38.73623, 35.10021, 35.44387] @ P15 NormalBed Left
+     INFO                check [58.75591, 57.05379, 56.65062] @ P16 ActuatedBed Down
+     INFO                check [69.47164, 97.69028, 95.27144] @ P16 ActuatedBed Right
+     OUTLIER             69.47164  
+     INFO                check [32.88271, 38.59816, 0.3886621] @ P16 ActuatedBed Up
+     EXCEED THRESHOLD    0.3886621 
+     INFO                check [75.43953, 82.54213, 105.3347] @ P16 ActuatedBed Left
+     OUTLIER             75.43953  
+     OUTLIER             105.3347  
+     INFO                check [62.08812, 55.70408, 61.56377] @ P16 NormalBed Down
+     OUTLIER             55.70408  
+     INFO                check [66.05262, 78.92258, 76.13383] @ P16 NormalBed Right
+     OUTLIER             66.05262  
+     INFO                check [36.90396, 35.59752, 34.43979] @ P16 NormalBed Up
+     INFO                check [43.43018, 54.4437, 58.8614] @ P16 NormalBed Left
+     OUTLIER             43.43018  
+     READ RAW DATA       read MaxViewingRange data
+     REMOVE BAD DATA     P4 ActuatedBed Right
+     REMOVE BAD DATA     P4 NormalBed Right
+     CALCULATE PVAL      save to ./Summative v2/output/formative/summative task1 MaxViewingRange pval.csv
+     CALCULATE STAT      save to ./Summative v2/output/formative/summative task1 MaxViewingRange stat.csv
+     DRAW RADAR          ActuatedBed 1.3326569869156706 1.2781156340805047
+2024-11-22 20:24:58.080083
+TASK1 RANGE START   MaxViewingRange
+     INFO                check [67.15463, 63.33971, 65.54333] @ P1 ActuatedBed Right
+     INFO                check [38.12593, 0.4370072, 35.33601] @ P1 ActuatedBed Up
+     EXCEED THRESHOLD    0.4370072 
+     INFO                check [65.67265, 65.33836, 70.04796] @ P1 ActuatedBed Left
+     INFO                check [58.61547, 56.64251, 54.43939] @ P1 ActuatedBed Down
+     INFO                check [77.86182, 73.74077, 70.86896] @ P1 NormalBed Right
+     INFO                check [59.28375, 40.87795, 44.2332] @ P1 NormalBed Up
+     OUTLIER             59.28375  
+     INFO                check [60.64087, 64.40167, 61.92882] @ P1 NormalBed Left
+     INFO                check [55.02459, 54.67641, 49.38008] @ P1 NormalBed Down
+     OUTLIER             49.38008  
+     INFO                check [69.50677, 80.52837, 73.50095] @ P2 ActuatedBed Left
+     OUTLIER             80.52837  
+     INFO                check [42.74792, 38.50052, 38.65511] @ P2 ActuatedBed Down
+     INFO                check [61.93163, 61.32144, 66.58101] @ P2 ActuatedBed Right
+     INFO                check [30.46254, 31.61752, 30.18572] @ P2 ActuatedBed Up
+     INFO                check [63.58891, 74.69035, 64.24626] @ P2 NormalBed Left
+     OUTLIER             74.69035  
+     INFO                check [31.38276, 28.31743, 23.16925] @ P2 NormalBed Down
+     OUTLIER             23.16925  
+     INFO                check [67.50972, 69.96882, 72.00175] @ P2 NormalBed Right
+     INFO                check [52.76004, 49.2309, 50.29265] @ P2 NormalBed Up
+     INFO                check [86.02251, 92.3515, 88.97606] @ P3 ActuatedBed Left
+     INFO                check [73.70825, 58.86172, 51.55622] @ P3 ActuatedBed Down
+     OUTLIER             73.70825  
+     OUTLIER             51.55622  
+     INFO                check [100.1281, 93.53325, 100.5139] @ P3 ActuatedBed Right
+     OUTLIER             93.53325  
+     INFO                check [57.83629, 49.84002, 52.3951] @ P3 ActuatedBed Up
+     OUTLIER             57.83629  
+     INFO                check [53.26811, 48.94985, 50.24303] @ P3 NormalBed Left
+     INFO                check [35.8447, 35.27755, 39.95703] @ P3 NormalBed Down
+     INFO                check [62.12046, 58.68949, 62.00852] @ P3 NormalBed Right
+     INFO                check [32.94743, 32.53005, 32.54552] @ P3 NormalBed Up
+     INFO                check [26.60706, 27.25171, 26.86964] @ P4 ActuatedBed Down
+     INFO                check [67.86015, 73.73125, 73.6021] @ P4 ActuatedBed Right
+     OUTLIER             67.86015  
+     INFO                check [41.90932, 44.00079, 35.99597] @ P4 ActuatedBed Up
+     OUTLIER             35.99597  
+     INFO                check [70.7422, 77.80106, 64.48997] @ P4 ActuatedBed Left
+     OUTLIER             77.80106  
+     INFO                check [0.1027921, 10.46952, 0.02797646] @ P4 NormalBed Down
+     EXCEED THRESHOLD    0.1027921 
+     EXCEED THRESHOLD    0.02797646
+     INFO                check [2.194013, 0.6333472, 1.096108] @ P4 NormalBed Right
+     EXCEED THRESHOLD    2.194013  
+     EXCEED THRESHOLD    0.6333472 
+     EXCEED THRESHOLD    1.096108  
+     INFO                check [30.70033, 26.92213, 28.95728] @ P4 NormalBed Up
+     INFO                check [45.82481, 42.88304, 43.17631] @ P4 NormalBed Left
+     INFO                check [95.28233, 97.99944, 97.43707] @ P5 ActuatedBed Left
+     INFO                check [66.98963, 63.02348, 65.84016] @ P5 ActuatedBed Down
+     INFO                check [103.6648, 104.0909, 104.7479] @ P5 ActuatedBed Right
+     INFO                check [56.52991, 56.30579, 57.53695] @ P5 ActuatedBed Up
+     INFO                check [86.10739, 81.71141, 0.3077414] @ P5 NormalBed Left
+     EXCEED THRESHOLD    0.3077414 
+     INFO                check [73.69415, 77.19357, 80.30869] @ P5 NormalBed Down
+     INFO                check [103.326, 111.8032, 113.5364] @ P5 NormalBed Right
+     OUTLIER             103.326   
+     INFO                check [56.7636, 54.79511, 54.73999] @ P5 NormalBed Up
+     INFO                check [72.21165, 75.03124, 81.71967] @ P6 ActuatedBed Right
+     OUTLIER             81.71967  
+     INFO                check [37.93076, 37.8707, 38.93587] @ P6 ActuatedBed Up
+     INFO                check [76.85213, 77.26392, 79.52841] @ P6 ActuatedBed Left
+     INFO                check [34.84738, 38.91475, 43.32566] @ P6 ActuatedBed Down
+     INFO                check [52.06699, 66.44498, 66.94048] @ P6 NormalBed Right
+     OUTLIER             52.06699  
+     INFO                check [31.82265, 34.31732, 37.5291] @ P6 NormalBed Up
+     INFO                check [59.81091, 65.54558, 65.999] @ P6 NormalBed Left
+     OUTLIER             59.81091  
+     INFO                check [39.83375, 42.88535, 43.82126] @ P6 NormalBed Down
+     INFO                check [55.01288, 55.09479, 54.64557] @ P7 ActuatedBed Up
+     INFO                check [109.3884, 127.3355, 136.3205] @ P7 ActuatedBed Left
+     OUTLIER             109.3884  
+     OUTLIER             136.3205  
+     INFO                check [88.07529, 0.9211111, 78.61578] @ P7 ActuatedBed Down
+     EXCEED THRESHOLD    0.9211111 
+     INFO                check [2.250815, 79.22501, 104.3644] @ P7 ActuatedBed Right
+     EXCEED THRESHOLD    2.250815  
+     OUTLIER             79.22501  
+     INFO                check [45.70806, 41.35776, 40.11411] @ P7 NormalBed Up
+     INFO                check [79.58192, 98.26536, 101.2393] @ P7 NormalBed Left
+     OUTLIER             79.58192  
+     INFO                check [93.54655, 96.73154, 94.1368] @ P7 NormalBed Down
+     INFO                check [89.04822, 79.78656, 73.72816] @ P7 NormalBed Right
+     OUTLIER             89.04822  
+     OUTLIER             73.72816  
+     INFO                check [31.52925, 30.94884, 32.22225] @ P8 ActuatedBed Up
+     INFO                check [69.15466, 71.07555, 73.31598] @ P8 ActuatedBed Left
+     INFO                check [40.04726, 41.82684, 40.299] @ P8 ActuatedBed Down
+     INFO                check [73.95261, 83.97276, 82.68122] @ P8 ActuatedBed Right
+     OUTLIER             73.95261  
+     INFO                check [33.04906, 28.86272, 24.12515] @ P8 NormalBed Up
+     INFO                check [54.27989, 59.02184, 57.77613] @ P8 NormalBed Left
+     INFO                check [35.62993, 42.70719, 46.05214] @ P8 NormalBed Down
+     OUTLIER             35.62993  
+     INFO                check [63.53133, 60.46896, 64.36417] @ P8 NormalBed Right
+     INFO                check [70.75744, 66.19108, 72.82951] @ P9 ActuatedBed Right
+     INFO                check [77.23244, 74.58321, 77.2193] @ P9 ActuatedBed Up
+     INFO                check [92.80944, 98.70844, 98.78168] @ P9 ActuatedBed Left
+     OUTLIER             92.80944  
+     INFO                check [51.04903, 39.98651, 41.83184] @ P9 ActuatedBed Down
+     OUTLIER             51.04903  
+     INFO                check [68.69061, 72.88403, 75.49406] @ P9 NormalBed Right
+     INFO                check [72.46621, 71.47477, 63.98969] @ P9 NormalBed Up
+     OUTLIER             63.98969  
+     INFO                check [77.00688, 80.2496, 79.37399] @ P9 NormalBed Left
+     INFO                check [26.0885, 26.04434, 27.33733] @ P9 NormalBed Down
+     INFO                check [17.44433, 15.99428, 15.82558] @ P10 ActuatedBed Up
+     INFO                check [30.56559, 31.62636, 29.93485] @ P10 ActuatedBed Left
+     INFO                check [13.66436, 11.28797, 11.42732] @ P10 ActuatedBed Down
+     INFO                check [1.737425, 29.27747, 31.95487] @ P10 ActuatedBed Right
+     EXCEED THRESHOLD    1.737425  
+     INFO                check [14.82215, 14.70946, 13.90071] @ P10 NormalBed Up
+     INFO                check [19.18365, 15.44696, 16.72837] @ P10 NormalBed Left
+     INFO                check [9.828494, 9.221642, 8.824833] @ P10 NormalBed Down
+     INFO                check [19.69861, 19.39977, 18.16608] @ P10 NormalBed Right
+     INFO                check [37.2677, 34.6346, 38.96029] @ P11 ActuatedBed Down
+     INFO                check [74.04941, 66.94327, 72.82722] @ P11 ActuatedBed Right
+     OUTLIER             66.94327  
+     INFO                check [17.9793, 26.48051, 26.57225] @ P11 ActuatedBed Up
+     OUTLIER             17.9793   
+     INFO                check [55.3713, 54.5404, 56.94178] @ P11 ActuatedBed Left
+     INFO                check [28.95368, 23.03779, 25.92726] @ P11 NormalBed Down
+     INFO                check [82.88313, 87.55749, 66.45778] @ P11 NormalBed Right
+     OUTLIER             66.45778  
+     INFO                check [43.86096, 38.06157, 37.48082] @ P11 NormalBed Up
+     OUTLIER             43.86096  
+     INFO                check [52.61197, 50.79478, 47.91768] @ P11 NormalBed Left
+     INFO                check [93.80816, 97.34253, 93.34414] @ P12 ActuatedBed Left
+     INFO                check [66.12886, 1.29875, 55.78009] @ P12 ActuatedBed Down
+     EXCEED THRESHOLD    1.29875   
+     OUTLIER             66.12886  
+     INFO                check [112.8995, 121.9889, 121.2496] @ P12 ActuatedBed Right
+     OUTLIER             112.8995  
+     INFO                check [35.52865, 30.49272, 0.7793398] @ P12 ActuatedBed Up
+     EXCEED THRESHOLD    0.7793398 
+     INFO                check [72.71082, 67.62531, 71.40416] @ P12 NormalBed Left
+     INFO                check [70.0448, 62.27541, 66.62747] @ P12 NormalBed Down
+     INFO                check [73.1366, 59.10252, 62.68239] @ P12 NormalBed Right
+     OUTLIER             73.1366   
+     INFO                check [59.86645, 44.1062, 40.82655] @ P12 NormalBed Up
+     OUTLIER             59.86645  
+     INFO                check [66.43977, 81.94058, 81.83568] @ P13 ActuatedBed Right
+     OUTLIER             66.43977  
+     INFO                check [39.85472, 37.93547, 36.98303] @ P13 ActuatedBed Up
+     INFO                check [61.08241, 75.49527, 80.15625] @ P13 ActuatedBed Left
+     OUTLIER             61.08241  
+     INFO                check [48.11405, 48.85948, 52.26643] @ P13 ActuatedBed Down
+     INFO                check [65.88382, 66.15642, 67.46909] @ P13 NormalBed Right
+     INFO                check [51.69279, 45.6116, 44.92579] @ P13 NormalBed Up
+     OUTLIER             51.69279  
+     INFO                check [51.54609, 50.43827, 50.86866] @ P13 NormalBed Left
+     INFO                check [27.0586, 30.6943, 35.96609] @ P13 NormalBed Down
+     OUTLIER             35.96609  
+     INFO                check [18.06992, 14.17565, 13.08772] @ P14 ActuatedBed Up
+     INFO                check [19.05476, 26.2869, 27.17138] @ P14 ActuatedBed Left
+     OUTLIER             19.05476  
+     INFO                check [11.4009, 11.96591, 14.61169] @ P14 ActuatedBed Down
+     INFO                check [18.48072, 18.07376, 19.11178] @ P14 ActuatedBed Right
+     INFO                check [5.81524, 8.950454, 10.61871] @ P14 NormalBed Up
+     INFO                check [11.05017, 8.979053, 11.11888] @ P14 NormalBed Left
+     INFO                check [8.904173, 6.988366, 8.135883] @ P14 NormalBed Down
+     INFO                check [9.77829, 10.46324, 10.32038] @ P14 NormalBed Right
+     INFO                check [42.94886, 37.87492, 40.56444] @ P15 ActuatedBed Down
+     INFO                check [60.25676, 58.64235, 56.25451] @ P15 ActuatedBed Right
+     INFO                check [25.18394, 17.41275, 23.20088] @ P15 ActuatedBed Up
+     OUTLIER             17.41275  
+     INFO                check [35.73783, 33.31527, 39.33097] @ P15 ActuatedBed Left
+     INFO                check [39.07808, 38.35204, 38.45543] @ P15 NormalBed Down
+     INFO                check [49.17188, 40.48456, 40.06077] @ P15 NormalBed Right
+     OUTLIER             49.17188  
+     INFO                check [28.86051, 26.55425, 23.43397] @ P15 NormalBed Up
+     INFO                check [38.73623, 35.10021, 35.44387] @ P15 NormalBed Left
+     INFO                check [58.75591, 57.05379, 56.65062] @ P16 ActuatedBed Down
+     INFO                check [69.47164, 97.69028, 95.27144] @ P16 ActuatedBed Right
+     OUTLIER             69.47164  
+     INFO                check [32.88271, 38.59816, 0.3886621] @ P16 ActuatedBed Up
+     EXCEED THRESHOLD    0.3886621 
+     INFO                check [75.43953, 82.54213, 105.3347] @ P16 ActuatedBed Left
+     OUTLIER             75.43953  
+     OUTLIER             105.3347  
+     INFO                check [62.08812, 55.70408, 61.56377] @ P16 NormalBed Down
+     OUTLIER             55.70408  
+     INFO                check [66.05262, 78.92258, 76.13383] @ P16 NormalBed Right
+     OUTLIER             66.05262  
+     INFO                check [36.90396, 35.59752, 34.43979] @ P16 NormalBed Up
+     INFO                check [43.43018, 54.4437, 58.8614] @ P16 NormalBed Left
+     OUTLIER             43.43018  
+     READ RAW DATA       read MaxViewingRange data
+     REMOVE BAD DATA     P4 ActuatedBed Right
+     REMOVE BAD DATA     P4 NormalBed Right
+     CALCULATE PVAL      save to ./Summative v2/output/formative/summative task1 MaxViewingRange pval.csv
+     CALCULATE STAT      save to ./Summative v2/output/formative/summative task1 MaxViewingRange stat.csv
+     DRAW RADAR          ActuatedBed 1.3326569869156706 1.2781156340805047
+     DRAW RADAR          NormalBed 1.1157414189423296 0.9805632212783134
+     DRAW RADAR          save to ./Summative v2/output/formative/summative MaxViewingRange YAW.png
+     DRAW RADAR          ActuatedBed 0.6639725075587292 0.7819228819713903
+     DRAW RADAR          NormalBed 0.6525984873480806 0.7156260761866055
+     DRAW RADAR          save to ./Summative v2/output/formative/summative MaxViewingRange PITCH.png
+TASK1 RANGE START   MaxBodyRange
+     INFO                check [12.91196, 11.12651, 14.185] @ P1 ActuatedBed Right
+     INFO                check [0.719821, 0.05595291, 0.6932335] @ P1 ActuatedBed Up
+     INFO                check [16.98321, 13.37699, 14.11612] @ P1 ActuatedBed Left
+     INFO                check [7.406952, 3.928847, 2.374133] @ P1 ActuatedBed Down
+     INFO                check [8.717379, 5.191464, 4.665393] @ P1 NormalBed Right
+     INFO                check [3.616226, 1.229079, 1.423953] @ P1 NormalBed Up
+     INFO                check [2.086566, 2.715484, 0.5475121] @ P1 NormalBed Left
+     INFO                check [7.612726, 3.107846, 4.609892] @ P1 NormalBed Down
+     INFO                check [10.04144, 11.37659, 9.557611] @ P2 ActuatedBed Left
+     INFO                check [3.730509, 3.454964, 1.381827] @ P2 ActuatedBed Down
+     INFO                check [8.766207, 7.220398, 7.547875] @ P2 ActuatedBed Right
+     INFO                check [0.8627541, 2.132858, 1.527262] @ P2 ActuatedBed Up
+     INFO                check [3.213027, 6.37366, 3.296219] @ P2 NormalBed Left
+     INFO                check [0.3946573, 1.372306, 1.696506] @ P2 NormalBed Down
+     INFO                check [1.499983, 1.819191, 3.057423] @ P2 NormalBed Right
+     INFO                check [3.515245, 2.116738, 1.320269] @ P2 NormalBed Up
+     INFO                check [28.94378, 27.63099, 23.11155] @ P3 ActuatedBed Left
+     INFO                check [4.90768, 1.769346, 1.279625] @ P3 ActuatedBed Down
+     INFO                check [43.19543, 33.94657, 37.71572] @ P3 ActuatedBed Right
+     EXCEED THRESHOLD    43.19543  
+     EXCEED THRESHOLD    33.94657  
+     EXCEED THRESHOLD    37.71572  
+     INFO                check [1.547375, 0.8829308, 0.3956476] @ P3 ActuatedBed Up
+     INFO                check [4.209009, 2.615165, 3.403696] @ P3 NormalBed Left
+     INFO                check [3.168915, 1.995668, 1.765471] @ P3 NormalBed Down
+     INFO                check [3.826331, 3.44969, 3.840379] @ P3 NormalBed Right
+     INFO                check [0.3891652, 0.4270431, 0.2832403] @ P3 NormalBed Up
+     INFO                check [0.5271187, 5.239815, 1.306112] @ P4 ActuatedBed Down
+     INFO                check [14.66384, 17.50839, 17.54162] @ P4 ActuatedBed Right
+     INFO                check [1.940175, 4.592651, 1.477638] @ P4 ActuatedBed Up
+     INFO                check [25.80874, 24.34393, 13.29726] @ P4 ActuatedBed Left
+     OUTLIER             13.29726  
+     INFO                check [0.5082192, 0.8081825, 1.246469] @ P4 NormalBed Down
+     INFO                check [0.9412843, 0.8893346, 0.4092611] @ P4 NormalBed Right
+     INFO                check [2.027579, 2.202826, 3.425313] @ P4 NormalBed Up
+     INFO                check [3.819878, 1.776191, 0.9487386] @ P4 NormalBed Left
+     INFO                check [37.51128, 40.96827, 36.0891] @ P5 ActuatedBed Left
+     EXCEED THRESHOLD    37.51128  
+     EXCEED THRESHOLD    40.96827  
+     EXCEED THRESHOLD    36.0891   
+     INFO                check [13.28033, 9.103642, 9.522498] @ P5 ActuatedBed Down
+     INFO                check [35.87749, 31.26101, 32.60873] @ P5 ActuatedBed Right
+     EXCEED THRESHOLD    35.87749  
+     EXCEED THRESHOLD    31.26101  
+     EXCEED THRESHOLD    32.60873  
+     INFO                check [3.492278, 8.991321, 8.283422] @ P5 ActuatedBed Up
+     INFO                check [24.10582, 20.61496, 0.1938267] @ P5 NormalBed Left
+     OUTLIER             0.1938267 
+     INFO                check [14.7904, 13.84745, 17.7654] @ P5 NormalBed Down
+     INFO                check [33.22092, 39.72623, 43.88348] @ P5 NormalBed Right
+     EXCEED THRESHOLD    33.22092  
+     EXCEED THRESHOLD    39.72623  
+     EXCEED THRESHOLD    43.88348  
+     INFO                check [7.218794, 7.709176, 6.261781] @ P5 NormalBed Up
+     INFO                check [8.617849, 11.68749, 13.75353] @ P6 ActuatedBed Right
+     INFO                check [3.574565, 2.605567, 1.326922] @ P6 ActuatedBed Up
+     INFO                check [18.10444, 13.11207, 13.65555] @ P6 ActuatedBed Left
+     INFO                check [2.435742, 3.783566, 3.899329] @ P6 ActuatedBed Down
+     INFO                check [4.022192, 3.905351, 3.460174] @ P6 NormalBed Right
+     INFO                check [1.8409, 1.309703, 0.5804718] @ P6 NormalBed Up
+     INFO                check [5.023402, 5.293427, 5.511605] @ P6 NormalBed Left
+     INFO                check [3.602881, 4.504282, 3.572044] @ P6 NormalBed Down
+     INFO                check [6.263252, 6.904954, 5.156017] @ P7 ActuatedBed Up
+     INFO                check [32.70272, 34.85617, 38.15219] @ P7 ActuatedBed Left
+     EXCEED THRESHOLD    32.70272  
+     EXCEED THRESHOLD    34.85617  
+     EXCEED THRESHOLD    38.15219  
+     INFO                check [8.380027, 2.802817, 4.39837] @ P7 ActuatedBed Down
+     INFO                check [15.16923, 19.41085, 23.82903] @ P7 ActuatedBed Right
+     INFO                check [6.076606, 5.854878, 5.078715] @ P7 NormalBed Up
+     INFO                check [1.928946, 8.222467, 11.69169] @ P7 NormalBed Left
+     OUTLIER             1.928946  
+     INFO                check [24.72578, 17.08795, 15.98384] @ P7 NormalBed Down
+     OUTLIER             24.72578  
+     INFO                check [9.875955, 2.074431, 1.323969] @ P7 NormalBed Right
+     OUTLIER             9.875955  
+     INFO                check [0.5824909, 3.23289, 2.756621] @ P8 ActuatedBed Up
+     INFO                check [13.14615, 11.67233, 9.350151] @ P8 ActuatedBed Left
+     INFO                check [3.878736, 3.902342, 3.956216] @ P8 ActuatedBed Down
+     INFO                check [27.86379, 12.66185, 10.38423] @ P8 ActuatedBed Right
+     OUTLIER             27.86379  
+     INFO                check [1.840581, 1.238753, 1.278401] @ P8 NormalBed Up
+     INFO                check [0.3642322, 1.939368, 0.8213912] @ P8 NormalBed Left
+     INFO                check [1.572839, 1.857305, 1.798527] @ P8 NormalBed Down
+     INFO                check [0.8552368, 1.04605, 1.763696] @ P8 NormalBed Right
+     INFO                check [13.40647, 9.214458, 11.46931] @ P9 ActuatedBed Right
+     INFO                check [6.248868, 3.673491, 5.788923] @ P9 ActuatedBed Up
+     INFO                check [18.88423, 17.79165, 18.69577] @ P9 ActuatedBed Left
+     INFO                check [12.95549, 2.883237, 1.37885] @ P9 ActuatedBed Down
+     OUTLIER             12.95549  
+     INFO                check [5.0303, 1.733365, 1.125179] @ P9 NormalBed Right
+     INFO                check [8.406534, 4.797548, 9.395968] @ P9 NormalBed Up
+     INFO                check [13.41757, 9.04974, 11.80402] @ P9 NormalBed Left
+     INFO                check [4.92406, 6.47911, 9.323607] @ P9 NormalBed Down
+     INFO                check [1.495148, 9.22503, 1.401373] @ P10 ActuatedBed Up
+     OUTLIER             9.22503   
+     INFO                check [3.919016, 2.579368, 2.313338] @ P10 ActuatedBed Left
+     INFO                check [1.766911, 0.5482264, 0.8625273] @ P10 ActuatedBed Down
+     INFO                check [2.534972, 2.383924, 2.912554] @ P10 ActuatedBed Right
+     INFO                check [0.1713202, 0.2298502, 0.1907741] @ P10 NormalBed Up
+     INFO                check [0.8016186, 0.09065409, 0.1866263] @ P10 NormalBed Left
+     INFO                check [1.564355, 0.6731851, 0.8778186] @ P10 NormalBed Down
+     INFO                check [0.2594432, 0.2065338, 0.261696] @ P10 NormalBed Right
+     INFO                check [4.910913, 3.805086, 5.846402] @ P11 ActuatedBed Down
+     INFO                check [8.038245, 9.312112, 10.56939] @ P11 ActuatedBed Right
+     INFO                check [6.842979, 7.199473, 4.96345] @ P11 ActuatedBed Up
+     INFO                check [6.735544, 8.869731, 7.621228] @ P11 ActuatedBed Left
+     INFO                check [2.854236, 4.436855, 4.185539] @ P11 NormalBed Down
+     INFO                check [4.707443, 6.021578, 4.219234] @ P11 NormalBed Right
+     INFO                check [1.5418, 4.593631, 4.662999] @ P11 NormalBed Up
+     INFO                check [3.384603, 2.94796, 5.631063] @ P11 NormalBed Left
+     INFO                check [27.64764, 27.28569, 29.55302] @ P12 ActuatedBed Left
+     INFO                check [6.475083, 0.06255726, 1.87273] @ P12 ActuatedBed Down
+     INFO                check [63.85014, 72.51764, 68.30096] @ P12 ActuatedBed Right
+     EXCEED THRESHOLD    63.85014  
+     EXCEED THRESHOLD    72.51764  
+     EXCEED THRESHOLD    68.30096  
+     INFO                check [3.338651, 2.637747, 1.030406] @ P12 ActuatedBed Up
+     INFO                check [14.60185, 8.355785, 4.66136] @ P12 NormalBed Left
+     OUTLIER             14.60185  
+     INFO                check [8.854857, 3.490371, 5.440245] @ P12 NormalBed Down
+     INFO                check [16.88313, 10.84079, 16.11031] @ P12 NormalBed Right
+     OUTLIER             10.84079  
+     INFO                check [10.21685, 2.808886, 4.334947] @ P12 NormalBed Up
+     OUTLIER             10.21685  
+     INFO                check [7.584212, 11.69723, 10.81114] @ P13 ActuatedBed Right
+     INFO                check [0.6370438, 0.4005627, 1.430945] @ P13 ActuatedBed Up
+     INFO                check [13.55471, 12.31542, 13.528] @ P13 ActuatedBed Left
+     INFO                check [4.813976, 3.415926, 3.832008] @ P13 ActuatedBed Down
+     INFO                check [0.6145305, 1.119426, 0.8784871] @ P13 NormalBed Right
+     INFO                check [2.407047, 2.152133, 3.544532] @ P13 NormalBed Up
+     INFO                check [0.386643, 0.2993615, 0.7947544] @ P13 NormalBed Left
+     INFO                check [1.741812, 1.132633, 1.710636] @ P13 NormalBed Down
+     INFO                check [0.4116447, 0.4302385, 0.1582588] @ P14 ActuatedBed Up
+     INFO                check [2.035286, 2.096392, 2.364302] @ P14 ActuatedBed Left
+     INFO                check [0.261696, 0.6943616, 0.6437659] @ P14 ActuatedBed Down
+     INFO                check [1.693042, 1.297544, 1.329279] @ P14 ActuatedBed Right
+     INFO                check [0.3986039, 0.08622923, 0.6531205] @ P14 NormalBed Up
+     INFO                check [0.4374548, 0.4845679, 0.6516207] @ P14 NormalBed Left
+     INFO                check [0.1008706, 0.3494264, 0.3815487] @ P14 NormalBed Down
+     INFO                check [0.1480375, 0.5605795, 0.1083524] @ P14 NormalBed Right
+     INFO                check [1.9434, 4.560894, 5.175816] @ P15 ActuatedBed Down
+     INFO                check [8.549366, 8.96539, 9.857201] @ P15 ActuatedBed Right
+     INFO                check [0.4302385, 0.3039024, 0.7008132] @ P15 ActuatedBed Up
+     INFO                check [7.995564, 8.195465, 9.623837] @ P15 ActuatedBed Left
+     INFO                check [1.310151, 2.335148, 5.392451] @ P15 NormalBed Down
+     INFO                check [1.012784, 1.200078, 1.632188] @ P15 NormalBed Right
+     INFO                check [4.132612, 2.797294, 0.8268523] @ P15 NormalBed Up
+     INFO                check [1.309404, 2.359828, 1.850549] @ P15 NormalBed Left
+     INFO                check [12.99429, 13.26614, 15.50875] @ P16 ActuatedBed Down
+     INFO                check [23.65055, 22.16524, 23.68796] @ P16 ActuatedBed Right
+     INFO                check [2.237559, 2.435742, 0.4338616] @ P16 ActuatedBed Up
+     INFO                check [24.61566, 28.91868, 37.1679] @ P16 ActuatedBed Left
+     EXCEED THRESHOLD    37.1679   
+     INFO                check [8.565248, 6.784228, 6.417563] @ P16 NormalBed Down
+     INFO                check [2.336657, 5.870558, 10.29169] @ P16 NormalBed Right
+     INFO                check [1.851501, 3.838849, 2.162022] @ P16 NormalBed Up
+     INFO                check [3.115207, 3.952898, 3.321189] @ P16 NormalBed Left
+     READ RAW DATA       read MaxBodyRange data
+     REMOVE BAD DATA     P3 ActuatedBed Right
+     REMOVE BAD DATA     P3 NormalBed Right
+     REMOVE BAD DATA     P5 ActuatedBed Left
+     REMOVE BAD DATA     P5 NormalBed Left
+     REMOVE BAD DATA     P5 ActuatedBed Right
+     REMOVE BAD DATA     P5 NormalBed Right
+2024-11-22 20:26:19.318986
+TASK1 RANGE START   MaxViewingRange
+     INFO                check [67.15463, 63.33971, 65.54333] @ P1 ActuatedBed Right
+     INFO                check [38.12593, 0.4370072, 35.33601] @ P1 ActuatedBed Up
+     EXCEED THRESHOLD    0.4370072 
+     INFO                check [65.67265, 65.33836, 70.04796] @ P1 ActuatedBed Left
+     INFO                check [58.61547, 56.64251, 54.43939] @ P1 ActuatedBed Down
+     INFO                check [77.86182, 73.74077, 70.86896] @ P1 NormalBed Right
+     INFO                check [59.28375, 40.87795, 44.2332] @ P1 NormalBed Up
+     OUTLIER             59.28375  
+     INFO                check [60.64087, 64.40167, 61.92882] @ P1 NormalBed Left
+     INFO                check [55.02459, 54.67641, 49.38008] @ P1 NormalBed Down
+     OUTLIER             49.38008  
+     INFO                check [69.50677, 80.52837, 73.50095] @ P2 ActuatedBed Left
+     OUTLIER             80.52837  
+     INFO                check [42.74792, 38.50052, 38.65511] @ P2 ActuatedBed Down
+     INFO                check [61.93163, 61.32144, 66.58101] @ P2 ActuatedBed Right
+     INFO                check [30.46254, 31.61752, 30.18572] @ P2 ActuatedBed Up
+     INFO                check [63.58891, 74.69035, 64.24626] @ P2 NormalBed Left
+     OUTLIER             74.69035  
+     INFO                check [31.38276, 28.31743, 23.16925] @ P2 NormalBed Down
+     OUTLIER             23.16925  
+     INFO                check [67.50972, 69.96882, 72.00175] @ P2 NormalBed Right
+     INFO                check [52.76004, 49.2309, 50.29265] @ P2 NormalBed Up
+     INFO                check [86.02251, 92.3515, 88.97606] @ P3 ActuatedBed Left
+     INFO                check [73.70825, 58.86172, 51.55622] @ P3 ActuatedBed Down
+     OUTLIER             73.70825  
+     OUTLIER             51.55622  
+     INFO                check [100.1281, 93.53325, 100.5139] @ P3 ActuatedBed Right
+     OUTLIER             93.53325  
+     INFO                check [57.83629, 49.84002, 52.3951] @ P3 ActuatedBed Up
+     OUTLIER             57.83629  
+     INFO                check [53.26811, 48.94985, 50.24303] @ P3 NormalBed Left
+     INFO                check [35.8447, 35.27755, 39.95703] @ P3 NormalBed Down
+     INFO                check [62.12046, 58.68949, 62.00852] @ P3 NormalBed Right
+     INFO                check [32.94743, 32.53005, 32.54552] @ P3 NormalBed Up
+     INFO                check [26.60706, 27.25171, 26.86964] @ P4 ActuatedBed Down
+     INFO                check [67.86015, 73.73125, 73.6021] @ P4 ActuatedBed Right
+     OUTLIER             67.86015  
+     INFO                check [41.90932, 44.00079, 35.99597] @ P4 ActuatedBed Up
+     OUTLIER             35.99597  
+     INFO                check [70.7422, 77.80106, 64.48997] @ P4 ActuatedBed Left
+     OUTLIER             77.80106  
+     INFO                check [0.1027921, 10.46952, 0.02797646] @ P4 NormalBed Down
+     EXCEED THRESHOLD    0.1027921 
+     EXCEED THRESHOLD    0.02797646
+     INFO                check [2.194013, 0.6333472, 1.096108] @ P4 NormalBed Right
+     EXCEED THRESHOLD    2.194013  
+     EXCEED THRESHOLD    0.6333472 
+     EXCEED THRESHOLD    1.096108  
+     INFO                check [30.70033, 26.92213, 28.95728] @ P4 NormalBed Up
+     INFO                check [45.82481, 42.88304, 43.17631] @ P4 NormalBed Left
+     INFO                check [95.28233, 97.99944, 97.43707] @ P5 ActuatedBed Left
+     INFO                check [66.98963, 63.02348, 65.84016] @ P5 ActuatedBed Down
+     INFO                check [103.6648, 104.0909, 104.7479] @ P5 ActuatedBed Right
+     INFO                check [56.52991, 56.30579, 57.53695] @ P5 ActuatedBed Up
+     INFO                check [86.10739, 81.71141, 0.3077414] @ P5 NormalBed Left
+     EXCEED THRESHOLD    0.3077414 
+     INFO                check [73.69415, 77.19357, 80.30869] @ P5 NormalBed Down
+     INFO                check [103.326, 111.8032, 113.5364] @ P5 NormalBed Right
+     OUTLIER             103.326   
+     INFO                check [56.7636, 54.79511, 54.73999] @ P5 NormalBed Up
+     INFO                check [72.21165, 75.03124, 81.71967] @ P6 ActuatedBed Right
+     OUTLIER             81.71967  
+     INFO                check [37.93076, 37.8707, 38.93587] @ P6 ActuatedBed Up
+     INFO                check [76.85213, 77.26392, 79.52841] @ P6 ActuatedBed Left
+     INFO                check [34.84738, 38.91475, 43.32566] @ P6 ActuatedBed Down
+     INFO                check [52.06699, 66.44498, 66.94048] @ P6 NormalBed Right
+     OUTLIER             52.06699  
+     INFO                check [31.82265, 34.31732, 37.5291] @ P6 NormalBed Up
+     INFO                check [59.81091, 65.54558, 65.999] @ P6 NormalBed Left
+     OUTLIER             59.81091  
+     INFO                check [39.83375, 42.88535, 43.82126] @ P6 NormalBed Down
+     INFO                check [55.01288, 55.09479, 54.64557] @ P7 ActuatedBed Up
+     INFO                check [109.3884, 127.3355, 136.3205] @ P7 ActuatedBed Left
+     OUTLIER             109.3884  
+     OUTLIER             136.3205  
+     INFO                check [88.07529, 0.9211111, 78.61578] @ P7 ActuatedBed Down
+     EXCEED THRESHOLD    0.9211111 
+     INFO                check [2.250815, 79.22501, 104.3644] @ P7 ActuatedBed Right
+     EXCEED THRESHOLD    2.250815  
+     OUTLIER             79.22501  
+     INFO                check [45.70806, 41.35776, 40.11411] @ P7 NormalBed Up
+     INFO                check [79.58192, 98.26536, 101.2393] @ P7 NormalBed Left
+     OUTLIER             79.58192  
+     INFO                check [93.54655, 96.73154, 94.1368] @ P7 NormalBed Down
+     INFO                check [89.04822, 79.78656, 73.72816] @ P7 NormalBed Right
+     OUTLIER             89.04822  
+     OUTLIER             73.72816  
+     INFO                check [31.52925, 30.94884, 32.22225] @ P8 ActuatedBed Up
+     INFO                check [69.15466, 71.07555, 73.31598] @ P8 ActuatedBed Left
+     INFO                check [40.04726, 41.82684, 40.299] @ P8 ActuatedBed Down
+     INFO                check [73.95261, 83.97276, 82.68122] @ P8 ActuatedBed Right
+     OUTLIER             73.95261  
+     INFO                check [33.04906, 28.86272, 24.12515] @ P8 NormalBed Up
+     INFO                check [54.27989, 59.02184, 57.77613] @ P8 NormalBed Left
+     INFO                check [35.62993, 42.70719, 46.05214] @ P8 NormalBed Down
+     OUTLIER             35.62993  
+     INFO                check [63.53133, 60.46896, 64.36417] @ P8 NormalBed Right
+     INFO                check [70.75744, 66.19108, 72.82951] @ P9 ActuatedBed Right
+     INFO                check [77.23244, 74.58321, 77.2193] @ P9 ActuatedBed Up
+     INFO                check [92.80944, 98.70844, 98.78168] @ P9 ActuatedBed Left
+     OUTLIER             92.80944  
+     INFO                check [51.04903, 39.98651, 41.83184] @ P9 ActuatedBed Down
+     OUTLIER             51.04903  
+     INFO                check [68.69061, 72.88403, 75.49406] @ P9 NormalBed Right
+     INFO                check [72.46621, 71.47477, 63.98969] @ P9 NormalBed Up
+     OUTLIER             63.98969  
+     INFO                check [77.00688, 80.2496, 79.37399] @ P9 NormalBed Left
+     INFO                check [26.0885, 26.04434, 27.33733] @ P9 NormalBed Down
+     INFO                check [17.44433, 15.99428, 15.82558] @ P10 ActuatedBed Up
+     INFO                check [30.56559, 31.62636, 29.93485] @ P10 ActuatedBed Left
+     INFO                check [13.66436, 11.28797, 11.42732] @ P10 ActuatedBed Down
+     INFO                check [1.737425, 29.27747, 31.95487] @ P10 ActuatedBed Right
+     EXCEED THRESHOLD    1.737425  
+     INFO                check [14.82215, 14.70946, 13.90071] @ P10 NormalBed Up
+     INFO                check [19.18365, 15.44696, 16.72837] @ P10 NormalBed Left
+     INFO                check [9.828494, 9.221642, 8.824833] @ P10 NormalBed Down
+     INFO                check [19.69861, 19.39977, 18.16608] @ P10 NormalBed Right
+     INFO                check [37.2677, 34.6346, 38.96029] @ P11 ActuatedBed Down
+     INFO                check [74.04941, 66.94327, 72.82722] @ P11 ActuatedBed Right
+     OUTLIER             66.94327  
+     INFO                check [17.9793, 26.48051, 26.57225] @ P11 ActuatedBed Up
+     OUTLIER             17.9793   
+     INFO                check [55.3713, 54.5404, 56.94178] @ P11 ActuatedBed Left
+     INFO                check [28.95368, 23.03779, 25.92726] @ P11 NormalBed Down
+     INFO                check [82.88313, 87.55749, 66.45778] @ P11 NormalBed Right
+     OUTLIER             66.45778  
+     INFO                check [43.86096, 38.06157, 37.48082] @ P11 NormalBed Up
+     OUTLIER             43.86096  
+     INFO                check [52.61197, 50.79478, 47.91768] @ P11 NormalBed Left
+     INFO                check [93.80816, 97.34253, 93.34414] @ P12 ActuatedBed Left
+     INFO                check [66.12886, 1.29875, 55.78009] @ P12 ActuatedBed Down
+     EXCEED THRESHOLD    1.29875   
+     OUTLIER             66.12886  
+     INFO                check [112.8995, 121.9889, 121.2496] @ P12 ActuatedBed Right
+     OUTLIER             112.8995  
+     INFO                check [35.52865, 30.49272, 0.7793398] @ P12 ActuatedBed Up
+     EXCEED THRESHOLD    0.7793398 
+     INFO                check [72.71082, 67.62531, 71.40416] @ P12 NormalBed Left
+     INFO                check [70.0448, 62.27541, 66.62747] @ P12 NormalBed Down
+     INFO                check [73.1366, 59.10252, 62.68239] @ P12 NormalBed Right
+     OUTLIER             73.1366   
+     INFO                check [59.86645, 44.1062, 40.82655] @ P12 NormalBed Up
+     OUTLIER             59.86645  
+     INFO                check [66.43977, 81.94058, 81.83568] @ P13 ActuatedBed Right
+     OUTLIER             66.43977  
+     INFO                check [39.85472, 37.93547, 36.98303] @ P13 ActuatedBed Up
+     INFO                check [61.08241, 75.49527, 80.15625] @ P13 ActuatedBed Left
+     OUTLIER             61.08241  
+     INFO                check [48.11405, 48.85948, 52.26643] @ P13 ActuatedBed Down
+     INFO                check [65.88382, 66.15642, 67.46909] @ P13 NormalBed Right
+     INFO                check [51.69279, 45.6116, 44.92579] @ P13 NormalBed Up
+     OUTLIER             51.69279  
+     INFO                check [51.54609, 50.43827, 50.86866] @ P13 NormalBed Left
+     INFO                check [27.0586, 30.6943, 35.96609] @ P13 NormalBed Down
+     OUTLIER             35.96609  
+     INFO                check [18.06992, 14.17565, 13.08772] @ P14 ActuatedBed Up
+     INFO                check [19.05476, 26.2869, 27.17138] @ P14 ActuatedBed Left
+     OUTLIER             19.05476  
+     INFO                check [11.4009, 11.96591, 14.61169] @ P14 ActuatedBed Down
+     INFO                check [18.48072, 18.07376, 19.11178] @ P14 ActuatedBed Right
+     INFO                check [5.81524, 8.950454, 10.61871] @ P14 NormalBed Up
+     INFO                check [11.05017, 8.979053, 11.11888] @ P14 NormalBed Left
+     INFO                check [8.904173, 6.988366, 8.135883] @ P14 NormalBed Down
+     INFO                check [9.77829, 10.46324, 10.32038] @ P14 NormalBed Right
+     INFO                check [42.94886, 37.87492, 40.56444] @ P15 ActuatedBed Down
+     INFO                check [60.25676, 58.64235, 56.25451] @ P15 ActuatedBed Right
+     INFO                check [25.18394, 17.41275, 23.20088] @ P15 ActuatedBed Up
+     OUTLIER             17.41275  
+     INFO                check [35.73783, 33.31527, 39.33097] @ P15 ActuatedBed Left
+     INFO                check [39.07808, 38.35204, 38.45543] @ P15 NormalBed Down
+     INFO                check [49.17188, 40.48456, 40.06077] @ P15 NormalBed Right
+     OUTLIER             49.17188  
+     INFO                check [28.86051, 26.55425, 23.43397] @ P15 NormalBed Up
+     INFO                check [38.73623, 35.10021, 35.44387] @ P15 NormalBed Left
+     INFO                check [58.75591, 57.05379, 56.65062] @ P16 ActuatedBed Down
+     INFO                check [69.47164, 97.69028, 95.27144] @ P16 ActuatedBed Right
+     OUTLIER             69.47164  
+     INFO                check [32.88271, 38.59816, 0.3886621] @ P16 ActuatedBed Up
+     EXCEED THRESHOLD    0.3886621 
+     INFO                check [75.43953, 82.54213, 105.3347] @ P16 ActuatedBed Left
+     OUTLIER             75.43953  
+     OUTLIER             105.3347  
+     INFO                check [62.08812, 55.70408, 61.56377] @ P16 NormalBed Down
+     OUTLIER             55.70408  
+     INFO                check [66.05262, 78.92258, 76.13383] @ P16 NormalBed Right
+     OUTLIER             66.05262  
+     INFO                check [36.90396, 35.59752, 34.43979] @ P16 NormalBed Up
+     INFO                check [43.43018, 54.4437, 58.8614] @ P16 NormalBed Left
+     OUTLIER             43.43018  
+     READ RAW DATA       read MaxViewingRange data
+     REMOVE BAD DATA     P4 ActuatedBed Right
+     REMOVE BAD DATA     P4 NormalBed Right
+     CALCULATE PVAL      save to ./Summative v2/output/formative/summative task1 MaxViewingRange pval.csv
+     CALCULATE STAT      save to ./Summative v2/output/formative/summative task1 MaxViewingRange stat.csv
+     DRAW RADAR          ActuatedBed 1.3326569869156706 1.2781156340805047
+     DRAW RADAR          NormalBed 1.1157414189423296 0.9805632212783134
+     DRAW RADAR          save to ./Summative v2/output/formative/summative MaxViewingRange YAW.png
+     DRAW RADAR          ActuatedBed 0.6639725075587292 0.7819228819713903
+     DRAW RADAR          NormalBed 0.6525984873480806 0.7156260761866055
+     DRAW RADAR          save to ./Summative v2/output/formative/summative MaxViewingRange PITCH.png
+TASK1 RANGE START   MaxBodyRange
+     INFO                check [12.91196, 11.12651, 14.185] @ P1 ActuatedBed Right
+     INFO                check [0.719821, 0.05595291, 0.6932335] @ P1 ActuatedBed Up
+     INFO                check [16.98321, 13.37699, 14.11612] @ P1 ActuatedBed Left
+     INFO                check [7.406952, 3.928847, 2.374133] @ P1 ActuatedBed Down
+     INFO                check [8.717379, 5.191464, 4.665393] @ P1 NormalBed Right
+     INFO                check [3.616226, 1.229079, 1.423953] @ P1 NormalBed Up
+     INFO                check [2.086566, 2.715484, 0.5475121] @ P1 NormalBed Left
+     INFO                check [7.612726, 3.107846, 4.609892] @ P1 NormalBed Down
+     INFO                check [10.04144, 11.37659, 9.557611] @ P2 ActuatedBed Left
+     INFO                check [3.730509, 3.454964, 1.381827] @ P2 ActuatedBed Down
+     INFO                check [8.766207, 7.220398, 7.547875] @ P2 ActuatedBed Right
+     INFO                check [0.8627541, 2.132858, 1.527262] @ P2 ActuatedBed Up
+     INFO                check [3.213027, 6.37366, 3.296219] @ P2 NormalBed Left
+     INFO                check [0.3946573, 1.372306, 1.696506] @ P2 NormalBed Down
+     INFO                check [1.499983, 1.819191, 3.057423] @ P2 NormalBed Right
+     INFO                check [3.515245, 2.116738, 1.320269] @ P2 NormalBed Up
+     INFO                check [28.94378, 27.63099, 23.11155] @ P3 ActuatedBed Left
+     INFO                check [4.90768, 1.769346, 1.279625] @ P3 ActuatedBed Down
+     INFO                check [43.19543, 33.94657, 37.71572] @ P3 ActuatedBed Right
+     OUTLIER             43.19543  
+     INFO                check [1.547375, 0.8829308, 0.3956476] @ P3 ActuatedBed Up
+     INFO                check [4.209009, 2.615165, 3.403696] @ P3 NormalBed Left
+     INFO                check [3.168915, 1.995668, 1.765471] @ P3 NormalBed Down
+     INFO                check [3.826331, 3.44969, 3.840379] @ P3 NormalBed Right
+     INFO                check [0.3891652, 0.4270431, 0.2832403] @ P3 NormalBed Up
+     INFO                check [0.5271187, 5.239815, 1.306112] @ P4 ActuatedBed Down
+     INFO                check [14.66384, 17.50839, 17.54162] @ P4 ActuatedBed Right
+     INFO                check [1.940175, 4.592651, 1.477638] @ P4 ActuatedBed Up
+     INFO                check [25.80874, 24.34393, 13.29726] @ P4 ActuatedBed Left
+     OUTLIER             13.29726  
+     INFO                check [0.5082192, 0.8081825, 1.246469] @ P4 NormalBed Down
+     INFO                check [0.9412843, 0.8893346, 0.4092611] @ P4 NormalBed Right
+     INFO                check [2.027579, 2.202826, 3.425313] @ P4 NormalBed Up
+     INFO                check [3.819878, 1.776191, 0.9487386] @ P4 NormalBed Left
+     INFO                check [37.51128, 40.96827, 36.0891] @ P5 ActuatedBed Left
+     INFO                check [13.28033, 9.103642, 9.522498] @ P5 ActuatedBed Down
+     INFO                check [35.87749, 31.26101, 32.60873] @ P5 ActuatedBed Right
+     INFO                check [3.492278, 8.991321, 8.283422] @ P5 ActuatedBed Up
+     INFO                check [24.10582, 20.61496, 0.1938267] @ P5 NormalBed Left
+     OUTLIER             0.1938267 
+     INFO                check [14.7904, 13.84745, 17.7654] @ P5 NormalBed Down
+     INFO                check [33.22092, 39.72623, 43.88348] @ P5 NormalBed Right
+     OUTLIER             33.22092  
+     INFO                check [7.218794, 7.709176, 6.261781] @ P5 NormalBed Up
+     INFO                check [8.617849, 11.68749, 13.75353] @ P6 ActuatedBed Right
+     INFO                check [3.574565, 2.605567, 1.326922] @ P6 ActuatedBed Up
+     INFO                check [18.10444, 13.11207, 13.65555] @ P6 ActuatedBed Left
+     INFO                check [2.435742, 3.783566, 3.899329] @ P6 ActuatedBed Down
+     INFO                check [4.022192, 3.905351, 3.460174] @ P6 NormalBed Right
+     INFO                check [1.8409, 1.309703, 0.5804718] @ P6 NormalBed Up
+     INFO                check [5.023402, 5.293427, 5.511605] @ P6 NormalBed Left
+     INFO                check [3.602881, 4.504282, 3.572044] @ P6 NormalBed Down
+     INFO                check [6.263252, 6.904954, 5.156017] @ P7 ActuatedBed Up
+     INFO                check [32.70272, 34.85617, 38.15219] @ P7 ActuatedBed Left
+     INFO                check [8.380027, 2.802817, 4.39837] @ P7 ActuatedBed Down
+     INFO                check [15.16923, 19.41085, 23.82903] @ P7 ActuatedBed Right
+     INFO                check [6.076606, 5.854878, 5.078715] @ P7 NormalBed Up
+     INFO                check [1.928946, 8.222467, 11.69169] @ P7 NormalBed Left
+     OUTLIER             1.928946  
+     INFO                check [24.72578, 17.08795, 15.98384] @ P7 NormalBed Down
+     OUTLIER             24.72578  
+     INFO                check [9.875955, 2.074431, 1.323969] @ P7 NormalBed Right
+     OUTLIER             9.875955  
+     INFO                check [0.5824909, 3.23289, 2.756621] @ P8 ActuatedBed Up
+     INFO                check [13.14615, 11.67233, 9.350151] @ P8 ActuatedBed Left
+     INFO                check [3.878736, 3.902342, 3.956216] @ P8 ActuatedBed Down
+     INFO                check [27.86379, 12.66185, 10.38423] @ P8 ActuatedBed Right
+     OUTLIER             27.86379  
+     INFO                check [1.840581, 1.238753, 1.278401] @ P8 NormalBed Up
+     INFO                check [0.3642322, 1.939368, 0.8213912] @ P8 NormalBed Left
+     INFO                check [1.572839, 1.857305, 1.798527] @ P8 NormalBed Down
+     INFO                check [0.8552368, 1.04605, 1.763696] @ P8 NormalBed Right
+     INFO                check [13.40647, 9.214458, 11.46931] @ P9 ActuatedBed Right
+     INFO                check [6.248868, 3.673491, 5.788923] @ P9 ActuatedBed Up
+     INFO                check [18.88423, 17.79165, 18.69577] @ P9 ActuatedBed Left
+     INFO                check [12.95549, 2.883237, 1.37885] @ P9 ActuatedBed Down
+     OUTLIER             12.95549  
+     INFO                check [5.0303, 1.733365, 1.125179] @ P9 NormalBed Right
+     INFO                check [8.406534, 4.797548, 9.395968] @ P9 NormalBed Up
+     INFO                check [13.41757, 9.04974, 11.80402] @ P9 NormalBed Left
+     INFO                check [4.92406, 6.47911, 9.323607] @ P9 NormalBed Down
+     INFO                check [1.495148, 9.22503, 1.401373] @ P10 ActuatedBed Up
+     OUTLIER             9.22503   
+     INFO                check [3.919016, 2.579368, 2.313338] @ P10 ActuatedBed Left
+     INFO                check [1.766911, 0.5482264, 0.8625273] @ P10 ActuatedBed Down
+     INFO                check [2.534972, 2.383924, 2.912554] @ P10 ActuatedBed Right
+     INFO                check [0.1713202, 0.2298502, 0.1907741] @ P10 NormalBed Up
+     INFO                check [0.8016186, 0.09065409, 0.1866263] @ P10 NormalBed Left
+     INFO                check [1.564355, 0.6731851, 0.8778186] @ P10 NormalBed Down
+     INFO                check [0.2594432, 0.2065338, 0.261696] @ P10 NormalBed Right
+     INFO                check [4.910913, 3.805086, 5.846402] @ P11 ActuatedBed Down
+     INFO                check [8.038245, 9.312112, 10.56939] @ P11 ActuatedBed Right
+     INFO                check [6.842979, 7.199473, 4.96345] @ P11 ActuatedBed Up
+     INFO                check [6.735544, 8.869731, 7.621228] @ P11 ActuatedBed Left
+     INFO                check [2.854236, 4.436855, 4.185539] @ P11 NormalBed Down
+     INFO                check [4.707443, 6.021578, 4.219234] @ P11 NormalBed Right
+     INFO                check [1.5418, 4.593631, 4.662999] @ P11 NormalBed Up
+     INFO                check [3.384603, 2.94796, 5.631063] @ P11 NormalBed Left
+     INFO                check [27.64764, 27.28569, 29.55302] @ P12 ActuatedBed Left
+     INFO                check [6.475083, 0.06255726, 1.87273] @ P12 ActuatedBed Down
+     INFO                check [63.85014, 72.51764, 68.30096] @ P12 ActuatedBed Right
+     INFO                check [3.338651, 2.637747, 1.030406] @ P12 ActuatedBed Up
+     INFO                check [14.60185, 8.355785, 4.66136] @ P12 NormalBed Left
+     OUTLIER             14.60185  
+     INFO                check [8.854857, 3.490371, 5.440245] @ P12 NormalBed Down
+     INFO                check [16.88313, 10.84079, 16.11031] @ P12 NormalBed Right
+     OUTLIER             10.84079  
+     INFO                check [10.21685, 2.808886, 4.334947] @ P12 NormalBed Up
+     OUTLIER             10.21685  
+     INFO                check [7.584212, 11.69723, 10.81114] @ P13 ActuatedBed Right
+     INFO                check [0.6370438, 0.4005627, 1.430945] @ P13 ActuatedBed Up
+     INFO                check [13.55471, 12.31542, 13.528] @ P13 ActuatedBed Left
+     INFO                check [4.813976, 3.415926, 3.832008] @ P13 ActuatedBed Down
+     INFO                check [0.6145305, 1.119426, 0.8784871] @ P13 NormalBed Right
+     INFO                check [2.407047, 2.152133, 3.544532] @ P13 NormalBed Up
+     INFO                check [0.386643, 0.2993615, 0.7947544] @ P13 NormalBed Left
+     INFO                check [1.741812, 1.132633, 1.710636] @ P13 NormalBed Down
+     INFO                check [0.4116447, 0.4302385, 0.1582588] @ P14 ActuatedBed Up
+     INFO                check [2.035286, 2.096392, 2.364302] @ P14 ActuatedBed Left
+     INFO                check [0.261696, 0.6943616, 0.6437659] @ P14 ActuatedBed Down
+     INFO                check [1.693042, 1.297544, 1.329279] @ P14 ActuatedBed Right
+     INFO                check [0.3986039, 0.08622923, 0.6531205] @ P14 NormalBed Up
+     INFO                check [0.4374548, 0.4845679, 0.6516207] @ P14 NormalBed Left
+     INFO                check [0.1008706, 0.3494264, 0.3815487] @ P14 NormalBed Down
+     INFO                check [0.1480375, 0.5605795, 0.1083524] @ P14 NormalBed Right
+     INFO                check [1.9434, 4.560894, 5.175816] @ P15 ActuatedBed Down
+     INFO                check [8.549366, 8.96539, 9.857201] @ P15 ActuatedBed Right
+     INFO                check [0.4302385, 0.3039024, 0.7008132] @ P15 ActuatedBed Up
+     INFO                check [7.995564, 8.195465, 9.623837] @ P15 ActuatedBed Left
+     INFO                check [1.310151, 2.335148, 5.392451] @ P15 NormalBed Down
+     INFO                check [1.012784, 1.200078, 1.632188] @ P15 NormalBed Right
+     INFO                check [4.132612, 2.797294, 0.8268523] @ P15 NormalBed Up
+     INFO                check [1.309404, 2.359828, 1.850549] @ P15 NormalBed Left
+     INFO                check [12.99429, 13.26614, 15.50875] @ P16 ActuatedBed Down
+     INFO                check [23.65055, 22.16524, 23.68796] @ P16 ActuatedBed Right
+     INFO                check [2.237559, 2.435742, 0.4338616] @ P16 ActuatedBed Up
+     INFO                check [24.61566, 28.91868, 37.1679] @ P16 ActuatedBed Left
+     OUTLIER             37.1679   
+     INFO                check [8.565248, 6.784228, 6.417563] @ P16 NormalBed Down
+     INFO                check [2.336657, 5.870558, 10.29169] @ P16 NormalBed Right
+     INFO                check [1.851501, 3.838849, 2.162022] @ P16 NormalBed Up
+     INFO                check [3.115207, 3.952898, 3.321189] @ P16 NormalBed Left
+     READ RAW DATA       read MaxBodyRange data
+     CALCULATE PVAL      save to ./Summative v2/output/formative/summative task1 MaxBodyRange pval.csv
+     CALCULATE STAT      save to ./Summative v2/output/formative/summative task1 MaxBodyRange stat.csv
+     DRAW RADAR          ActuatedBed 0.3096315514847994 0.310375688973849
+     DRAW RADAR          NormalBed 0.10279272174817983 0.08607164887829681
+     DRAW RADAR          save to ./Summative v2/output/formative/summative MaxBodyRange YAW.png
+     DRAW RADAR          ActuatedBed 0.04584331937326372 0.07501466346112458
+     DRAW RADAR          NormalBed 0.050113641114166135 0.08382366444175396
+     DRAW RADAR          save to ./Summative v2/output/formative/summative MaxBodyRange PITCH.png

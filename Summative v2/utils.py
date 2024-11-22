@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 class bcolors:
     HEADER = "\033[95m"
     OKBLUE = "\033[94m"
@@ -11,12 +14,21 @@ class bcolors:
 
 
 class LOGGER:
-    def __init__(self):
+    def __init__(self, filepath=None):
         self.level = 0
+        self.filepath = filepath
+
+        if self.filepath is not None:
+            with open(self.filepath, "a") as f:
+                f.write(f"{datetime.now()}\n")
 
     def PRINT_LOG(self, title, color, detail):
         indent = " " * self.level * 5
         print(f"{indent}{color}{title:20}{bcolors.ENDC}{detail}")
+
+        if self.filepath is not None:
+            with open(self.filepath, "a") as f:
+                f.write(f"{indent}{title:20}{detail}\n")
 
     def ADD_LEVEL(self):
         self.level = self.level + 1

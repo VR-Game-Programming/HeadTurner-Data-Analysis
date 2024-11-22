@@ -13,17 +13,59 @@ from math import pi
 
 OUTPUT_DIR = f"{ROOT_DIR}/output/formative"
 
-logger = LOGGER()
+logger = LOGGER(f"{OUTPUT_DIR}/formative.log")
 
 
-def task1_range(variable_name, threshold):
-    logger.PRINT_LOG("TASK1 RANGE", bcolors.OKBLUE, f"start {variable_name}")
+def detect_baddata(lst, variable_name, condition, direction, participant):
+    if variable_name == "MaxViewingRange":
+        range_threshold = HEAD_RANGE_THRESHOLD
+    elif variable_name == "MaxBodyRange":
+        range_threshold = BODY_RANGE_THRESHOLD
+
+    logger.PRINT_LOG(
+        "INFO", bcolors.ENDC, f"check {lst} @ P{participant} {condition} {direction}"
+    )
+
+    # detect exterem values
+    o_lst = lst.copy()
+    for value in o_lst:
+        if (
+            value < range_threshold[condition][direction][0]
+            or value > range_threshold[condition][direction][1]
+        ):
+            logger.PRINT_LOG(
+                "EXCEED THRESHOLD",
+                bcolors.WARNING,
+                f"{value:<10}",
+            )
+            lst.remove(value)
+
+    if len(lst) <= 1:
+        return lst
+
+    # detect outliers
+    md = stat.median(lst)
+
+    for value in lst:
+        if abs(value - md) > OUTLIER_THRESHOLD:
+            logger.PRINT_LOG(
+                "OUTLIER",
+                bcolors.WARNING,
+                f"{value:<10}",
+            )
+            lst.remove(value)
+
+    return lst
+
+
+def task1_range(variable_name):
+    logger.PRINT_LOG("TASK1 RANGE START", bcolors.OKBLUE, f"{variable_name}")
     logger.ADD_LEVEL()
 
     # read raw data
     # d[direction][condition][participant] = value
     d = {}
-    outliers = []
+    baddatas = []
 
     for participant in PARTICIPANTS:
         for condition in CONDITIONS:
@@ -32,39 +74,32 @@ def task1_range(variable_name, threshold):
             try:
                 with open(input_file, newline="") as f:
                     reader = csv.DictReader(f)
-                    tmp_lst = []
+                    lst = []
 
                     for row in reader:
                         direction = row["Direction"]
                         count = int(row["tCount"])
-
-                        value = abs(float(row[variable_name]))
-                        if value < threshold:
-                            logger.PRINT_LOG(
-                                "EXCEED THRESHOLD",
-                                bcolors.ENDC,
-                                f"{variable_name} {value:<10} @ P{participant} {condition} {direction}",
-                            )
-                        else:
-                            tmp_lst.append(value)
+                        lst.append(abs(float(row[variable_name])))
 
                         if count == 3:
-                            if len(tmp_lst) == 0:
-                                x = -1
+                            lst = detect_baddata(
+                                lst,
+                                variable_name,
+                                condition,
+                                direction,
+                                participant,
+                            )
 
-                                logger.PRINT_LOG(
-                                    "DETECT OUTLIER",
-                                    bcolors.WARNING,
-                                    f"P{participant} {condition} {direction}",
-                                )
-                                outliers.append(f"{participant} {direction}")
+                            if len(lst) == 0:
+                                x = -1
+                                baddatas.append(f"{participant} {direction}")
                             else:
-                                x = stat.fmean(tmp_lst)
+                                x = stat.fmean(lst)
 
                             d.setdefault(direction, {}).setdefault(condition, {})[
                                 participant
                             ] = x
-                            tmp_lst = []
+                            lst = []
 
             except FileNotFoundError:
                 logger.PRINT_LOG(
@@ -72,14 +107,14 @@ def task1_range(variable_name, threshold):
                 )
     logger.PRINT_LOG("READ RAW DATA", bcolors.OKGREEN, f"read {variable_name} data")
 
-    # remove outlier's condition pairs, if "P4 NormalBed Right" is outlier, remove "P4 ActuatedBed Right"
-    for outlier in outliers:
-        participant, direction = outlier.split()
+    # remove baddata's condition pairs, if "P4 NormalBed Right" is baddata, remove "P4 ActuatedBed Right"
+    for baddata in baddatas:
+        participant, direction = baddata.split()
         for condition in CONDITIONS:
             d[direction][condition].pop(int(participant))
             logger.PRINT_LOG(
-                "REMOVE OUTLIER",
-                bcolors.WARNING,
+                "REMOVE BAD DATA",
+                bcolors.FAIL,
                 f"P{participant} {condition} {direction}",
             )
 
@@ -142,7 +177,7 @@ def task1_range(variable_name, threshold):
     draw_range(variable_name, "YAW", mean_d)
     draw_range(variable_name, "PITCH", mean_d)
 
-    logger.RESET_LEVEL()
+    logger.SUB_LEVEL()
 
 
 def draw_range(variable_name, orientation, d):
@@ -203,8 +238,8 @@ def draw_range(variable_name, orientation, d):
             height=(10 - bottom),
             width=(l_value + r_value),
             bottom=bottom,
-            color=COLORS[condition][cshade.DARK] + "32",  # make it transparent
-            edgecolor=COLORS[condition][cshade.DARK],
+            color=COLORS[condition][DARK] + "32",  # make it transparent
+            edgecolor=COLORS[condition][DARK],
             linewidth=3,
             linestyle="solid",
             label=condition,
@@ -232,7 +267,7 @@ def draw_range(variable_name, orientation, d):
 
 def form_metrics(task_id, variable_name):
     logger.PRINT_LOG(
-        "FORM METRICS", bcolors.OKBLUE, f"start task{task_id} {variable_name}"
+        "FORM METRICS START", bcolors.OKBLUE, f"task{task_id} {variable_name}"
     )
     logger.ADD_LEVEL()
 
@@ -301,7 +336,7 @@ def form_metrics(task_id, variable_name):
     # draw metric figure
     draw_metric(task_id, variable_name, mean_d, std_d, y_limit=10, annotate=False)
 
-    logger.RESET_LEVEL()
+    logger.SUB_LEVEL()
 
 
 def draw_metric(task_id, variable_name, mean_d, std_d=None, y_limit=10, annotate=False):
@@ -334,7 +369,7 @@ def draw_metric(task_id, variable_name, mean_d, std_d=None, y_limit=10, annotate
             ax.plot(
                 angles,
                 values,
-                color=COLORS[condition][cshade.MEDIUM],
+                color=COLORS[condition][MEDIUM],
                 linewidth=2,
                 linestyle="solid",
                 label=condition,
@@ -345,16 +380,16 @@ def draw_metric(task_id, variable_name, mean_d, std_d=None, y_limit=10, annotate
             ax.errorbar(
                 angles,
                 values,
-                color=COLORS[condition][cshade.MEDIUM],
+                color=COLORS[condition][MEDIUM],
                 linewidth=2,
                 linestyle="solid",
                 label=condition,
                 yerr=std_values,
-                ecolor=COLORS[condition][cshade.MEDIUM],
+                ecolor=COLORS[condition][MEDIUM],
                 capsize=5,
             )
 
-        ax.fill(angles, values, color=COLORS[condition][cshade.MEDIUM], alpha=0.1)
+        ax.fill(angles, values, color=COLORS[condition][MEDIUM], alpha=0.1)
         if annotate:
             for a, v in zip(angles, values):
                 ax.annotate(
@@ -379,9 +414,9 @@ def draw_metric(task_id, variable_name, mean_d, std_d=None, y_limit=10, annotate
     logger.PRINT_LOG("DRAW METRIC", bcolors.OKGREEN, f"save to {fig_path}")
 
 
-task1_range("MaxViewingRange", 5)
-task1_range("MaxBodyRange", 0)
+task1_range("MaxViewingRange")
+task1_range("MaxBodyRange")
 
-form_metrics(1, "Effort")
-form_metrics(2, "Effort")
-form_metrics(2, "Dizziness")
+# form_metrics(1, "Effort")
+# form_metrics(2, "Effort")
+# form_metrics(2, "Dizziness")

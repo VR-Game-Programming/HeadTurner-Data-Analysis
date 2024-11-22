@@ -1,19 +1,38 @@
-from enum import Enum
-
-
-class cshade(Enum):
-    LIGHTEST = 0
-    LIGHT = 1
-    MEDIUM = 2
-    DARK = 3
-    DARKEST = 4
-
-
-ROOT_DIR = "./Summative v2 test"
+ROOT_DIR = "./Summative v2"
 
 CONDITIONS = ["ActuatedBed", "NormalBed"]
 DIRECTIONS = ["Right", "Up", "Left", "Down"]
 PARTICIPANTS = list(range(1, 16 + 1))
+
+OUTLIER_THRESHOLD = 5
+HEAD_RANGE_THRESHOLD = {
+    "ActuatedBed": {
+        "Right": [5, 180],
+        "Up": [5, 180],
+        "Left": [5, 180],
+        "Down": [5, 180],
+    },
+    "NormalBed": {
+        "Right": [5, 180],
+        "Up": [5, 180],
+        "Left": [5, 180],
+        "Down": [5, 180],
+    },
+}
+BODY_RANGE_THRESHOLD = {
+    "ActuatedBed": {
+        "Right": [0, 100],
+        "Up": [0, 50],
+        "Left": [0, 100],
+        "Down": [0, 50],
+    },
+    "NormalBed": {
+        "Right": [0, 100],
+        "Up": [0, 50],
+        "Left": [0, 100],
+        "Down": [0, 50],
+    },
+}
 
 
 Applications = ["Ecosphere", "FPS"]
@@ -21,20 +40,12 @@ EcosphereClips = ["Borneo", "RajaAmpat"]
 
 Points = list(range(1, 5 + 1))
 
-
 COLORS = {
-    CONDITIONS[0]: {
-        cshade.LIGHTEST: "#BECACA",
-        cshade.LIGHT: "#AFC7C7",
-        cshade.MEDIUM: "#90C1C1",
-        cshade.DARK: "#71BBBB",
-        cshade.DARKEST: "#52B4B4",
-    },
-    CONDITIONS[1]: {
-        cshade.LIGHTEST: "#C7BFC4",
-        cshade.LIGHT: "#D0B3BD",
-        cshade.MEDIUM: "#D299AC",
-        cshade.DARK: "#D57F9C",
-        cshade.DARKEST: "#D7658B",
-    },
+    "ActuatedBed": ["#BECACA", "#AFC7C7", "#90C1C1", "#71BBBB", "#52B4B4"],
+    "NormalBed": ["#C7BFC4", "#D0B3BD", "#D299AC", "#D57F9C", "#D7658B"],
 }
+LIGHTEST = 0
+LIGHT = 1
+MEDIUM = 2
+DARK = 3
+DARKEST = 4
