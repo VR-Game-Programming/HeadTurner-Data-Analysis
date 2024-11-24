@@ -27,3 +27,10 @@ LIKERT METRICS STARTfreeplay Comfort
 LIKERT METRICS STARTfreeplay Preference
      CALCULATE PVAL      save to ./Summative v2/output/freeplay/summative freeplay Preference pval.csv
      DRAW LIKERT METRIC  save to ./Summative v2/output/freeplay/summative freeplay likert Preference.png
+2024-11-24 14:29:17.655766
+LIKERT METRICS STARTfreeplay Comfort
+     CALCULATE PVAL      save to ./Summative v2/output/freeplay/summative freeplay Comfort pval.csv
+     DRAW LIKERT METRIC  save to ./Summative v2/output/freeplay/summative freeplay likert Comfort.png
+LIKERT METRICS STARTfreeplay Preference
+     CALCULATE PVAL      save to ./Summative v2/output/freeplay/summative freeplay Preference pval.csv
+     DRAW LIKERT METRIC  save to ./Summative v2/output/freeplay/summative freeplay likert Preference.png

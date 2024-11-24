@@ -227,7 +227,8 @@ def draw_likert_metrics(variable_name, d):
 
     plt.ylim(-1, 3)
     plt.subplots_adjust(wspace=0, top=0.85, bottom=0.1, left=0.18, right=0.95)
-    plt.suptitle("Preference", fontsize=16, fontweight="bold")
+    fig_title = f"Summative Freeplay {variable_name}"
+    plt.suptitle(fig_title, fontsize=16, fontweight="bold")
 
     fig_path = f"{OUTPUT_DIR}/summative freeplay likert {variable_name}.png"
     plt.savefig(fig_path, transparent=False)
