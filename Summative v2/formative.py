@@ -320,8 +320,8 @@ def form_metrics(task_id, variable_name):
         writer = csv.writer(f)
         writer.writerow(["DIRECTIONS", "CONDITIONS", "MEAN", "STD"])
 
-        for condition in CONDITIONS:
-            for direction in DIRECTIONS:
+        for direction in DIRECTIONS:
+            for condition in CONDITIONS:
                 values = d[condition][direction]
 
                 mean_ = stat.mean(values)
@@ -334,7 +334,7 @@ def form_metrics(task_id, variable_name):
     logger.PRINT_LOG("CALCULATE STAT", bcolors.OKGREEN, f"save to {output_file}")
 
     # draw metric figure
-    draw_metric(task_id, variable_name, mean_d, std_d, y_limit=10, annotate=False)
+    draw_metric(task_id, variable_name, mean_d, std_d, 10, False)
 
     logger.SUB_LEVEL()
 
@@ -414,9 +414,9 @@ def draw_metric(task_id, variable_name, mean_d, std_d=None, y_limit=10, annotate
     logger.PRINT_LOG("DRAW METRIC", bcolors.OKGREEN, f"save to {fig_path}")
 
 
-task1_range("MaxViewingRange")
-task1_range("MaxBodyRange")
+# task1_range("MaxViewingRange")
+# task1_range("MaxBodyRange")
 
-# form_metrics(1, "Effort")
-# form_metrics(2, "Effort")
-# form_metrics(2, "Dizziness")
+form_metrics(1, "Effort")
+form_metrics(2, "Effort")
+form_metrics(2, "Dizziness")

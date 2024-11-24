@@ -1119,3 +1119,22 @@ TASK1 RANGE START   MaxBodyRange
      DRAW RADAR          ActuatedBed 0.04584331937326372 0.07501466346112458
      DRAW RADAR          NormalBed 0.050113641114166135 0.08382366444175396
      DRAW RADAR          save to ./Summative v2/output/formative/summative MaxBodyRange PITCH.png
+2024-11-24 13:31:17.639565
+FORM METRICS START  task1 Effort
+     CALCULATE PVAL      save to ./Summative v2/output/formative/summative task1 Effort pval.csv
+     CALCULATE STAT      save to ./Summative v2/output/formative/summative task1 Effort stat.csv
+     DRAW METRIC         ActuatedBed [4.1875, 4.5, 4.25, 4.8125]
+     DRAW METRIC         NormalBed [5.0625, 4.25, 5.3125, 5.75]
+     DRAW METRIC         save to ./Summative v2/output/formative/summative task1 Effort w-std.png
+FORM METRICS START  task2 Effort
+     CALCULATE PVAL      save to ./Summative v2/output/formative/summative task2 Effort pval.csv
+     CALCULATE STAT      save to ./Summative v2/output/formative/summative task2 Effort stat.csv
+     DRAW METRIC         ActuatedBed [3.625, 4.25, 3.375, 4.1875]
+     DRAW METRIC         NormalBed [4.125, 3.8125, 4.75, 5.0625]
+     DRAW METRIC         save to ./Summative v2/output/formative/summative task2 Effort w-std.png
+FORM METRICS START  task2 Dizziness
+     CALCULATE PVAL      save to ./Summative v2/output/formative/summative task2 Dizziness pval.csv
+     CALCULATE STAT      save to ./Summative v2/output/formative/summative task2 Dizziness stat.csv
+     DRAW METRIC         ActuatedBed [1, 0.8125, 0.6875, 0.875]
+     DRAW METRIC         NormalBed [1, 0.5625, 1.1875, 0.75]
+     DRAW METRIC         save to ./Summative v2/output/formative/summative task2 Dizziness w-std.png

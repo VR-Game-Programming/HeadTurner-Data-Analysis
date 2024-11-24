@@ -1,0 +1,29 @@
+2024-11-24 14:23:26.455859
+SCALE METRICS START freeplay Effort
+     CALCULATE PVAL      save to ./Summative v2/output/freeplay/summative freeplay Effort pval.csv
+     CALCULATE STAT      save to ./Summative v2/output/freeplay/summative freeplay Effort stat.csv
+     DRAW SCALE METRIC   save to ./Summative v2/output/freeplay/summative freeplay scale Effort.png
+SCALE METRICS START freeplay Dizziness
+     CALCULATE PVAL      save to ./Summative v2/output/freeplay/summative freeplay Dizziness pval.csv
+     CALCULATE STAT      save to ./Summative v2/output/freeplay/summative freeplay Dizziness stat.csv
+     DRAW SCALE METRIC   save to ./Summative v2/output/freeplay/summative freeplay scale Dizziness.png
+LIKERT METRICS STARTfreeplay Comfort
+     CALCULATE PVAL      save to ./Summative v2/output/freeplay/summative freeplay Comfort pval.csv
+     DRAW LIKERT METRIC  save to ./Summative v2/output/freeplay/summative freeplay likert Comfort.png
+LIKERT METRICS STARTfreeplay Preference
+     CALCULATE PVAL      save to ./Summative v2/output/freeplay/summative freeplay Preference pval.csv
+     DRAW LIKERT METRIC  save to ./Summative v2/output/freeplay/summative freeplay likert Preference.png
+2024-11-24 14:25:20.350730
+LIKERT METRICS STARTfreeplay Comfort
+     CALCULATE PVAL      save to ./Summative v2/output/freeplay/summative freeplay Comfort pval.csv
+     DRAW LIKERT METRIC  save to ./Summative v2/output/freeplay/summative freeplay likert Comfort.png
+LIKERT METRICS STARTfreeplay Preference
+     CALCULATE PVAL      save to ./Summative v2/output/freeplay/summative freeplay Preference pval.csv
+     DRAW LIKERT METRIC  save to ./Summative v2/output/freeplay/summative freeplay likert Preference.png
+2024-11-24 14:26:00.287787
+LIKERT METRICS STARTfreeplay Comfort
+     CALCULATE PVAL      save to ./Summative v2/output/freeplay/summative freeplay Comfort pval.csv
+     DRAW LIKERT METRIC  save to ./Summative v2/output/freeplay/summative freeplay likert Comfort.png
+LIKERT METRICS STARTfreeplay Preference
+     CALCULATE PVAL      save to ./Summative v2/output/freeplay/summative freeplay Preference pval.csv
+     DRAW LIKERT METRIC  save to ./Summative v2/output/freeplay/summative freeplay likert Preference.png
