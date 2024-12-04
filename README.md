@@ -1,5 +1,57 @@
 # HeadTurner-Data-Analysis
 
+# Summative v2
+## Formative-Metric Task 1: Maximum Range
+
+maximum head/viewing range:
+- [p value](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/f164bd30adc7fceb64e01132de5567889594382a/Summative%20v2/output/formative/summative%20task1%20MaxViewingRange%20pval.csv)
+- [mean & std](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/f164bd30adc7fceb64e01132de5567889594382a/Summative%20v2/output/formative/summative%20task1%20MaxViewingRange%20stat.csv)
+- [Fig: pitch direction](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/formative/summative%20MaxViewingRange%20PITCH.png)
+- [Fig: yaw direction](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/formative/summative%20MaxViewingRange%20YAW.png)
+
+maximum body range:
+- [p value](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/f164bd30adc7fceb64e01132de5567889594382a/Summative%20v2/output/formative/summative%20task1%20MaxBodyRange%20pval.csv)
+- [mean & std](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/f164bd30adc7fceb64e01132de5567889594382a/Summative%20v2/output/formative/summative%20task1%20MaxBodyRange%20stat.csv)
+- [Fig: pitch direction](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/formative/summative%20MaxBodyRange%20PITCH.png)
+- [Fig: yaw direction](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/formative/summative%20MaxBodyRange%20YAW.png)
+
+effort:
+- [p value](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/formative/summative%20task1%20Effort%20pval.csv)
+- [mean & std](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/formative/summative%20task1%20Effort%20stat.csv)
+- [Fig](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/f164bd30adc7fceb64e01132de5567889594382a/Summative%20v2/output/formative/summative%20task1%20Effort%20w-std.png)
+
+## Formative-Metric Task 2: Fixed Range
+
+effort:
+- [p value](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/formative/summative%20task2%20Effort%20pval.csv)
+- [mean & std](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/formative/summative%20task2%20Effort%20stat.csv)
+- [Fig](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/f164bd30adc7fceb64e01132de5567889594382a/Summative%20v2/output/formative/summative%20task2%20Effort%20w-std.png)
+
+dizziness:
+- [p value](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/formative/summative%20task2%20Dizziness%20pval.csv)
+- [mean & std](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/formative/summative%20task2%20Dizziness%20stat.csv)
+- [Fig](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/f164bd30adc7fceb64e01132de5567889594382a/Summative%20v2/output/formative/summative%20task2%20Dizziness%20w-std.png)
+
+## FreePlay
+
+effort:
+- [p value](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/freeplay/summative%20freeplay%20Effort%20pval.csv)
+- [mean & std](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/freeplay/summative%20freeplay%20Effort%20stat.csv)
+- [Fig](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/freeplay/summative%20freeplay%20scale%20Effort.png)
+
+dizziness:
+- [p value](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/freeplay/summative%20freeplay%20Dizziness%20pval.csv)
+- [mean & std](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/freeplay/summative%20freeplay%20Dizziness%20stat.csv)
+- [Fig](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/freeplay/summative%20freeplay%20scale%20Dizziness.png)
+
+comfort:
+- [p value](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/freeplay/summative%20freeplay%20Comfort%20pval.csv)
+- [Fig](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/freeplay/summative%20freeplay%20likert%20Comfort.png)
+
+preference:
+- [p value](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/freeplay/summative%20freeplay%20Preference%20pval.csv)
+- [Fig](https://github.com/VR-Game-Programming/HeadTurner-Data-Analysis/blob/main/Summative%20v2/output/freeplay/summative%20freeplay%20likert%20Preference.png)
+
 # Formative
 ## Task 1
 [不同姿勢和方向上 maximum head range 的(受試者)平均和標準差](/Formative/Result%20Processed/T1_Result.csv)
@@ -22,35 +74,3 @@
 [不同姿勢和方向上 maximum trunk range 的(受試者)平均和標準差](/Formative/Result%20Processed/O3_MaxTrunkRotation.csv)
 
 [不同方向上，姿勢之間的 maximum head range 的 Wilcoxon signed-rank test 結果](Formative/Result%20Processed/O3_pValue_Result.txt)
-
-# Summative
-## Formative-Metric Task 1
-[不同方向和情境上的 maximum head rotation range 的(受試者)平均和標準差](/Summative/Processed%20Data/Summative_T1_HeadMaximumRange.csv)
-
-[不同方向上，情境之間的 maximum head rotation range 的 Wilcoxon signed-rank test 結果](/Summative/Processed%20Data/Summative_T1_HeadMaximumRange_pval.csv)
-
-[不同方向和情境上的 maximum body rotation range 的(受試者)平均和標準差](/Summative/Processed%20Data/Summative_T1_BodyMaximumRange.csv)
-
-[不同方向上，情境之間的 maximum body rotation range 的 Wilcoxon signed-rank test 結果](/Summative/Processed%20Data/Summative_T1_BodyMaximumRange_pval.csv)
-
-[不同方向和情境上的 effort 的(受試者)平均和標準差](/Summative/Processed%20Data/Summative_T1_Effort.csv)
-
-[不同方向上，情境之間的 effort 的 Paired-t Test 和 Wilcoxon signed-rank test 結果](/Summative/Processed%20Data/Summative_T1_Effort_pval.csv)
-
-## Formative-Metric Task 2
-[不同方向和情境上的 effort 的(受試者)平均和標準差](/Summative/Processed%20Data/Summative_T2_Effort.csv)
-
-[不同方向上，情境之間的 effort 的 Wilcoxon signed-rank test 結果](/Summative/Processed%20Data/Summative_T2_Effort_pval.csv)
-
-[不同方向和情境上的 dizziness 的(受試者)平均和標準差](/Summative/Processed%20Data/Summative_T2_Dizziness.csv)
-
-[不同方向上，情境之間的 dizziness 的 Wilcoxon signed-rank test 結果](/Summative/Processed%20Data/Summative_T2_Dizziness_pval.csv)
-
-## FreePlay
-[不同應用程式和情境上的 effort 的(受試者)平均和標準差](/Summative/Processed%20Data/Summative_Freeplay_Effort.csv)
-
-[不同應用程式時，情境之間的 effort 的 Wilcoxon signed-rank test 結果](/Summative/Processed%20Data/Summative_Freeplay_Effort_pval.csv)
-
-[不同應用程式和情境上的 dizziness 的(受試者)平均和標準差](/Summative/Processed%20Data/Summative_Freeplay_Dizziness.csv)
-
-[不同應用程式時，情境之間的 dizziness 的 Wilcoxon signed-rank test 結果](/Summative/Processed%20Data/Summative_Freeplay_Dizziness_pval.csv)
