@@ -4,6 +4,8 @@ CONDITIONS = ["ActuatedBed", "NormalBed"]
 
 # Formative Metrics
 DIRECTIONS = ["Right", "Up", "Left", "Down"]
+YAW_DIRECTION = ["Right", "Left"]
+PITCH_DIRECTION = ["Up", "Down"]
 PARTICIPANTS = list(range(1, 16 + 1))
 
 OUTLIER_THRESHOLD = 5

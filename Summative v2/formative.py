@@ -118,6 +118,8 @@ def task1_range(variable_name):
                 f"P{participant} {condition} {direction}",
             )
 
+    pprint.pprint(d)
+
     # calculate pval
     output_file = f"{OUTPUT_DIR}/summative task1 {variable_name} pval.csv"
     with open(output_file, "w", newline="") as f:
@@ -132,50 +134,77 @@ def task1_range(variable_name):
             _, wp = wilcoxon(c1, c2)
 
             writer.writerow([direction, p, wp])
+
+        # yaw direction
+        c1 = list(d["Right"][CONDITIONS[0]].values()) + list(
+            d["Left"][CONDITIONS[0]].values()
+        )
+        c2 = list(d["Right"][CONDITIONS[1]].values()) + list(
+            d["Left"][CONDITIONS[1]].values()
+        )
+
+        _, p = ttest_rel(c1, c2)
+        _, wp = wilcoxon(c1, c2)
+
+        writer.writerow(["Yaw", p, wp])
+
+        # pitch direction
+        c1 = list(d["Up"][CONDITIONS[0]].values()) + list(
+            d["Down"][CONDITIONS[0]].values()
+        )
+        c2 = list(d["Up"][CONDITIONS[1]].values()) + list(
+            d["Down"][CONDITIONS[1]].values()
+        )
+
+        _, p = ttest_rel(c1, c2)
+        _, wp = wilcoxon(c1, c2)
+
+        writer.writerow(["Pitch", p, wp])
+
     logger.PRINT_LOG("CALCULATE PVAL", bcolors.OKGREEN, f"save to {output_file}")
 
     # calculate stat
-    mean_d = {}
+    # mean_d = {}
 
-    output_file = f"{OUTPUT_DIR}/summative task1 {variable_name} stat.csv"
-    with open(output_file, "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["DIRECTIONS", "CONDITIONS", "MEAN", "STD", "MIN", "MAX"])
+    # output_file = f"{OUTPUT_DIR}/summative task1 {variable_name} stat.csv"
+    # with open(output_file, "w", newline="") as f:
+    #     writer = csv.writer(f)
+    #     writer.writerow(["DIRECTIONS", "CONDITIONS", "MEAN", "STD", "MIN", "MAX"])
 
-        for direction in DIRECTIONS:
-            for condition in CONDITIONS:
-                values = list(d[direction][condition].values())
+    #     for direction in DIRECTIONS:
+    #         for condition in CONDITIONS:
+    #             values = list(d[direction][condition].values())
 
-                mean_ = stat.mean(values)
-                mean_d.setdefault(direction, {})[condition] = mean_
+    #             mean_ = stat.mean(values)
+    #             mean_d.setdefault(direction, {})[condition] = mean_
 
-                std_ = stat.stdev(values)
+    #             std_ = stat.stdev(values)
 
-                min_ = min(values)
-                for p, v in d[direction][condition].items():
-                    if v == min_:
-                        min_p = p
+    #             min_ = min(values)
+    #             for p, v in d[direction][condition].items():
+    #                 if v == min_:
+    #                     min_p = p
 
-                max_ = max(values)
-                for p, v in d[direction][condition].items():
-                    if v == max_:
-                        max_p = p
+    #             max_ = max(values)
+    #             for p, v in d[direction][condition].items():
+    #                 if v == max_:
+    #                     max_p = p
 
-                writer.writerow(
-                    [
-                        direction,
-                        condition,
-                        mean_,
-                        std_,
-                        f"{min_}@P{min_p}",
-                        f"{max_}@P{max_p}",
-                    ]
-                )
-    logger.PRINT_LOG("CALCULATE STAT", bcolors.OKGREEN, f"save to {output_file}")
+    #             writer.writerow(
+    #                 [
+    #                     direction,
+    #                     condition,
+    #                     mean_,
+    #                     std_,
+    #                     f"{min_}@P{min_p}",
+    #                     f"{max_}@P{max_p}",
+    #                 ]
+    #             )
+    # logger.PRINT_LOG("CALCULATE STAT", bcolors.OKGREEN, f"save to {output_file}")
 
-    # draw range figure
-    draw_range(variable_name, "YAW", mean_d)
-    draw_range(variable_name, "PITCH", mean_d)
+    # # draw range figure
+    # draw_range(variable_name, "YAW", mean_d)
+    # draw_range(variable_name, "PITCH", mean_d)
 
     logger.SUB_LEVEL()
 
@@ -414,9 +443,9 @@ def draw_metric(task_id, variable_name, mean_d, std_d=None, y_limit=10, annotate
     logger.PRINT_LOG("DRAW METRIC", bcolors.OKGREEN, f"save to {fig_path}")
 
 
-# task1_range("MaxViewingRange")
-# task1_range("MaxBodyRange")
+task1_range("MaxViewingRange")
+task1_range("MaxBodyRange")
 
-form_metrics(1, "Effort")
-form_metrics(2, "Effort")
-form_metrics(2, "Dizziness")
+# form_metrics(1, "Effort")
+# form_metrics(2, "Effort")
+# form_metrics(2, "Dizziness")
