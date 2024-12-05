@@ -1656,3 +1656,23 @@ FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBe
 FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
 KS TEST             Ecosphere: ks_stat=0.20307, ks_pval=0.00000
 KS TEST             HyperDash: ks_stat=0.12429, ks_pval=0.00000
+2024-12-05 21:00:42.236110
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBed_converted.csv not found
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
+2024-12-05 21:02:18.963718
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBed_converted.csv not found
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
+2024-12-05 21:02:32.920574
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBed_converted.csv not found
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
+2024-12-05 21:03:31.866590
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBed_converted.csv not found
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
+2024-12-05 21:04:10.877348
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBed_converted.csv not found
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
+2024-12-05 21:09:52.608331
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBed_converted.csv not found
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
+INFO                Ecosphere: gap at 50% = 6.63936, gap at 90% = 3.08179
+INFO                HyperDash: gap at 50% = 4.18328, gap at 90% = 12.32012
