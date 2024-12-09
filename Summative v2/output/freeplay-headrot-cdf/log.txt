@@ -1676,3 +1676,49 @@ FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBe
 FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
 INFO                Ecosphere: gap at 50% = 6.63936, gap at 90% = 3.08179
 INFO                HyperDash: gap at 50% = 4.18328, gap at 90% = 12.32012
+2024-12-09 19:49:50.915388
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBed_converted.csv not found
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
+2024-12-09 19:51:52.525406
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBed_converted.csv not found
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
+2024-12-10 00:06:35.161283
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBed_converted.csv not found
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
+INFO                Ecosphere: gap at 50% = 6.63936, gap at 90% = 3.08179
+INFO                HyperDash: gap at 50% = 4.18328, gap at 90% = 12.32012
+2024-12-10 00:07:06.017840
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBed_converted.csv not found
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
+INFO                Ecosphere: gap at 50% = 6.63936, gap at 90% = 3.08179
+SAVE PLOT           saved ./Summative v2/output/freeplay-headrot-cdf/Ecosphere_headrot_cdf.png
+INFO                HyperDash: gap at 50% = 4.18328, gap at 90% = 12.32012
+SAVE PLOT           saved ./Summative v2/output/freeplay-headrot-cdf/HyperDash_headrot_cdf.png
+2024-12-10 00:07:42.276555
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBed_converted.csv not found
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
+INFO                Ecosphere: gap at 50% = 6.63936, gap at 90% = 3.08179
+SAVE PLOT           saved ./Summative v2/output/freeplay-headrot-cdf/Ecosphere_headrot_cdf.png
+INFO                HyperDash: gap at 50% = 4.18328, gap at 90% = 12.32012
+SAVE PLOT           saved ./Summative v2/output/freeplay-headrot-cdf/HyperDash_headrot_cdf.png
+2024-12-10 00:08:14.712405
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBed_converted.csv not found
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
+INFO                Ecosphere: gap at 50% = 6.63936, gap at 90% = 3.08179
+SAVE PLOT           saved ./Summative v2/output/freeplay-headrot-cdf/Ecosphere_headrot_cdf.png
+INFO                HyperDash: gap at 50% = 4.18328, gap at 90% = 12.32012
+SAVE PLOT           saved ./Summative v2/output/freeplay-headrot-cdf/HyperDash_headrot_cdf.png
+2024-12-10 00:09:04.532913
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBed_converted.csv not found
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
+INFO                Ecosphere: gap at 50% = 6.61421, gap at 90% = 2.96403
+SAVE PLOT           saved ./Summative v2/output/freeplay-headrot-cdf/Ecosphere_headrot_cdf.png
+INFO                HyperDash: gap at 50% = 3.93850, gap at 90% = 13.67790
+SAVE PLOT           saved ./Summative v2/output/freeplay-headrot-cdf/HyperDash_headrot_cdf.png
+2024-12-10 00:09:50.254426
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_ActuatedBed_converted.csv not found
+FILE NOT FOUND      ./Summative v2/raw data/s_converted/Ecosphere/P_2_NormalBed_converted.csv not found
+INFO                Ecosphere: gap at 50% = 6.61421, gap at 90% = 2.96403
+SAVE PLOT           saved ./Summative v2/output/freeplay-headrot-cdf/Ecosphere_headrot_cdf.png
+INFO                HyperDash: gap at 50% = 3.93850, gap at 90% = 13.67790
+SAVE PLOT           saved ./Summative v2/output/freeplay-headrot-cdf/HyperDash_headrot_cdf.png

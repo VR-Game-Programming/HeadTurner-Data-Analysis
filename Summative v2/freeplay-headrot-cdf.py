@@ -31,13 +31,14 @@ for application in APPLICATIONS:
                     "FILE NOT FOUND", bcolors.FAIL, f"{input_file} not found"
                 )
 
+
 # plot CDF
 PLOT_CDF = True
 if PLOT_CDF:
-    bins = np.arange(0, 90 + 1, 1)
+    bins = np.arange(0, 175 + 1, 1)
 
     for application in APPLICATIONS:
-        # plt.figure(figsize=(12, 6))
+        plt.figure(figsize=(12, 6))
 
         value_50 = {}
         value_90 = {}
@@ -50,22 +51,23 @@ if PLOT_CDF:
             value_50.setdefault(condition, np.interp(0.5, cdf, bin_edges[:-1]))
             value_90.setdefault(condition, np.interp(0.9, cdf, bin_edges[:-1]))
 
-            # plt.plot(
-            #     bin_edges[:-1],
-            #     cdf * 100,
-            #     linestyle="-",
-            #     color=COLORS[condition][DARKEST],
-            #     label=condition,
-            # )
+            plt.plot(
+                bin_edges[:-1],
+                cdf * 100,
+                linestyle="-",
+                color=COLORS[condition][DARKEST],
+                label=condition,
+            )
 
-        # plt.xlabel("Head Rotation Angle (°)")
-        # plt.ylabel("Cumulative Proportion (%)")
-        # plt.title(
-        #     f"Cumulative Distribution Function of Head Rotation Angles ({application})"
-        # )
-        # plt.xticks(np.arange(0, 90 + 10, 10))
-        # plt.yticks(np.arange(0, 100 + 10, 10))
-        # plt.legend()
+        plt.xlabel("Head Rotation Angle (°)")
+        plt.ylabel("Cumulative Proportion (%)")
+        plt.title(
+            f"Cumulative Distribution Function of Head Rotation Angles ({application})"
+        )
+        plt.xticks(np.arange(0, 175 + 25, 25))
+        plt.yticks(np.arange(0, 100 + 10, 10))
+        plt.legend()
+        plt.grid(True)
 
         # calculate the gap between two CDFs at 50% and 90%
 
@@ -78,11 +80,11 @@ if PLOT_CDF:
             f"{application}: gap at 50% = {gap_50:.5f}, gap at 90% = {gap_90:.5f}",
         )
 
-        # output_file = f"{OUTPUT_DIR}/{application}_headrot_cdf_(anglex).png"
-        # plt.savefig(output_file)
-        # plt.close()
+        output_file = f"{OUTPUT_DIR}/{application}_headrot_cdf.png"
+        plt.savefig(output_file)
+        plt.close()
 
-        # logger.PRINT_LOG("SAVE PLOT", bcolors.OKBLUE, f"saved {output_file}")
+        logger.PRINT_LOG("SAVE PLOT", bcolors.OKBLUE, f"saved {output_file}")
 
 # plot PDF
 PLOT_PDF = False
